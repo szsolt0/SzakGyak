@@ -1,4 +1,4 @@
-# Tesztelési követelmények
+# Használni Tervezett Eszközök
 
 ## 1. Godot Engine
 A Godot Engine egy modern, nyílt forráskódú játékmotor 2D és 3D játékok fejlesztéséhez. 
