@@ -1,0 +1,2 @@
+# SzakGyak
+Szakmai Gyakorlat
