@@ -1,0 +1,7 @@
+site_name: SzakGyak
+repo_url: https://github.com/JanosSandor2002/SzakGyak
+
+markdown_extensions:
+  - smarty: {}
+  - toc:
+      toc_depth: 3
