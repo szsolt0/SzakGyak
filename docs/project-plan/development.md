@@ -27,8 +27,8 @@ Fő cél: A rendszer logikai modelljének és a játék vizuális világának l�
 - Analízis modell elkészítése: rendszer szintű logikai struktúra, folyamatmodellek.
 - Godot projekt mappaszerkezetének kialakítása.
 - Grafikai elemek megtervezése és felosztása a csapattagok között:
-   - Munkakörnyezetek (autószerelő műhely, bolt, iroda) hátterei és tárgyi elemei.
-   - Családi ház, UI-elemek (mutatósávok, karakterikonok, eseményszövegek).
+  - Munkakörnyezetek (autószerelő műhely, bolt, iroda) hátterei és tárgyi elemei.
+  - Családi ház, UI-elemek (mutatósávok, karakterikonok, eseményszövegek).
 - Egységes 2D-s stílus kialakítása, szocialista korszakhoz illeszkedő látványvilág.
 - Kezdeti animációk, alap textúrák és interakciós vizuális visszajelzések készítése.
 - Analízis modell és grafikai anyagok véglegesítése, bemutatása a gyakorlatvezetőnek.
@@ -42,10 +42,10 @@ Fő cél: A játékmenet technikai alapjainak megvalósítása és az első ját
 - Rendszerterv elemeinek felosztása a csapattagok között.
 - Godot scriptjeinek és node-oknak a megtervezése, leosztása.
 - A játékmenet fő logikáinak implementálása:
-   - Mutatók frissülése, munkavégzés, események.
-   - Képernyőváltási rendszer (navigáció jobbra–balra, fel–le).
-   - Morális döntési rendszer működő verziója.
-   - Alap játékkör: munkavégzés – pihenés – új nap.
+  - Mutatók frissülése, munkavégzés, események.
+  - Képernyőváltási rendszer (navigáció jobbra–balra, fel–le).
+  - Morális döntési rendszer működő verziója.
+  - Alap játékkör: munkavégzés – pihenés – új nap.
 - Script-részek integrálása és összehangolása.
 - Alap visszajelzések (éhség, pénzmozgás, eseménymegjelenítés).
 - prototípus létrehozása és alap tesztelése.
