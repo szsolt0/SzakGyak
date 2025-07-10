@@ -3,13 +3,25 @@ repo_url: https://github.com/JanosSandor2002/SzakGyak
 
 nav:
   - 'Project Terv': project-plan/*
+  - 'Dokumentáció':
+    - documentation/vision.md
+    - documentation/*
   - 'Munkanapló': work-log/*
 
 plugins:
   - search
   - literate-nav
+  - enumerate-headings:
+      toc_depth: 6
+      exclude:
+        - work-log/*
+        - documentation/index.md
+      restart_increment_after:
+        - documentation/vision.md
+
+theme: 
+  name: mkdocs
+  navigation_depth: 999
 
 markdown_extensions:
-  - smarty: {}
-  - toc:
-      toc_depth: 3
+  - smarty
