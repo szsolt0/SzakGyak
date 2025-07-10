@@ -1,6 +1,14 @@
 site_name: SzakGyak
 repo_url: https://github.com/JanosSandor2002/SzakGyak
 
+nav:
+  - 'Project Terv': project-plan/*
+  - 'Munkanapló': work-log/*
+
+plugins:
+  - search
+  - literate-nav
+
 markdown_extensions:
   - smarty: {}
   - toc:
