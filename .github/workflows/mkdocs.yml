@@ -35,6 +35,7 @@ jobs:
         run: |
           pip install mkdocs
           pip install mkdocs-literate-nav
+          pip install mkdocs-enumerate-headings-plugin
 
       - name: Build with MkDocs
         run: mkdocs build
