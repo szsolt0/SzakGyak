@@ -1,6 +1,61 @@
 # Vízió
 
-## Bevezetés
+### Projekt címe és rövid leírása
+**Túlélés a Szocializmusban**  
+A “Túlélés a Szocializmusban” egy történelmi ihletésű, túlélésorientált szimulációs játék, amely a szocialista korszakban élők mindennapi életének kihívásait, korlátozott lehetőségeit és döntési kényszereit idézi meg. A játék célja nem csupán a fizikai túlélés, hanem a morális, mentális és társadalmi helytállás is egy olyan rendszerben, ahol a döntéseink súlya gyakran meghaladja azok azonnali hatását. A játékos különféle munkák révén próbálja fenntartani saját és családja életét, miközben külső tényezők, véletlenszerű események és társadalmi nyomás formálják útját. A játék egyszerre kínál mechanikai kihívást, mély történeti reflexiót és stratégiai gondolkodást.
+
+### Célközönség
+A játékot olyan játékosoknak szánjuk, akik többet keresnek egy egyszerű szórakozásnál. A célközönség elsősorban:
+
+- **Történelmi érdeklődésű játékosok**: Akik értékelik a valós társadalmi rendszerek és politikai háttér alapján készült játékokat.
+- **Morális döntéseket kedvelő játékosok**: Akik szeretik, ha döntéseiknek súlya van, és azok következményei hosszú távon érvényesülnek.
+- **Életmenedzsment és túlélő műfaj rajongói**: Akik élvezik az erőforrás-menedzsmentet, a karakterfejlődést, és a folyamatos nyomás alatti döntéshozatalt.
+- **Felnőtt közönség**: Akik érettebb, elgondolkodtatóbb témák iránt érdeklődnek, nem riadnak vissza a nehezebb morális vagy társadalmi tartalmaktól.
+
+A játék nemcsak szórakoztató, hanem gondolkodásra is ösztönöz, miközben történelmi és pszichológiai rétegekkel gazdagítja a szimulációs műfajt.
+
+### Áttekintés
+A játék egy fiktív, ám a szocialista korszak valóságát hűen tükröző világban játszódik. A játékos különböző munkák elvégzése révén próbál megélni és családját eltartani, miközben egyre szűkülő lehetőségek és társadalmi nyomás közepette kell döntéseket hoznia. A rendszer nem csupán gazdasági, hanem erkölcsi nyomást is gyakorol a karakterre: a túlélés és a „helyes cselekvés” között gyakran választani kell.
+
+A játék főbb mechanikái:
+- Többféle munkalehetőség, különböző mechanikákkal (autószerelő, bolti eladó, irodai adminisztrátor)
+- Jelzők és állapotmutatók (éhség, stressz, reputáció, alkoholfüggőség)
+- Morális dilemmák és véletlenszerű események
+- Gazdasági rendszer pénzzel, cserekereskedelemmel, feketepiac jelenléttel
+- Büntetési rendszer (börtön, Gulág)
+
+---
+
+## Problémameghatározás
+
+### A jelenlegi probléma vagy igény, amit a rendszer megold
+
+A videójátékok világában túlsúlyban vannak a nyugati, kapitalista társadalmak logikáját követő játékmodellek. Kevés olyan játék létezik, amely érdemben, realisztikusan dolgozza fel a szocialista éra egyéni szintű tapasztalatait, dilemmáit és mindennapi túlélési stratégiáit. Ezen túlmenően, a morális döntéseket középpontba helyező szimulációk gyakran fantasy vagy sci-fi környezetben zajlanak, így a játékos elidegenítve tapasztalja meg a következményeket.
+
+A “Túlélés a Szocializmusban” erre a hiányra reagál:
+
+- **Társadalmi reflexió**: A játék lehetőséget ad arra, hogy a játékosok új szemszögből ismerjék meg egy elnyomó rendszer dinamikáját.
+- **Morális edukáció**: Valós következményekkel járó, komplex döntések meghozatalára kényszerít, ezáltal fejlesztve az empátiát és etikai érzékenységet.
+- **Hiteles narratíva**: Olyan élettapasztalatokat idéz meg, amelyeket a nyugati játékosok nem, vagy csak könyvekből, filmekből ismerhetnek.
+
+### Tipikus felhasználói helyzetek (pain points)
+
+#### **Krónikus erőforráshiány**
+A játékos rendszeresen kénytelen választani az alapelemek között – elegendő ételt szerezzen a családnak, vagy csökkentse saját stressz-szintjét? Egy jobb minőségű cserecikk beszerzése azt jelenti, hogy más szükséglet háttérbe szorul. Ez a folyamatos kompromisszumkényszer feszültséget teremt.
+
+#### **Morális és túlélési dilemmák**
+A játékos gyakran kerül erkölcsileg vitás helyzetekbe: elvállaljon-e egy kenőpénzes munkát, amivel többet keres, de kockáztatja a reputációját? Lopjon-e a boltból, ha gyermeke éhezik, de lebukás esetén börtön vár rá? A játék célja, hogy a morális döntések ne pusztán esztétikai, hanem gyakorlati következményekkel járjanak.
+
+#### **Időmenedzsment nyomása**
+Egy nap nem elég mindenre: munka, pihenés, család, szocializáció. A játékos soha nem tud mindent ideálisan megoldani, ami fokozza az állandó időnyomás érzetét. Ez különösen azoknak a játékosoknak jelent kihívást, akik szeretik az optimalizálást, de itt gyakran a „legkevésbé rossz” opciót kell választani.
+
+#### **Kiszámíthatatlan külső események**
+A rendszerbe beépített véletlenszerű események (pl. hatósági ellenőrzés, megbetegedés, leállások) kizökkentik a játékost az addig kialakított stratégiájából. Ezek az események hitelesítik a szocialista rendszer bizonytalanságát, és növelik az újratervezési kényszert.
+
+#### **Mentális és pszichológiai terhelés**
+A karakter mentális állapota (stressz, alkoholizmus) közvetlenül hat a teljesítményre. A játékosnak időnként saját testi-lelki egészségét is figyelembe kell vennie, különben fokozatosan ellehetetlenül a hatékony munkavégzés. A stressz-kezelés tehát nem luxus, hanem stratégiai döntés.
+
+---
 
 ## A javasolt megoldás
 
