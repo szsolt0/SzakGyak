@@ -99,83 +99,48 @@ vannak az események alakulására.
 
 ## Kockázatok és feltételezések
 
+### Potenciális akadályok
 
-## A játék súgórendszere
+- **Tapasztalat hiánya**: A csapat tagjai számára új lehet a Godot vagy a Blender használata, ami tanulási időt igényelhet.
+- **Időkorlát**: A rendelkezésre álló idő nem biztos, hogy elegendő a teljes játék minden funkciójának megvalósítására.
+- **Technikai kompatibilitás**: A Blenderből exportált 3D modellek és animációk nem minden esetben működnek zökkenőmentesen Godot-ban (pl. riggelés, anyagok, UV mapping).
+- **Verziókezelési hibák**: GitHub használata során konfliktusok, rosszul kezelt branchek vagy összeolvasási problémák okozhatnak fennakadásokat.
+- **Optimalizálási problémák**: Különösen 3D esetén előfordulhat, hogy a teljesítmény nem megfelelő gyengébb eszközökön.
+- **Kommunikációs nehézségek**: Többfős csapat esetén a koordináció és feladatmegosztás hiánya lassíthatja a munkát.
 
-A játék különféle módokon nyújt segítséget a felhasználó számára, hogy teljes mértékben elsajátíthassa a különböző funkciókat.  
-Az első napon mindenre kiterjedő eszközökkel támogatjuk a játékos előrehaladását.  
-A játék funkcióit egyszerű és könnyen megjegyezhető módon implementáljuk.  
-A játék funkcióit és minijátékait a játékos dinamikusan ismeri meg, ami megkönnyíti azok megjegyzését.  
-A játékos nem kap egyszerre túl sok információt – a funkciókat fokozatosan ismeri meg.  
-Ez a fokozatosság hozzájárul a hatékonyabb tanuláshoz és a pozitív játékélményhez.
+### Feltételezések
 
-### Használt eszközök
+- A csapattagok képesek megtanulni a szükséges eszközök használatát (Godot, Blender, GitHub).
+- A fejlesztés során folyamatosan elérhető lesz az internet a dokumentációk és tutorialok eléréséhez.
+- A projekt során nem történik jelentős technikai váltás vagy eszközcserére kényszerítő hiba.
+- A munka elosztása arányosan történik, mindenki vállal részt a fejlesztés különböző területein.
+- Az exportálási és integrálási folyamat Blender és Godot között működőképes marad a fejlesztés során.
 
-- **Szövegbuborék**  
-  A játék első napján megjelenő tájékoztató eszköz, amely lényegesebb és bővebb információk átadására szolgál. Ezt a segédeszközt a játékos bármikor kikapcsolhatja a beálításoknál.
-  Magyarázó jelleggel, röviden leírja az adott funkció célját és működését.  
-  Az új funkciók megjelenésekor is felbukkannak.
+## Ütemezés (magas szintű roadmap)
 
-- **Kiemelés**  
-  Vizuálisan kiemeli az éppen bemutatott grafikai elemeket (pl. gombokat, paneleket).  
-  Egyértelműen megmutatja, mire kattinthat a játékos vagy mit kell megfigyelnie. 
+A projekt 8 hetes időkeretben, kéthetes szakaszokban halad:
 
-- **Leírás**  
-  Rövid, állandó szöveges jelölések, amelyek a bonyolultabb funkciókat néhány szóban megnevezik.  
-  Ezek nem részletes magyarázatok, hanem gyors beazonosítást segítő címkék.  
-  Például egy gomb fölött megjelenő statikus címke.
+### 1–2. hét: Dokumentáció (teljes fókusz)
+- Projektcél, eszközök, technikai alapok leírása
+- Tervezett funkciók és játékmechanikák definiálása
+- Technikai és grafikai követelmények összegzése
+- Kockázatok, függőségek és ütemezés rögzítése
 
+### 3–4. hét: Grafika (teljes fókusz) + Dokumentáció
+- Karaktermodellek, tárgyak, pályaelemek elkészítése Blenderben
+- Alap animációk és textúrák létrehozása
+- Export pipeline tesztelése Godot-ba
+- Kiegészítő dokumentáció a grafikai pipeline-ról és asset-átvitelről
 
-## Felhasznált kész komponensek
+### 5–6. hét: Prototípus-fejlesztés + Dokumentáció
+- Alapvető játékmenet megvalósítása Godot-ban (mozgás, interakciók, kamera)
+- UI vázlat, menürendszer, játékmenet állapotok kialakítása
+- Placeholder assetek integrálása
+- Dokumentáció frissítése a technikai megvalósítás részleteivel
 
-A játék megalkotásakor törekszünk az egyediségre.
-
-A projekt keretében nem használunk előre elkészített, külső kész komponenseket (pl. Godot pluginokat, Unity asseteket, külső API-kat). Minden funkció saját fejlesztésű modulokból épül fel.
-
-Ugyanakkor a fejlesztés során különféle generatív mesterséges intelligencia eszközök támogatják a munkát, különösen a következő területeken:
-
-- **Textúrák és vizuális elemek előállítása:**  
-  Alap textúrák és mintaelemek generálása AI-modellek (pl. DeepSeek, DALL·E) segítségével történik. Ezeket a tartalmakat a csapat tovább szerkeszti, hogy megfeleljenek a játékon belüli stílusnak és technikai követelményeknek.
-
-- **Dokumentációs vázlatok és technikai szövegek előállítása:**  
-  A projekt dokumentációjának bizonyos részei (pl. struktúra, megfogalmazás) generatív nyelvi modellek (pl. ChatGPT) segítségével készültek, majd manuálisan átnézésre és szerkesztésre kerültek.
-
-- **Kódötletek és algoritmiai javaslatok:**  
-  A játék bizonyos algoritmusainak (pl. alap mesterséges intelligencia logika, játékmenet prototípus) megtervezését nyelvi modellek (ChatGPT, DeepSeek Code) inspirálták, de minden végső megvalósítás saját fejlesztés.
-
-Fontos megjegyezni, hogy minden AI által generált tartalom utólagos ellenőrzésen és testreszabáson megy keresztül, így a végső termék teljes mértékben megfelel a projekt minőségi és jogi elvárásainak.
-
-
-## 12. Alkalmazott szabványok  
-**Applicable Standards**
-
-A játékfejlesztés és üzemeltetés során az alábbi szabványokat és előírásokat vesszük figyelembe. A szabványokat két kategóriában ismertetjük: kötelezően alkalmazandó (jogszabályi vagy technikai előírások), illetve választható, de a fejlesztők által követett szabványok.
-
-### 12.1 Kötelezően alkalmazandó szabványok  
-**Mandatory Standards**
-
-- **Digitális hozzáférhetőségi irányelv (WAD - Web Accessibility Directive):**  
-  Amennyiben a játék tartalmaz webes felületet (pl. dokumentáció vagy beállítások online elérése), biztosítani kell a minimális akadálymentesítési előírások betartását.
-
-- **PEGI 16 – Pan-European Game Information korhatárbesorolás:**  
-  A játék tartalma (pl. erőszak ábrázolása, trágár nyelvezet vagy alkoholfogyasztás) alapján a PEGI 16 besorolás alkalmazása indokolt. Ez a jelölés biztosítja, hogy a termék megfelel a korosztályi elvárásoknak, valamint segíti a fogyasztók (és szülők) tájékozódását.
-
-- **Szerzői jogi előírások:**  
-  A felhasznált grafikai, zenei vagy egyéb médiatartalmak esetén be kell tartani az adott licenceket (pl. CC-BY, MIT, GNU GPL).
-
-### 12.2 Választás alapján alkalmazott szabványok  
-**Optional Standards**
-
-- **Godot Engine GDScript Style Guide:**  
-  A fejlesztés során követjük a Godot által ajánlott kódolási stílusirányelveket a jobb olvashatóság és karbantarthatóság érdekében (pl. elnevezési konvenciók, indentálás, dokumentálás).
-
-- **Semantic Versioning (SemVer 2.0.0):**  
-  A projekt verziózására a szokásos `MAJOR.MINOR.PATCH` séma alkalmazása történik a GitHubon való egyértelmű kiadások érdekében.
-
-- **Markdown dokumentációs szabványok:**  
-  A projekt dokumentációja `.md` formátumban készül, egységes szintaxis és struktúra szerint (pl. címhierarchia, kódrészletek formázása).
-
-- **Open Design and Development Practices:**  
-  A fejlesztés nyílt forráskódú eszközökkel (Godot, Blender, GitHub) történik, az átláthatóság és közösségi bevonhatóság biztosítása céljából.
-
+### 7–8. hét: Véglegesítés és finomhangolás
+- Végleges modellek és animációk beépítése
+- Hibajavítás, teljesítményoptimalizálás
+- Projekt teljes funkcionalitásának lezárása
+- Teljes dokumentáció lezárása és prezentációs anyagok előkészítése
 
