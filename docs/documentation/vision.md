@@ -1,10 +1,10 @@
 # Vízió
 
-### Projekt címe és rövid leírása
+## Projekt címe és rövid leírása
 **Túlélés a Szocializmusban**  
 A “Túlélés a Szocializmusban” egy történelmi ihletésű, túlélésorientált szimulációs játék, amely a szocialista korszakban élők mindennapi életének kihívásait, korlátozott lehetőségeit és döntési kényszereit idézi meg. A játék célja nem csupán a fizikai túlélés, hanem a morális, mentális és társadalmi helytállás is egy olyan rendszerben, ahol a döntéseink súlya gyakran meghaladja azok azonnali hatását. A játékos különféle munkák révén próbálja fenntartani saját és családja életét, miközben külső tényezők, véletlenszerű események és társadalmi nyomás formálják útját. A játék egyszerre kínál mechanikai kihívást, mély történeti reflexiót és stratégiai gondolkodást.
 
-### Célközönség
+## Célközönség
 A játékot olyan játékosoknak szánjuk, akik többet keresnek egy egyszerű szórakozásnál. A célközönség elsősorban:
 
 - **Történelmi érdeklődésű játékosok**: Akik értékelik a valós társadalmi rendszerek és politikai háttér alapján készült játékokat.
@@ -14,7 +14,7 @@ A játékot olyan játékosoknak szánjuk, akik többet keresnek egy egyszerű s
 
 A játék nemcsak szórakoztató, hanem gondolkodásra is ösztönöz, miközben történelmi és pszichológiai rétegekkel gazdagítja a szimulációs műfajt.
 
-### Áttekintés
+## Áttekintés
 A játék egy fiktív, ám a szocialista korszak valóságát hűen tükröző világban játszódik. A játékos különböző munkák elvégzése révén próbál megélni és családját eltartani, miközben egyre szűkülő lehetőségek és társadalmi nyomás közepette kell döntéseket hoznia. A rendszer nem csupán gazdasági, hanem erkölcsi nyomást is gyakorol a karakterre: a túlélés és a „helyes cselekvés” között gyakran választani kell.
 
 A játék főbb mechanikái:
@@ -98,3 +98,49 @@ vannak az események alakulására.
 ## Felhasználói Szerepkörök és Projekt Hatókör
 
 ## Kockázatok és feltételezések
+
+### Potenciális akadályok
+
+- **Tapasztalat hiánya**: A csapat tagjai számára új lehet a Godot vagy a Blender használata, ami tanulási időt igényelhet.
+- **Időkorlát**: A rendelkezésre álló idő nem biztos, hogy elegendő a teljes játék minden funkciójának megvalósítására.
+- **Technikai kompatibilitás**: A Blenderből exportált 3D modellek és animációk nem minden esetben működnek zökkenőmentesen Godot-ban (pl. riggelés, anyagok, UV mapping).
+- **Verziókezelési hibák**: GitHub használata során konfliktusok, rosszul kezelt branchek vagy összeolvasási problémák okozhatnak fennakadásokat.
+- **Optimalizálási problémák**: Különösen 3D esetén előfordulhat, hogy a teljesítmény nem megfelelő gyengébb eszközökön.
+- **Kommunikációs nehézségek**: Többfős csapat esetén a koordináció és feladatmegosztás hiánya lassíthatja a munkát.
+
+### Feltételezések
+
+- A csapattagok képesek megtanulni a szükséges eszközök használatát (Godot, Blender, GitHub).
+- A fejlesztés során folyamatosan elérhető lesz az internet a dokumentációk és tutorialok eléréséhez.
+- A projekt során nem történik jelentős technikai váltás vagy eszközcserére kényszerítő hiba.
+- A munka elosztása arányosan történik, mindenki vállal részt a fejlesztés különböző területein.
+- Az exportálási és integrálási folyamat Blender és Godot között működőképes marad a fejlesztés során.
+
+## Ütemezés (magas szintű roadmap)
+
+A projekt 8 hetes időkeretben, kéthetes szakaszokban halad:
+
+### 1–2. hét: Dokumentáció (teljes fókusz)
+- Projektcél, eszközök, technikai alapok leírása
+- Tervezett funkciók és játékmechanikák definiálása
+- Technikai és grafikai követelmények összegzése
+- Kockázatok, függőségek és ütemezés rögzítése
+
+### 3–4. hét: Grafika (teljes fókusz) + Dokumentáció
+- Karaktermodellek, tárgyak, pályaelemek elkészítése Blenderben
+- Alap animációk és textúrák létrehozása
+- Export pipeline tesztelése Godot-ba
+- Kiegészítő dokumentáció a grafikai pipeline-ról és asset-átvitelről
+
+### 5–6. hét: Prototípus-fejlesztés + Dokumentáció
+- Alapvető játékmenet megvalósítása Godot-ban (mozgás, interakciók, kamera)
+- UI vázlat, menürendszer, játékmenet állapotok kialakítása
+- Placeholder assetek integrálása
+- Dokumentáció frissítése a technikai megvalósítás részleteivel
+
+### 7–8. hét: Véglegesítés és finomhangolás
+- Végleges modellek és animációk beépítése
+- Hibajavítás, teljesítményoptimalizálás
+- Projekt teljes funkcionalitásának lezárása
+- Teljes dokumentáció lezárása és prezentációs anyagok előkészítése
+
