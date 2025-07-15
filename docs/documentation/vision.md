@@ -97,6 +97,71 @@ vannak az események alakulására.
 
 ## Felhasználói Szerepkörök és Projekt Hatókör
 
+## Felhasználói Szerepkörök
+
+### 1. Játékos
+**Leírás:**  
+A fő felhasználói réteg, akik aktívan játszanak.
+
+**Céljaik:**
+- Túlélni a szocialista rendszer viszontagságait.
+- A család életben tartása.
+- Morális és stratégiai döntések meghozatala.
+- Magas pontszám, reputáció és teljesítmény elérése.
+- Változatos játékvégeket kipróbálni.
+- Saját döntéseik visszakövetése a naplózási rendszerben (később).
+
+---
+
+### 2. Admin / Fejlesztő
+**Leírás:**  
+A játék működéséért, karbantartásáért felelős háttérfelhasználók.
+
+**Céljaik:**
+- Hibák, bugok javítása.
+- Tesztelés, balanszolás.
+- Tartalom (események, munkák) frissítése.
+- Felhasználói naplók és metrikák elemzése.
+- Verziófrissítések menedzselése.
+
+---
+
+### 3. Vendég (opcionális)
+**Leírás:**  
+Nem regisztrált vagy korlátozott hozzáférésű látogatók.
+
+**Céljaik:**
+- A játék kipróbálása teljes elköteleződés nélkül.
+- Grafikai és játékmeneti hangulat megtapasztalása.
+- Regisztráció előtti érdeklődés felkeltése.
+
+---
+
+## Projekt Hatókör – Verzió 1.0 
+
+### Tartalmazza:
+- Napi időciklus kezelése (8:00–20:00)
+- 2 munkahely (Autószerelő - 3D, Bolti eladó - 2D)
+- Alap státuszok és mutatók (Éhség, Stressz, Reputáció, Alkoholfüggőség)
+- Családtagok eltartása, éhségszint kezelése
+- Véletlenszerű események, morális döntések
+- Lopás és lebukás mechanika (Börtön, Gulág)
+- Erőforrásmenedzsment: pénz, kajajegyek, cserekereskedelem
+- 2D-s UI és képernyőnavigáció (munkák, státuszok, család)
+- Vizuális háttérgrafikák (családiház, bolt, műhely)
+- Játék vége logika: többféle végkimenetel és pontszámítás
+
+---
+
+### Nem tartalmazza (kívül esik a hatókörön):
+- Irodai munka (tervezett harmadik munkalehetőség)
+- Naplózási és statisztikai rendszer
+- Jutalmazás, globális rangsor, achievement rendszer
+- Felhőalapú mentés / online profilkezelés
+- Multiplayer mód / hálózati játék
+- Mobilplatform támogatás (első körben csak PC)
+
+
 ## Kockázatok és feltételezések
 
 ### Potenciális akadályok
