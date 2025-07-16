@@ -159,3 +159,48 @@ is.
   megterhelők lehetnek azok számára, akik személyesen vagy közvetetten
   érintettek voltak a szocialista rendszerben. A játék ezért a kezdés előtt
   figyelmeztetést jelenít meg, amelyet a játékosnak el kell fogadnia.
+
+## II.
+
+### 5. Megbízhatóság (Reliability)
+
+A **„Túlélés a Szocializmusban”** célja, hogy stabil és megbízható játékélményt nyújtson minden felhasználói környezetben. A játék rendszeres mentési pontokat alkalmaz, így az esetleges hibák vagy megszakítások nem vezetnek adatvesztéshez. A hibaállóságot úgy terveztük, hogy a kritikus funkciók (pl. játékállás mentése, döntéslogika, erőforrás-kezelés) minden körülmények között konzisztensen működjenek.
+
+A tesztelés során kiemelt figyelmet kapnak:
+
+- a váratlan események kezelése (pl. megszakított mentés, rendszerösszeomlás),
+- a döntési útvonalak következetessége,
+- a szkriptelt események stabilitása.
+
+### 6. Teljesítmény (Performance)
+
+A játék célja, hogy széles körű hardverkonfigurációkon is zökkenőmentesen fusson, különösen mivel az oktatási vagy alacsonyabb erőforrású környezetek is potenciális célcsoportot jelentenek.
+
+Fontos teljesítménykritériumok:
+
+- Gyors betöltési idők (maximum néhány másodperc menük és jelenetek között)
+- Stabil, legalább 30 FPS teljesítmény még gyengébb gépeken is
+- Alacsony memóriahasználat: optimalizált assetek, háttérben futó folyamatok minimalizálása
+- Támogatás 16:9 és 4:3 képarányokra, valamint különböző felbontásokra
+
+### 7. Támogatottság (Supportability)
+
+A játék fejlesztése során szem előtt tartjuk a hosszú távú karbantarthatóságot és a könnyű hibajavítást.
+
+Támogatottsági irányelvek:
+
+- Moduláris kódbázis, amely megkönnyíti az új funkciók beépítését vagy hibák elszigetelt javítását
+- Rendszeres frissítések: kisebb javítások és funkciófrissítések tervezett ütemezéssel
+- Hibajelentési lehetőség: beépített funkció vagy külső platformon (pl. GitHub Issues vagy e-mailes forma)
+- Dokumentált API-k és eseménykezelések a fejlesztők és modkészítők számára
+
+### 8. Tervezési korlátozások (Design Constraints)
+
+A játék tervezése során számos korlátozást kellett figyelembe venni, amelyek befolyásolták a végső megvalósítást:
+
+- **Történelmi hűség**: A szocialista korszak bemutatása nem torzítható játékmechanikai célok miatt. Ez korlátozza a túlzottan stilizált vagy eltúlzott elemek használatát.
+- **Etikai határok**: A morális dilemmák megjelenítése érzékeny téma, ezért minden narratív döntés és karakterábrázolás alapos kutatáson alapul.
+- **Offline működés**: A játék teljes mértékben offline is játszható, így nem építhet kritikus funkciókat internetkapcsolatra.
+- **Platformfüggetlenség (minimálisan)**: Az alapverzió PC-re készül, de a vezérlési logikát és UI-t úgy alakítottuk ki, hogy későbbi portolás (pl. mobil vagy konzol) se igényeljen jelentős újratervezést.
+- **Erőforráskorlátok**: A fejlesztés során kis csapat dolgozik a játékon, így a technikai megvalósítások és tartalombővítések reálisan tervezettek.
+
