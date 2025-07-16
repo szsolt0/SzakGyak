@@ -38,7 +38,7 @@ theme:
 markdown_extensions:
   - smarty
   - toc:
-      toc_depth: 999
+      toc_depth: 3
       permalink: true
   - admonition
   - pymdownx.details
@@ -46,5 +46,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.escapeall:
-      hardbreak: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
