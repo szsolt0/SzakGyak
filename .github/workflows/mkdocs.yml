@@ -33,9 +33,11 @@ jobs:
 
       - name: Install MkDocs
         run: |
-          pip install mkdocs
-          pip install mkdocs-literate-nav
-          pip install mkdocs-enumerate-headings-plugin
+          pip install \
+            mkdocs-material \
+            mkdocs-literate-nav \
+            mkdocs-enumerate-headings-plugin \
+            pymdown-extensions
 
       - name: Build with MkDocs
         run: mkdocs build

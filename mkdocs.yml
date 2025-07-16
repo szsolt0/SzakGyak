@@ -2,26 +2,49 @@ site_name: SzakGyak
 repo_url: https://github.com/JanosSandor2002/SzakGyak
 
 nav:
-  - 'Project Terv': project-plan/*
+  - 'Project Terv': project-plan/
   - 'Dokumentáció':
     - documentation/vision.md
-    - documentation/*
-  - 'Munkanapló': work-log/*
+    - documentation/srs.md
+    - documentation/analysismodel.md
+    - documentation/systemarch.md
+  - 'Munkanapló': 'https://docs.google.com/spreadsheets/d/1jSlDk9d3kgoSkNY78S58bChsSggCFRqs5fNXPh3aXEc'
 
 plugins:
   - search
   - literate-nav
   - enumerate-headings:
-      toc_depth: 6
-      exclude:
-        - work-log/*
-        - documentation/index.md
       restart_increment_after:
-        - documentation/vision.md
+      - documentation/vision.md
 
 theme: 
-  name: mkdocs
-  navigation_depth: 999
+  name: material
+  features:
+    - navigation.tabs
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-sunny
 
 markdown_extensions:
   - smarty
+  - toc:
+      toc_depth: 999
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.extra
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.escapeall:
+      hardbreak: true
