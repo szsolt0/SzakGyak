@@ -204,3 +204,130 @@ A játék tervezése során számos korlátozást kellett figyelembe venni, amel
 - **Platformfüggetlenség (minimálisan)**: Az alapverzió PC-re készül, de a vezérlési logikát és UI-t úgy alakítottuk ki, hogy későbbi portolás (pl. mobil vagy konzol) se igényeljen jelentős újratervezést.
 - **Erőforráskorlátok**: A fejlesztés során kis csapat dolgozik a játékon, így a technikai megvalósítások és tartalombővítések reálisan tervezettek.
 
+
+## A játék súgórendszere
+
+A játék különféle módokon nyújt segítséget a felhasználó számára, hogy teljes mértékben elsajátíthassa a különböző funkciókat.  
+Az első napon mindenre kiterjedő eszközökkel támogatjuk a játékos előrehaladását.  
+A játék funkcióit egyszerű és könnyen megjegyezhető módon implementáljuk.  
+A játék funkcióit és minijátékait a játékos dinamikusan ismeri meg, ami megkönnyíti azok megjegyzését.  
+A játékos nem kap egyszerre túl sok információt – a funkciókat fokozatosan ismeri meg.  
+Ez a fokozatosság hozzájárul a hatékonyabb tanuláshoz és a pozitív játékélményhez.
+
+
+### Használt eszközök
+
+- **Szövegbuborék**  
+  A játék első napján megjelenő tájékoztató eszköz, amely lényegesebb és bővebb információk átadására szolgál. Ezt a segédeszközt a játékos bármikor kikapcsolhatja a beálításoknál.
+  Magyarázó jelleggel, röviden leírja az adott funkció célját és működését.  
+  Az új funkciók megjelenésekor is felbukkannak.
+
+- **Kiemelés**  
+  Vizuálisan kiemeli az éppen bemutatott grafikai elemeket (pl. gombokat, paneleket).  
+  Egyértelműen megmutatja, mire kattinthat a játékos vagy mit kell megfigyelnie. 
+
+- **Leírás**  
+  Rövid, állandó szöveges jelölések, amelyek a bonyolultabb funkciókat néhány szóban megnevezik.  
+  Ezek nem részletes magyarázatok, hanem gyors beazonosítást segítő címkék.  
+  Például egy gomb fölött megjelenő statikus címke.
+
+
+## Felhasznált kész komponensek
+
+A játék megalkotásakor törekszünk az egyediségre.
+
+A projekt keretében nem használunk előre elkészített, külső kész komponenseket (pl. Godot pluginokat, Unity asseteket, külső API-kat). Minden funkció saját fejlesztésű modulokból épül fel.
+
+Ugyanakkor a fejlesztés során különféle generatív mesterséges intelligencia eszközök támogatják a munkát, különösen a következő területeken:
+
+- **Textúrák és vizuális elemek előállítása:**  
+  Alap textúrák és mintaelemek generálása AI-modellek (pl. DeepSeek, DALL·E) segítségével történik. Ezeket a tartalmakat a csapat tovább szerkeszti, hogy megfeleljenek a játékon belüli stílusnak és technikai követelményeknek.
+
+- **Dokumentációs vázlatok és technikai szövegek előállítása:**  
+  A projekt dokumentációjának bizonyos részei (pl. struktúra, megfogalmazás) generatív nyelvi modellek (pl. ChatGPT) segítségével készültek, majd manuálisan átnézésre és szerkesztésre kerültek.
+
+- **Kódötletek és algoritmiai javaslatok:**  
+  A játék bizonyos algoritmusainak (pl. alap mesterséges intelligencia logika, játékmenet prototípus) megtervezését nyelvi modellek (ChatGPT, DeepSeek Code) inspirálták, de minden végső megvalósítás saját fejlesztés.
+
+Fontos megjegyezni, hogy minden AI által generált tartalom utólagos ellenőrzésen és testreszabáson megy keresztül, így a végső termék teljes mértékben megfelel a projekt minőségi és jogi elvárásainak.
+
+
+## 11. Interfészek
+
+A játék stílusa szovjet propaganda szerű karikatúra. a navigálás a menüpontok illetve minden más részén a játéknak az egérrel valósul meg
+A projekt során az alábbi interfészeket használjuk a különböző komponensek és rendszerek közötti együttműködés biztosítására:
+
+### 11.1 Felhasználói interfész (UI)
+- A játék felhasználói felülete Godot-ban kerül kialakításra, jellemzően `Control` típusú node-okkal.
+- A UI tartalmazza: főmenü, beállítások menü, játék közbeni HUD (élet, stressz, stb.), játék végi képernyő.
+- Felhasználóbarát elrendezés, egér- és billentyűzet/touch kompatibilitás.
+
+#### Főmenü UI:
+Egyszerű minimalisztikus statikus hátérkép itt csak gombok találhatóak amik stílushoz megfelelően textúrázottak.
+Főmenü gombjai:
+- beállítások: beállítások menüpontra navigál
+- új játék: elindítja az új játékot (az elejéről)
+- játék folytatása: betölti az előző mentést 
+
+#### Beállítások UI:
+Átlátható, (egyszerű háttér) címkék alatt találhatók a megfelelő beállítások amik csúszkák illetve több opciós kiválasztható dobozok. A címkék közül egyszerre egy választható és csak annak a beállításai jelennek meg. A címkék legfelül mindig láthatóak.
+Beállítások elemei:
+- grafika (címke)
+    - teljesképernyős ki/be 
+    - felbontás: 3840x2160 / 2560x1440 / 1920x1080 / 1600x900 / 1366x768 / 1280x720 / 1024x768 / 800x600
+    - világosság 0-100% 
+- audió/nyelv (címke)
+    - nyelv Magyar/English
+    - főhangerő 0-100%
+    - zene hangerő 0-100%
+    - effekt hangerő 0-100%
+- segítség ki/be : kikapcsolja a felbukkanó segítő leírásokat és  kijelöléseket
+- kész gomb: visszavisz az előzőleg használt oldalra
+
+#### Játék UI:
+Álltalába statikus elemekből áll kevés részt takar ki a képernyőből.
+Játék UI elemei:
+- életerő csík 
+- éhségmérő csík 
+- józanságmérő csík 
+- beállítások ikon 
+    -mentés és kilépés főmenü/játék bezárása
+    -beállítások
+- óra: időt méri illetve az eltelt napokat
+- család ikon: megnyitja a család felugró ablakot amin a családtagok vannak és az ő éhségmérőjük
+
+### 11.2 Grafikai interfész
+- A 3D modellek és animációk Blenderben készülnek, majd `.glb` (GLTF 2.0) formátumban kerülnek exportálásra Godot-ba.
+- Az interfész itt az **asset export pipeline**: Blender → GLTF → Godot import rendszer.
+- Anyagok, UV térképek, animációcsatornák kompatibilitása biztosított.
+
+
+## 12. Alkalmazott szabványok  
+**Applicable Standards**
+
+A játékfejlesztés és üzemeltetés során az alábbi szabványokat és előírásokat vesszük figyelembe. A szabványokat két kategóriában ismertetjük: kötelezően alkalmazandó (jogszabályi vagy technikai előírások), illetve választható, de a fejlesztők által követett szabványok.
+
+### 12.1 Kötelezően alkalmazandó szabványok  
+**Mandatory Standards**
+
+- **Digitális hozzáférhetőségi irányelv (WAD - Web Accessibility Directive):**  
+  Amennyiben a játék tartalmaz webes felületet (pl. dokumentáció vagy beállítások online elérése), biztosítani kell a minimális akadálymentesítési előírások betartását.
+
+- **Szerzői jogi előírások:**  
+  A felhasznált grafikai, zenei vagy egyéb médiatartalmak esetén be kell tartani az adott licenceket (pl. CC-BY, MIT, GNU GPL).
+
+### 12.2 Választás alapján alkalmazott szabványok  
+**Optional Standards**
+
+- **Godot Engine GDScript Style Guide:**  
+  A fejlesztés során követjük a Godot által ajánlott kódolási stílusirányelveket a jobb olvashatóság és karbantarthatóság érdekében (pl. elnevezési konvenciók, indentálás, dokumentálás).
+
+- **Semantic Versioning (SemVer 2.0.0):**  
+  A projekt verziózására a szokásos `MAJOR.MINOR.PATCH` séma alkalmazása történik a GitHubon való egyértelmű kiadások érdekében.
+
+- **Markdown dokumentációs szabványok:**  
+  A projekt dokumentációja `.md` formátumban készül, egységes szintaxis és struktúra szerint (pl. címhierarchia, kódrészletek formázása).
+
+- **Open Design and Development Practices:**  
+  A fejlesztés nyílt forráskódú eszközökkel (Godot, Blender, GitHub) történik, az átláthatóság és közösségi bevonhatóság biztosítása céljából.
+
