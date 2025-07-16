@@ -596,3 +596,63 @@ A játékmechanika célja, hogy a játékos **napról napra meghozza a nehéz d�
 - Hogyan lavírozzon a hiánygazdaság és a család túlélése között
 
 > „A mindennapokban nem a hősiesség, hanem a jó döntés a legnagyobb fegyver.”
+
+# Játéklogika – kiegészítések
+
+Az alábbi pontosítások **felülírják / kiegészítik** a korábban leírt szabályokat.
+
+---
+
+## Alkohol–éhség szinergia
+
+| Változó | Jelölés | Hatás |
+|---------|---------|-------|
+| Alkoholszint | `alkohol` (0‑100) | 50 felett **negatív módosító** az ételekre |
+| Éhség | `ehseg` (0‑100) | 0 = halál |
+
+### Szabályok
+
+**Alkoholhatár (50) – „függőségi küszöb”**  
+   - Ha `alkohol` > 50, akkor az ételek **hatékonysága csökken**.  
+   - A csökkentés mértéke:  
+     \[
+     \text{módosító} = \frac{\,\text{alkohol} - 50\,}{3}
+     \]  
+     *Azaz 65‑ös alkoholnál a kaja 5 ponttal (15÷3) kevesebbet tölt az éhségből.*
+
+**Fokozódó kényszer**  
+   - Amint `alkohol` lecsökken **50‑re**, ott **„padlózik”**: magától nem megy 50 alá.  
+   - A küszöb ezután **egyre magasabbra tolódik**:
+     - Először 60 → 70 → 80 → 90.  
+     - Ha a játékos nem tartja a *következő* küszöböt, **stressz‑büntetést** kap, és az ételek még kevésbé hatnak (lásd 3.).
+
+**Stressz‑büntetés és éhségszankció**  
+   - Ha az aktuális „kötelező” szint alá esik az alkohol:  
+     - `stressz` azonnal +15  
+     - Az ételek **hatékonysága feleződik** a normál értékhez képest, amíg vissza nem éri a küszöböt.
+
+---
+
+## Időciklus finomítása
+
+### Napi főidő: **08:00 – 20:00**
+
+- **3 fő blokk** (délelőtt, délután, kora este) = *produktív idő*.  
+- Tevékenységek (munka, csere, vásárlás) ezeken belül zajlanak.
+
+### Szabadidő: **20:00 – lefekvés**
+
+- Szabadon etetés, beszélgetés, olvasás, iszogatás.
+- **Alváskezdés**: bármikor, de lásd alábbi szabályt.
+
+### Alvás–stressz kapcsolat
+
+| Alvással töltött idő | Hatás a következő nap reggelén |
+|----------------------|--------------------------------|
+| **≥ 7 óra**          | `stressz` ‑10 (pihent) |
+| 5–6,9 óra            | nincs változás |
+| **< 5 óra**          | `stressz` +15 (kimerült) |
+
+*Az alvás az alkoholszintet **nem** csökkenti tovább a küszöbnél.*
+
+---
