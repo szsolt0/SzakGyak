@@ -1,4 +1,4 @@
-# Projekt terv
+# Projekt Terv
 
 Gyakorlatvezető: Piller Imre
 
@@ -79,7 +79,7 @@ A játék gazdasága pénzszerzésre, cserekereskedelemre, valamint időszakosan
 kajajegyek használatára épül. A játékosnak döntenie kell, mire fordítja jövedelmét:
 ételre, stresszoldásra, családtagokra, vagy esetleg alkoholfogyasztásra.
 
-### Cserekereskedelem és hiánygazdaság
+### Cserekereskedelem és Hiánygazdaság
 
 A szocialista korszakra jellemző hiánygazdaságot a játék cserekereskedelmi lehetőségek
 és limitált elérhetőségű árucikkek formájában idézi meg. A játékos a feketepiacon, vagy
@@ -94,7 +94,7 @@ szituációk, amelyek során a játékosnak mérlegelnie kell: a könnyebb, de e
 
 ## Kockázatok és Büntetések
 
-### Lopás és következményei
+### Lopás és Következményei
 
 A játékosnak mindig lesz lehetősége lopásra, ám annak kockázata és következménye súlyos:
 

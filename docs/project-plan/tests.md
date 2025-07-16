@@ -1,8 +1,8 @@
-# Tesztelési követelmények
+# Tesztelési Követelmények
 
-## Funkcionális tesztek
+## Funkcionális Tesztek
 
-### Alapjáték mechanikák
+### Alapjáték Mechanikák
 
 -   Játékos állapotváltozások tesztelése (éhség, stressz, alkohol,
     reputáció)
@@ -21,7 +21,7 @@
     -   Irodai részleg (adminisztratív interakciók, ha van
         implementálva)
 
-### Interakciók és események
+### Interakciók és Események
 
 -   Véletlenszerű események aktiválása és változatai
 
