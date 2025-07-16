@@ -529,3 +529,70 @@ A játékos minden nap:
 A tervezés részét képezi a fizikai energia, pénz és morál egyensúlya.
 
 ---
+
+## Cserekereskedelem és hiánygazdaság
+
+- Az állami boltok kínálata **szűkös**, gyakran kiszámíthatatlan.
+- Cserekereskedelem zajlik ismerősök, árusok, „hátsó ajtós” karakterek révén.
+- Ritka tárgyakhoz (pl. gyógyszer, gyerekruha, babatápszer) csak kapcsolatokon vagy feketepiacon keresztül lehet hozzájutni.
+- A rendszer célja, hogy **bátorítsa a kockázatvállalást**, de magas áron.
+
+---
+
+## Események és morális dilemmák
+
+- Minden nap aktiválódhat egy vagy több **esemény**, amelyek szituációs döntések elé állítják a játékost:
+  - Munkahelyi: elhallgatni egy hibát, vagy feldobni egy kollégát
+  - Otthoni: családtagok kérései, krízisek
+  - Közösségi: párttag megfigyel, vagy valaki segítséget kér
+
+Ezek a döntések azonnali vagy hosszútávú következményekkel járnak:
+- Pozitív: plusz pénz, jó kapcsolat
+- Negatív: lebukás, stressz, haláleset
+
+---
+
+## Kockázat és következmény rendszer
+
+A játékban minden törvénytelen vagy etikailag szürke tett lebukással fenyeget.
+
+- **Első lebukás**:  
+  - Piotr börtönbe kerül néhány napra.  
+  - Nem tud dolgozni → nincs bevétel.  
+  - A család éhezik.  
+  - Reputáció nagyot zuhan.
+
+- **Második lebukás**:  
+  - Piotr a Gulágra kerül → ez egy alternatív játékszakasz.  
+  - Nincs visszaút, a cél innentől a puszta túlélés.  
+  - A család sorsa végérvényesen bizonytalanná válik.
+
+---
+
+## Végjáték és értékelés
+
+A játék 1988. decemberében indul, és **1989 nyaráig** tart.
+
+A végkifejlet függ:
+- Hány családtag él túl
+- Piotr mentális és fizikai állapotától
+- Reputáció és erkölcsi integritás szintjétől
+- Mennyi pénz és kapcsolat maradt
+
+Többféle befejezés lehetséges, az alábbi témák mentén:
+- Megmenekülés és újrakezdés
+- Családi tragédia
+- Morális bukás vagy megmaradás
+- Gulág-túlélés
+
+---
+
+## Összefoglalás
+
+A játékmechanika célja, hogy a játékos **napról napra meghozza a nehéz döntéseket**:
+
+- Hol dolgozzon, mikor pihenjen, mibe fektessen
+- Kockáztasson-e a túlélésért vagy maradjon erkölcsös
+- Hogyan lavírozzon a hiánygazdaság és a család túlélése között
+
+> „A mindennapokban nem a hősiesség, hanem a jó döntés a legnagyobb fegyver.”
