@@ -451,3 +451,81 @@ A történet az év végére fokozatosan eljut a **rendszerváltás hajnaláig**
 A történet személyes, keserédes, realista. Tele van *belső monológokkal*, *családi párbeszédekkel*, *utalásokkal a korszakra*, és azzal a soha ki nem mondott kérdéssel:
 
 > **„Megéri még becsületesnek lenni?”**
+
+# Játékmechanika – „Túlélés a Szocializmusban”
+
+## Alapmechanikák
+
+A játék egy túlélés-orientált, napokra bontott szimuláció, amely során a játékos – **Piotr** – egy fiktív szocialista országban próbálja eltartani családját, miközben a rendszer gazdasági és erkölcsi nyomása alatt lavírozik.
+
+A mechanikák célja, hogy folyamatos döntéskényszerbe helyezzék a játékost a következő területeken: **idő, erőforrás, morál, és kockázat**.
+
+---
+
+## Időkezelés és napi ciklus
+
+- A játék **napokra** van bontva.
+- Minden nap **reggeltől estig szabadon tervezhető**:
+  - A játékos **időblokkokban** dönthet arról, hogy mikor melyik munkahelyen dolgozik, mikor intéz otthoni feladatokat, mikor pihen vagy cserekereskedik.
+  - Egy nap több különböző tevékenységet is tartalmazhat (pl. délelőtt műhely, délután bolt, este csere).
+- A nap végén következik az **összegzés és állapotfrissítés**:
+  - Bevétel és kiadás összesítése
+  - Éhség, stressz, alkoholszint, reputáció frissítése
+  - Családtagok állapotának ellenőrzése
+  - Események aktiválása (esély alapú vagy szkriptelt)
+
+---
+
+## Munkahelyi interakciók
+
+### Autószerelő műhely (3D szegmens)
+- Interaktív szerelési feladatok (alkatrészcsere, hibakeresés, javítás).
+- Minden munkadarab több lépéses, hibázás vagy késés reputáció- és jövedelemvesztést okoz.
+- Lehetőség van **alkatrészek eltulajdonítására** vagy „kamu megoldásra”.
+- Túl hosszú vagy sietős munka → stressz nőhet.
+
+### Bolti eladó (2D szegmens)
+- Vásárlók kiszolgálása korlátozott kínálat mellett.
+- Kezelni kell a csereigényeket, váratlan kéréseket, feketepiacot.
+- Helytelen vagy elutasított interakció → bevétel-, reputáció- vagy hangulatsérülés.
+- Illegális eladásokkal kockáztatni lehet – több pénz, de lebukási esély.
+
+### Irodai munka *(tervezés alatt)*
+- Adminisztrációs jellegű feladatok, ismétlődő mini-játékok (adatbevitel, gépelés).
+- Jutalom: stabil jövedelem, alacsony fizikai megterhelés.
+- Döntések: információk eltussolása vagy továbbadása → extra haszon vagy veszély.
+
+---
+
+## Állapotmutatók (Statrendszer)
+
+A játékosnak és családtagjainak túlélése több mutatótól függ:
+
+- **Éhség** – Folyamatosan nő.  
+  - Ha **teljesen lemerül**, **Piotr vagy egy családtag meghal**.  
+  - Étkezésre időt és pénzt kell fordítani.
+- **Stressz** – Növekszik munka, események vagy konfliktusok hatására.  
+  - Magas szinten mentális problémákhoz vagy rossz döntésekhez vezethet.
+- **Alkoholfüggőség** – Alkohol csökkenti a stresszt, de rendszeres fogyasztás esetén kialakul a függőség.  
+  - Ez automatikus fogyasztást, reputációcsökkenést és munkaképesség-romlást okozhat.
+- **Reputáció** – A játékos társadalmi megítélése.  
+  - Befolyásolja, ki bízik benne, milyen lehetőségei lesznek, mekkora a lebukás esélye.
+
+**Családtagok** nem rendelkeznek saját mutatókkal, de az **éhségszintjük folyamatosan csökken**.  
+Ha nem jutnak megfelelő ellátáshoz, megbetegedhetnek vagy meghalhatnak.
+
+---
+
+## Erőforráskezelés és szabad döntések
+
+A játékos minden nap:
+- **szabadon osztja be idejét**: mikor, hol és mennyit dolgozik.
+- **önállóan dönt** arról, mire költi a megszerzett pénzt:
+  - Étel (saját és család számára kötelező)
+  - Stresszoldók (pl. alkohol)
+  - Illegális árucikkek (pl. gyógyszer, alkatrész)
+  - Spórolás (kevésbé biztonságos)
+
+A tervezés részét képezi a fizikai energia, pénz és morál egyensúlya.
+
+---
