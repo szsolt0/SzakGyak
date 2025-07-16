@@ -301,6 +301,16 @@ Játék UI elemei:
 - Az interfész itt az **asset export pipeline**: Blender → GLTF → Godot import rendszer.
 - Anyagok, UV térképek, animációcsatornák kompatibilitása biztosított.
 
+### Koncepciós rajzok
+
+Kezdőképernyő
+![kezdőképernyő](https://media.discordapp.net/attachments/1377672717758890106/1394996693308538890/Kezdokepernyo.PNG?ex=6878d769&is=687785e9&hm=025bfac1d35a0cb8cdefe135b01777a1b04cf06313577d2d011a803c9be8d748&=&format=webp&quality=lossless&width=1566&height=744)
+
+Beállítások
+![beállítások](https://media.discordapp.net/attachments/1377672717758890106/1394996694017642516/settings.png?ex=6878d769&is=687785e9&hm=1a4651ff468d3a80ce7c62f930c9eff9068e0626d52e19186ca728fc963ea28a&=&format=webp&quality=lossless&width=1047&height=744)
+
+Játék nézet
+![UI](https://cdn.discordapp.com/attachments/1377672717758890106/1392855010886291567/CAR.bmp?ex=68784d10&is=6876fb90&hm=bff6ee30679a0f87d5e27f4ce2ebea64577640435ab87b51568efa3078caefcb&)
 
 ## 12. Alkalmazott szabványok  
 **Applicable Standards**
