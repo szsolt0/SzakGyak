@@ -36,8 +36,8 @@ befolyásoló döntéseket. A napi ciklus struktúrája adja a játék ritmusát
 lehetőséget biztosít arra, hogy a játékos megtapasztalja a szocialista korszak
 mindennapi kihívásait.
 
-A napi események részletes működését a [Játékmenet](To be replaced with link) és
-a [Játékmechanika](To be replaced with link) szekciók ismertetik.
+A napi események részletes működését a [Játékmechanika](#jatekmechanika)
+szekció ismerteti.
 
 ### Autószerelő Minijáték
 
@@ -61,8 +61,8 @@ Tartósan gyenge teljesítmény vagy súlyos hibák (pl. balesethez vezető hib�
 javítás) akár az állás elvesztéséhez vagy a történet szerint munkatáborba
 ("gulágra") való küldéshez is vezethetnek.
 
-Erről részletesebben a [Játékmechanika](To be replaced with link) és a
-[Játékmenet](To be replaced with link) szekciókban olvashatunk.
+Erről részletesebben a [Játéktörténet](#jatektortenet) és a
+[Játékmechanika](#jatekmechanika) szekciókban olvashatunk.
 
 ### Bolt Minijáték
 
@@ -80,8 +80,8 @@ A játékos saját pénzéből vásárolhat egyszerű számológépet, amely seg
 nyújt a számításokhoz. Ez a funkció elsősorban azoknak szól, akik a játékot
 "vanilla" (külső eszköz nélküli) formában kívánják játszani.
 
-Erről részletesebben a [Játékmechanika](To be replaced with link) és a
-[Játékmenet](To be replaced with link) szekciókban olvashatunk.
+Erről részletesebben a [Játéktörténet](#jatektortenet) és a
+[Játékmechanika](#jatekmechanika) szekciókban olvashatunk.
 
 ### Beállítási Rendszer
 
@@ -122,9 +122,8 @@ figyelmeztetés a továbbiakban már nem jelenik meg.
 Ha egy beállítás hiányzik a fájlból, akkor automatikusan az alapértelmezett
 érték kerül alkalmazásra.
 
-A beállítások grafikus változatáról az [Interfészek](To be replaced with link)
-szekciókban olvashatunk. A `lang` változóban használt konvencióról pedig a
-[Alkalmazott szabványok](To be replaced with link) ad részletes leírást.
+A beállítások grafikus változatáról az [Interfészek](#interfeszek)
+szekcióban olvashatunk.
 
 ### Mentési Rendszer
 
@@ -141,30 +140,29 @@ is.
 - A játék kezelése intuitív, különösen azok számára, akik korábban játszottak
   már point-and-click stílusú játékokkal.
 
-- Gyengénlátók támogatása: A `readable` betűtípus-választás lehetőséget nyújt
-  azoknak a játékosoknak, akik számára a pixeles megjelenítés nehezen olvasható.
+- **Gyengénlátók támogatása:** A `readable` betűtípus-választás lehetőséget
+  nyújt azoknak a játékosoknak, akik számára a pixeles megjelenítés nehezen
+  olvasható.
 
-- Színvakok támogatása: A játékban a színalapú jelzéseket kiegészítő elemek is
-  segítik az értelmezést (pl. ikonok, szimbólumok), így minden információ
+- **Színvakok támogatása:** A játékban a színalapú jelzéseket kiegészítő elemek
+  is segítik az értelmezést (pl. ikonok, szimbólumok), így minden információ
   többcsatornásan is elérhető.
 
-- "Potato PC" kompatibilitás: A játék alacsony rendszerkövetelményeinek
+- **"Potato PC" kompatibilitás:** A játék alacsony rendszerkövetelményeinek
   köszönhetően régebbi vagy gyengébb teljesítményű gépeken is megfelelően fut.
 
-- Multiplatform támogatás: A játék natívan elérhető Linux és Windows
+- **Multiplatform támogatás:** A játék natívan elérhető Linux és Windows
   rendszerekre. macOS-re való portolása is könnyen megvalósítható, azonban a
   fejlesztői csapatban jelenleg nincs Apple géppel rendelkező tag.
 
-- Érzékeny tartalomra való figyelmeztetés: A játék egyes elemei érzelmileg
+- **Érzékeny tartalomra való figyelmeztetés:** A játék egyes elemei érzelmileg
   megterhelők lehetnek azok számára, akik személyesen vagy közvetetten
   érintettek voltak a szocialista rendszerben. A játék ezért a kezdés előtt
   figyelmeztetést jelenít meg, amelyet a játékosnak el kell fogadnia.
 
-## II.
+## Megbízhatóság (Reliability)
 
-### 5. Megbízhatóság (Reliability)
-
-A **„Túlélés a Szocializmusban”** célja, hogy stabil és megbízható játékélményt nyújtson minden felhasználói környezetben. A játék rendszeres mentési pontokat alkalmaz, így az esetleges hibák vagy megszakítások nem vezetnek adatvesztéshez. A hibaállóságot úgy terveztük, hogy a kritikus funkciók (pl. játékállás mentése, döntéslogika, erőforrás-kezelés) minden körülmények között konzisztensen működjenek.
+A **"Túlélés a Szocializmusban"** célja, hogy stabil és megbízható játékélményt nyújtson minden felhasználói környezetben. A játék rendszeres mentési pontokat alkalmaz, így az esetleges hibák vagy megszakítások nem vezetnek adatvesztéshez. A hibaállóságot úgy terveztük, hogy a kritikus funkciók (pl. játékállás mentése, döntéslogika, erőforrás-kezelés) minden körülmények között konzisztensen működjenek.
 
 A tesztelés során kiemelt figyelmet kapnak:
 
@@ -172,7 +170,7 @@ A tesztelés során kiemelt figyelmet kapnak:
 - a döntési útvonalak következetessége,
 - a szkriptelt események stabilitása.
 
-### 6. Teljesítmény (Performance)
+## Teljesítmény (Performance)
 
 A játék célja, hogy széles körű hardverkonfigurációkon is zökkenőmentesen fusson, különösen mivel az oktatási vagy alacsonyabb erőforrású környezetek is potenciális célcsoportot jelentenek.
 
@@ -183,7 +181,7 @@ Fontos teljesítménykritériumok:
 - Alacsony memóriahasználat: optimalizált assetek, háttérben futó folyamatok minimalizálása
 - Támogatás 16:9 és 4:3 képarányokra, valamint különböző felbontásokra
 
-### 7. Támogatottság (Supportability)
+## Támogatottság (Supportability)
 
 A játék fejlesztése során szem előtt tartjuk a hosszú távú karbantarthatóságot és a könnyű hibajavítást.
 
@@ -194,7 +192,7 @@ Támogatottsági irányelvek:
 - Hibajelentési lehetőség: beépített funkció vagy külső platformon (pl. GitHub Issues vagy e-mailes forma)
 - Dokumentált API-k és eseménykezelések a fejlesztők és modkészítők számára
 
-### 8. Tervezési korlátozások (Design Constraints)
+## Tervezési Korlátozások (Design Constraints)
 
 A játék tervezése során számos korlátozást kellett figyelembe venni, amelyek befolyásolták a végső megvalósítást:
 
@@ -205,34 +203,34 @@ A játék tervezése során számos korlátozást kellett figyelembe venni, amel
 - **Erőforráskorlátok**: A fejlesztés során kis csapat dolgozik a játékon, így a technikai megvalósítások és tartalombővítések reálisan tervezettek.
 
 
-## A játék súgórendszere
+## A Játék Súgórendszere
 
-A játék különféle módokon nyújt segítséget a felhasználó számára, hogy teljes mértékben elsajátíthassa a különböző funkciókat.  
-Az első napon mindenre kiterjedő eszközökkel támogatjuk a játékos előrehaladását.  
-A játék funkcióit egyszerű és könnyen megjegyezhető módon implementáljuk.  
-A játék funkcióit és minijátékait a játékos dinamikusan ismeri meg, ami megkönnyíti azok megjegyzését.  
-A játékos nem kap egyszerre túl sok információt – a funkciókat fokozatosan ismeri meg.  
+A játék különféle módokon nyújt segítséget a felhasználó számára, hogy teljes mértékben elsajátíthassa a különböző funkciókat.
+Az első napon mindenre kiterjedő eszközökkel támogatjuk a játékos előrehaladását.
+A játék funkcióit egyszerű és könnyen megjegyezhető módon implementáljuk.
+A játék funkcióit és minijátékait a játékos dinamikusan ismeri meg, ami megkönnyíti azok megjegyzését.
+A játékos nem kap egyszerre túl sok információt – a funkciókat fokozatosan ismeri meg.
 Ez a fokozatosság hozzájárul a hatékonyabb tanuláshoz és a pozitív játékélményhez.
 
 
-### Használt eszközök
+### Használt Eszközök
 
-- **Szövegbuborék**  
+- **Szövegbuborék**
   A játék első napján megjelenő tájékoztató eszköz, amely lényegesebb és bővebb információk átadására szolgál. Ezt a segédeszközt a játékos bármikor kikapcsolhatja a beálításoknál.
-  Magyarázó jelleggel, röviden leírja az adott funkció célját és működését.  
+  Magyarázó jelleggel, röviden leírja az adott funkció célját és működését.
   Az új funkciók megjelenésekor is felbukkannak.
 
-- **Kiemelés**  
-  Vizuálisan kiemeli az éppen bemutatott grafikai elemeket (pl. gombokat, paneleket).  
-  Egyértelműen megmutatja, mire kattinthat a játékos vagy mit kell megfigyelnie. 
+- **Kiemelés**
+  Vizuálisan kiemeli az éppen bemutatott grafikai elemeket (pl. gombokat, paneleket).
+  Egyértelműen megmutatja, mire kattinthat a játékos vagy mit kell megfigyelnie.
 
-- **Leírás**  
-  Rövid, állandó szöveges jelölések, amelyek a bonyolultabb funkciókat néhány szóban megnevezik.  
-  Ezek nem részletes magyarázatok, hanem gyors beazonosítást segítő címkék.  
+- **Leírás**
+  Rövid, állandó szöveges jelölések, amelyek a bonyolultabb funkciókat néhány szóban megnevezik.
+  Ezek nem részletes magyarázatok, hanem gyors beazonosítást segítő címkék.
   Például egy gomb fölött megjelenő statikus címke.
 
 
-## Felhasznált kész komponensek
+## Felhasznált Kész Komponensek
 
 A játék megalkotásakor törekszünk az egyediségre.
 
@@ -240,42 +238,46 @@ A projekt keretében nem használunk előre elkészített, külső kész kompone
 
 Ugyanakkor a fejlesztés során különféle generatív mesterséges intelligencia eszközök támogatják a munkát, különösen a következő területeken:
 
-- **Textúrák és vizuális elemek előállítása:**  
+- **Textúrák és vizuális elemek előállítása:**
   Alap textúrák és mintaelemek generálása AI-modellek (pl. DeepSeek, DALL·E) segítségével történik. Ezeket a tartalmakat a csapat tovább szerkeszti, hogy megfeleljenek a játékon belüli stílusnak és technikai követelményeknek.
 
-- **Dokumentációs vázlatok és technikai szövegek előállítása:**  
+- **Dokumentációs vázlatok és technikai szövegek előállítása:**
   A projekt dokumentációjának bizonyos részei (pl. struktúra, megfogalmazás) generatív nyelvi modellek (pl. ChatGPT) segítségével készültek, majd manuálisan átnézésre és szerkesztésre kerültek.
 
-- **Kódötletek és algoritmiai javaslatok:**  
+- **Kódötletek és algoritmiai javaslatok:**
   A játék bizonyos algoritmusainak (pl. alap mesterséges intelligencia logika, játékmenet prototípus) megtervezését nyelvi modellek (ChatGPT, DeepSeek Code) inspirálták, de minden végső megvalósítás saját fejlesztés.
 
 Fontos megjegyezni, hogy minden AI által generált tartalom utólagos ellenőrzésen és testreszabáson megy keresztül, így a végső termék teljes mértékben megfelel a projekt minőségi és jogi elvárásainak.
 
 
-## 11. Interfészek
+## Interfészek
 
 A játék stílusa szovjet propaganda szerű karikatúra. a navigálás a menüpontok illetve minden más részén a játéknak az egérrel valósul meg
 A projekt során az alábbi interfészeket használjuk a különböző komponensek és rendszerek közötti együttműködés biztosítására:
 
-### 11.1 Felhasználói interfész (UI)
+### Felhasználói Interfész (UI)
+
 - A játék felhasználói felülete Godot-ban kerül kialakításra, jellemzően `Control` típusú node-okkal.
 - A UI tartalmazza: főmenü, beállítások menü, játék közbeni HUD (élet, stressz, stb.), játék végi képernyő.
 - Felhasználóbarát elrendezés, egér- és billentyűzet/touch kompatibilitás.
 
-#### Főmenü UI:
+#### Főmenü UI
+
 Egyszerű minimalisztikus statikus hátérkép itt csak gombok találhatóak amik stílushoz megfelelően textúrázottak.
 Főmenü gombjai:
 - beállítások: beállítások menüpontra navigál
 - új játék: elindítja az új játékot (az elejéről)
-- játék folytatása: betölti az előző mentést 
+- játék folytatása: betölti az előző mentést
 
-#### Beállítások UI:
+#### Beállítások UI
+
 Átlátható, (egyszerű háttér) címkék alatt találhatók a megfelelő beállítások amik csúszkák illetve több opciós kiválasztható dobozok. A címkék közül egyszerre egy választható és csak annak a beállításai jelennek meg. A címkék legfelül mindig láthatóak.
 Beállítások elemei:
+
 - grafika (címke)
-    - teljesképernyős ki/be 
+    - teljesképernyős ki/be
     - felbontás: 3840x2160 / 2560x1440 / 1920x1080 / 1600x900 / 1366x768 / 1280x720 / 1024x768 / 800x600
-    - világosság 0-100% 
+    - világosság 0-100%
 - audió/nyelv (címke)
     - nyelv Magyar/English
     - főhangerő 0-100%
@@ -284,24 +286,27 @@ Beállítások elemei:
 - segítség ki/be : kikapcsolja a felbukkanó segítő leírásokat és  kijelöléseket
 - kész gomb: visszavisz az előzőleg használt oldalra
 
-#### Játék UI:
+#### Játék UI
+
 Álltalába statikus elemekből áll kevés részt takar ki a képernyőből.
 Játék UI elemei:
-- életerő csík 
-- éhségmérő csík 
-- józanságmérő csík 
-- beállítások ikon 
-    -mentés és kilépés főmenü/játék bezárása
-    -beállítások
+
+- életerő csík
+- éhségmérő csík
+- józanságmérő csík
+- beállítások ikon
+    - mentés és kilépés főmenü/játék bezárása
+    - beállítások
 - óra: időt méri illetve az eltelt napokat
 - család ikon: megnyitja a család felugró ablakot amin a családtagok vannak és az ő éhségmérőjük
 
-### 11.2 Grafikai interfész
+### Grafikai Interfész
+
 - A 3D modellek és animációk Blenderben készülnek, majd `.glb` (GLTF 2.0) formátumban kerülnek exportálásra Godot-ba.
 - Az interfész itt az **asset export pipeline**: Blender → GLTF → Godot import rendszer.
 - Anyagok, UV térképek, animációcsatornák kompatibilitása biztosított.
 
-### Koncepciós rajzok
+### Koncepciós Rajzok
 
 Kezdőképernyő
 ![kezdőképernyő](https://media.discordapp.net/attachments/1377672717758890106/1394996693308538890/Kezdokepernyo.PNG?ex=6878d769&is=687785e9&hm=025bfac1d35a0cb8cdefe135b01777a1b04cf06313577d2d011a803c9be8d748&=&format=webp&quality=lossless&width=1566&height=744)
@@ -312,67 +317,64 @@ Beállítások
 Játék nézet
 ![UI](https://cdn.discordapp.com/attachments/1377672717758890106/1392855010886291567/CAR.bmp?ex=68784d10&is=6876fb90&hm=bff6ee30679a0f87d5e27f4ce2ebea64577640435ab87b51568efa3078caefcb&)
 
-## 12. Alkalmazott szabványok  
+## Alkalmazott Szabványok
+
 **Applicable Standards**
 
 A játékfejlesztés és üzemeltetés során az alábbi szabványokat és előírásokat vesszük figyelembe. A szabványokat két kategóriában ismertetjük: kötelezően alkalmazandó (jogszabályi vagy technikai előírások), illetve választható, de a fejlesztők által követett szabványok.
 
-### 12.1 Kötelezően alkalmazandó szabványok  
+### Kötelezően Alkalmazandó Szabványok
+
 **Mandatory Standards**
 
-- **Digitális hozzáférhetőségi irányelv (WAD - Web Accessibility Directive):**  
+- **Digitális hozzáférhetőségi irányelv (WAD - Web Accessibility Directive):**
   Amennyiben a játék tartalmaz webes felületet (pl. dokumentáció vagy beállítások online elérése), biztosítani kell a minimális akadálymentesítési előírások betartását.
 
-- **Szerzői jogi előírások:**  
+- **Szerzői jogi előírások:**
   A felhasznált grafikai, zenei vagy egyéb médiatartalmak esetén be kell tartani az adott licenceket (pl. CC-BY, MIT, GNU GPL).
 
-### 12.2 Választás alapján alkalmazott szabványok  
+### Választás Alapján Alkalmazott Szabványok
+
 **Optional Standards**
 
-- **Godot Engine GDScript Style Guide:**  
+- **Godot Engine GDScript Style Guide:**
   A fejlesztés során követjük a Godot által ajánlott kódolási stílusirányelveket a jobb olvashatóság és karbantarthatóság érdekében (pl. elnevezési konvenciók, indentálás, dokumentálás).
 
-- **Semantic Versioning (SemVer 2.0.0):**  
+- **Semantic Versioning (SemVer 2.0.0):**
   A projekt verziózására a szokásos `MAJOR.MINOR.PATCH` séma alkalmazása történik a GitHubon való egyértelmű kiadások érdekében.
 
-- **Markdown dokumentációs szabványok:**  
+- **Markdown dokumentációs szabványok:**
   A projekt dokumentációja `.md` formátumban készül, egységes szintaxis és struktúra szerint (pl. címhierarchia, kódrészletek formázása).
 
-- **Open Design and Development Practices:**  
+- **Open Design and Development Practices:**
   A fejlesztés nyílt forráskódú eszközökkel (Godot, Blender, GitHub) történik, az átláthatóság és közösségi bevonhatóság biztosítása céljából.
 
-# Játéktörténet – „Túlélés a Szocializmusban”
+## Játéktörténet
 
-## Cím: „Piotr naplója – Egy család a holnap küszöbén”**
+### Cím: "Piotr naplója – Egy család a holnap küszöbén"
 
-**Időpont:** 1988. december  
+**Időpont:** 1988. december
 **Helyszín:** Egy fiktív kelet-európai szocialista állam nagyvárosának külvárosi lakótelepe
 
----
-
-## Alaptörténet
+### Alaptörténet
 
 A történet főhőse **Piotr**, egy negyvenes éveiben járó családfő, aki feleségével, **Mihalinával**, és három gyermekével – **Gustav** (11), **Matka** (7) és **Vilen** (fél éves) – próbál túlélni a szocialista rendszer összeomlásának küszöbén.
 
 A háztartás egy apró, penészes panellakásban tengődik a hónapról hónapra egyre súlyosabbá váló hiánygazdaságban. A fűtés akadozik, a kenyérjegy már csak lisztre elég, és a legfontosabb gyógyszerek is eltűntek a patikákból. A gyerekek betegeskednek, Mihalina egyre fáradtabb. Piotr vállán nyugszik minden: a jövő, a napi megélhetés, a döntések súlya – és a lelkiismeret.
 
----
-
-## Munkák és a mindennapok
+### Munkák és a Mindennapok
 
 Piotr többféle munkát is vállalhat – néha párhuzamosan is –, hogy biztosítsa a család túlélését. Mindegyik munkatípus másképp hat az életére:
 
----
+### Autószerelő Műhely – "Féken tartott életek"
 
-### Autószerelő műhely – „Féken tartott életek”
+Egy állami tulajdonban lévő, lepusztult autószerelő műhelyben dolgozik, ahol keleti blokkos Zsigulik, Wartburgok és Trabantok sorakoznak javításra. Itt naponta **fizikai munkát végez**, hosszú órákon át szerel, gyakran feketén csempész be alkatrészeket vagy "megbütyköz" egy-egy javítást.
 
-Egy állami tulajdonban lévő, lepusztult autószerelő műhelyben dolgozik, ahol keleti blokkos Zsigulik, Wartburgok és Trabantok sorakoznak javításra. Itt naponta **fizikai munkát végez**, hosszú órákon át szerel, gyakran feketén csempész be alkatrészeket vagy „megbütyköz” egy-egy javítást.
+- A fizetés kiszámíthatatlan.
+- Ha hibázik, **büntetést vonhat maga után**, de néha lopott alkatrészekből is lehet pénzt csinálni – ha nem bukik le.
+- A brigádban gyakoriak a konfliktusok, de egyben a legnagyobb az "összetartás".
 
-- A fizetés kiszámíthatatlan.  
-- Ha hibázik, **büntetést vonhat maga után**, de néha lopott alkatrészekből is lehet pénzt csinálni – ha nem bukik le.  
-- A brigádban gyakoriak a konfliktusok, de egyben a legnagyobb az „összetartás”.
-
-#### Játékmenet:
+#### Játékmenet
 
 - **2D-s tér**, amelyben **a kocsi 3D-ben, ortogonálisan jelenik meg**, a játékos **forgathatja a járművet**.
 - A **hibák felderítéséhez műszereket kell használni**, majd szerszámokkal lehet javítani – mindkettő **időigényes folyamat**.
@@ -380,224 +382,205 @@ Egy állami tulajdonban lévő, lepusztult autószerelő műhelyben dolgozik, ah
 - **Ha a javítás nem készül el időben**, a fizetés jelentősen csökken.
 - A precizitás és gyorsaság egyensúlya kulcsfontosságú.
 
----
+### Bolti Eladó – "Polcok és pletykák"
 
-### Bolti eladó – „Polcok és pletykák”
+Részmunkaidőben a helyi közértnél is besegít. Az állandó sorban állás miatt a vevők frusztráltak, az árukészlet nevetségesen szegényes, és minden második ügyfél **valami "külön" dolgot kér** – háttéralkuk, rejtett kérések, és gyakran **cserekereskedelem** jellemzi a boltot.
 
-Részmunkaidőben a helyi közértnél is besegít. Az állandó sorban állás miatt a vevők frusztráltak, az árukészlet nevetségesen szegényes, és minden második ügyfél **valami „külön” dolgot kér** – háttéralkuk, rejtett kérések, és gyakran **cserekereskedelem** jellemzi a boltot.
-
-- A bolt lehetőséget kínál feketepiaci kapcsolatok kiépítésére.  
-- A reputáció itt kulcsfontosságú – ha Piotr lebukik csúszópénz elfogadásánál, az állását és a lakását is elveszítheti.  
+- A bolt lehetőséget kínál feketepiaci kapcsolatok kiépítésére.
+- A reputáció itt kulcsfontosságú – ha Piotr lebukik csúszópénz elfogadásánál, az állását és a lakását is elveszítheti.
 - Mihalina néha segít be adminisztratív munkában, de gyerekek mellett ez ritka.
 
-#### Játékmenet:
+#### Játékmenet
 
 - **2D-s tér**, ahol a kamera **a pult mögül néz előre**.
 - A vásárlók **balról jobbra** érkeznek a boltba.
 - Vásárlók **elmondják mit kérnek**, a játékos a kézikönyv alapján **meghatározza az árakat** és **fejben kiszámolja** az összeget.
 - Fizetés után:
-  - **Megnyitjuk a pénztárgépet**, betesszük a pénzt.
-  - A játék **automatikusan kiszámolja a visszajárót**, amit átadunk.
-  - **Bezárjuk a kasszát**.
+    - **Megnyitjuk a pénztárgépet**, betesszük a pénzt.
+    - A játék **automatikusan kiszámolja a visszajárót**, amit átadunk.
+    - **Bezárjuk a kasszát**.
 - **Hibás visszajáró**:
-  - Ha **többet adunk**, a vevő nem szól, de **a nap végén levonás jár**, és **a reputáció is csökken**.
-  - Ha **kevesebbet adunk**, a vevő reklamál – **súlyos reputációvesztés** jár.
+    - Ha **többet adunk**, a vevő nem szól, de **a nap végén levonás jár**, és **a reputáció is csökken**.
+    - Ha **kevesebbet adunk**, a vevő reklamál – **súlyos reputációvesztés** jár.
 
----
 
-### Irodai munka – „Tollak és titkok” *(tervezett vagy későbbi szakasz)*
+### Irodai Munka – "Tollak és titkok" (Tervezett vagy Későbbi Szakasz)
 
 Később lehetőség nyílik egy irodai munkára a pártbizottság egyik osztályán – statisztikai feldolgozás, aktatologatás, jelentések gépelése. A munka monoton, de stabil. Ugyanakkor **kompromittáló információk** is átfolynak Piotr kezei között: nevekről, lejelentésekről, megfigyelésekről.
 
-- A fizetés jobb, a stressz más jellegű.  
+- A fizetés jobb, a stressz más jellegű.
 - A munkából származó adatokkal vissza is lehet élni – ha Piotr elad infókat, gyorsan sok pénzhez juthat, de nagy kockázattal.
 
-#### Játékmenet:
+#### Játékmenet
 
 - **2D-s tér**, ahol **az asztalt és dokumentumokat** látjuk felülnézetből.
 - A játékosnak **hibákat kell keresnie**:
-  - **Szöveges dokumentumokban elgépelések**, hamis adatok.
-  - **Személyi aktákban hibás betűk vagy dátumok**.
+    - **Szöveges dokumentumokban elgépelések**, hamis adatok.
+    - **Személyi aktákban hibás betűk vagy dátumok**.
 - Bizonyos dokumentumokat **ki lehet szivárogtatni**, ezért:
-  - Jutalom (pénz, árucikk, információ).
-  - **Ha lebukik**, súlyos reputációvesztés, akár teljes ellehetetlenülés.
+    - Jutalom (pénz, árucikk, információ).
+    - **Ha lebukik**, súlyos reputációvesztés, akár teljes ellehetetlenülés.
 
----
-
-## A mindennapi dráma
+### A Mindennapi Dráma
 
 A munkahelyeken túl a történet mélyebb rétegeiben az igazi tét: **együtt marad-e a család**, és **megélik-e a rendszerváltást?** A történet során gyakran kerül sor morális döntésekre:
 
-- Érdemes-e elcsenni egy olajszűrőt a műhelyből, ha abból tejpor vehető Vilennek?  
-- El lehet-e adni a boltból egy doboz szardíniát a feketepiacon, ha abból gyógyszert lehet venni Gustav lázára?  
-- Megéri-e „jelenteni” egy kollégát a pártirodán, ha abból előléptetés származik – vagy túl nagy a lelki ára?
+- Érdemes-e elcsenni egy olajszűrőt a műhelyből, ha abból tejpor vehető Vilennek?
+- El lehet-e adni a boltból egy doboz szardíniát a feketepiacon, ha abból gyógyszert lehet venni Gustav lázára?
+- Megéri-e "jelenteni" egy kollégát a pártirodán, ha abból előléptetés származik – vagy túl nagy a lelki ára?
 
 A rendszer fojtogató, és **a játék lényege nem az, hogy hős legyen a játékos, hanem hogy ne törjön meg teljesen.**
 
----
-
-## Narratív csúcspontok és zárások
+### Narratív Csúcspontok és Zárások
 
 A történet az év végére fokozatosan eljut a **rendszerváltás hajnaláig**: tüntetések kezdődnek, új pártok alakulnak, a vezetés meginog. A játékban ezek **háttérként** jelennek meg – a fő fókusz mindig a családon és a hétköznapi emberek döntésein van.
 
-### Lehetséges végkimenetelek:
+### Lehetséges Végkimenetelek
 
-- **Túlélés együtt:**  
+- **Túlélés együtt:**
   A család minden tagja megéri a rendszerváltást. A jövő bizonytalan, de szabadabb.
 
-- **Széthullás:**  
+- **Széthullás:**
   Egy vagy több családtag elvész – éhség, betegség, börtön miatt.
 
-- **Korrumpálódás:**  
+- **Korrumpálódás:**
   A túlélés sikerül, de morálisan megkérdőjelezhető úton.
 
-- **Piotr bukása:**  
+- **Piotr bukása:**
   Lebukik, Gulágra kerül – a játék új szintre vált, ahol már csak egy cél van: nem meghalni.
 
----
-
-## Hangvétel és stílus
+### Hangvétel és Stílus
 
 A történet személyes, keserédes, realista. Tele van *belső monológokkal*, *családi párbeszédekkel*, *utalásokkal a korszakra*, és azzal a soha ki nem mondott kérdéssel:
 
-> **„Megéri még becsületesnek lenni?”**
+> **"Megéri még becsületesnek lenni?"**
 
-# Játékmechanika – „Túlélés a Szocializmusban”
+## Játékmechanika
 
-## Alapmechanikák
+### Alapmechanikák
 
 A játék egy túlélés-orientált, napokra bontott szimuláció, amely során a játékos – **Piotr** – egy fiktív szocialista országban próbálja eltartani családját, miközben a rendszer gazdasági és erkölcsi nyomása alatt lavírozik.
 
 A mechanikák célja, hogy folyamatos döntéskényszerbe helyezzék a játékost a következő területeken: **idő, erőforrás, morál, és kockázat**.
 
----
-
-## Időkezelés és napi ciklus
+### Időkezelés és Napi Ciklus
 
 - A játék **napokra** van bontva.
 - Minden nap **reggeltől estig szabadon tervezhető**:
-  - A játékos **időblokkokban** dönthet arról, hogy mikor melyik munkahelyen dolgozik, mikor intéz otthoni feladatokat, mikor pihen vagy cserekereskedik.
-  - Egy nap több különböző tevékenységet is tartalmazhat (pl. délelőtt műhely, délután bolt, este csere).
+    - A játékos **időblokkokban** dönthet arról, hogy mikor melyik munkahelyen dolgozik, mikor intéz otthoni feladatokat, mikor pihen vagy cserekereskedik.
+    - Egy nap több különböző tevékenységet is tartalmazhat (pl. délelőtt műhely, délután bolt, este csere).
 - A nap végén következik az **összegzés és állapotfrissítés**:
-  - Bevétel és kiadás összesítése
-  - Éhség, stressz, alkoholszint, reputáció frissítése
-  - Családtagok állapotának ellenőrzése
-  - Események aktiválása (esély alapú vagy szkriptelt)
+    - Bevétel és kiadás összesítése
+    - Éhség, stressz, alkoholszint, reputáció frissítése
+    - Családtagok állapotának ellenőrzése
+    - Események aktiválása (esély alapú vagy szkriptelt)
 
----
+### Munkahelyi Interakciók
 
-## Munkahelyi interakciók
+#### Autószerelő Műhely (3D Szegmens)
 
-### Autószerelő műhely (3D szegmens)
 - Interaktív szerelési feladatok (alkatrészcsere, hibakeresés, javítás).
 - Minden munkadarab több lépéses, hibázás vagy késés reputáció- és jövedelemvesztést okoz.
-- Lehetőség van **alkatrészek eltulajdonítására** vagy „kamu megoldásra”.
+- Lehetőség van **alkatrészek eltulajdonítására** vagy "kamu megoldásra".
 - Túl hosszú vagy sietős munka → stressz nőhet.
 
-### Bolti eladó (2D szegmens)
+#### Bolti Eladó (2D Szegmens)
+
 - Vásárlók kiszolgálása korlátozott kínálat mellett.
 - Kezelni kell a csereigényeket, váratlan kéréseket, feketepiacot.
 - Helytelen vagy elutasított interakció → bevétel-, reputáció- vagy hangulatsérülés.
 - Illegális eladásokkal kockáztatni lehet – több pénz, de lebukási esély.
 
-### Irodai munka *(tervezés alatt)*
+#### Irodai munka (Tervezés Alatt)
+
 - Adminisztrációs jellegű feladatok, ismétlődő mini-játékok (adatbevitel, gépelés).
 - Jutalom: stabil jövedelem, alacsony fizikai megterhelés.
 - Döntések: információk eltussolása vagy továbbadása → extra haszon vagy veszély.
 
----
-
-## Állapotmutatók (Statrendszer)
+### Állapotmutatók (Statrendszer)
 
 A játékosnak és családtagjainak túlélése több mutatótól függ:
 
-- **Éhség** – Folyamatosan nő.  
-  - Ha **teljesen lemerül**, **Piotr vagy egy családtag meghal**.  
-  - Étkezésre időt és pénzt kell fordítani.
-- **Stressz** – Növekszik munka, események vagy konfliktusok hatására.  
-  - Magas szinten mentális problémákhoz vagy rossz döntésekhez vezethet.
-- **Alkoholfüggőség** – Alkohol csökkenti a stresszt, de rendszeres fogyasztás esetén kialakul a függőség.  
-  - Ez automatikus fogyasztást, reputációcsökkenést és munkaképesség-romlást okozhat.
-- **Reputáció** – A játékos társadalmi megítélése.  
-  - Befolyásolja, ki bízik benne, milyen lehetőségei lesznek, mekkora a lebukás esélye.
+- **Éhség** – Folyamatosan nő.
+    - Ha **teljesen lemerül**, **Piotr vagy egy családtag meghal**.
+    - Étkezésre időt és pénzt kell fordítani.
+- **Stressz** – Növekszik munka, események vagy konfliktusok hatására.
+    - Magas szinten mentális problémákhoz vagy rossz döntésekhez vezethet.
+- **Alkoholfüggőség** – Alkohol csökkenti a stresszt, de rendszeres fogyasztás esetén kialakul a függőség.
+    - Ez automatikus fogyasztást, reputációcsökkenést és munkaképesség-romlást okozhat.
+- **Reputáció** – A játékos társadalmi megítélése.
+    - Befolyásolja, ki bízik benne, milyen lehetőségei lesznek, mekkora a lebukás esélye.
 
-**Családtagok** nem rendelkeznek saját mutatókkal, de az **éhségszintjük folyamatosan csökken**.  
+**Családtagok** nem rendelkeznek saját mutatókkal, de az **éhségszintjük folyamatosan csökken**.
 Ha nem jutnak megfelelő ellátáshoz, megbetegedhetnek vagy meghalhatnak.
 
----
-
-## Erőforráskezelés és szabad döntések
+### Erőforráskezelés és Szabad Döntések
 
 A játékos minden nap:
+
 - **szabadon osztja be idejét**: mikor, hol és mennyit dolgozik.
 - **önállóan dönt** arról, mire költi a megszerzett pénzt:
-  - Étel (saját és család számára kötelező)
-  - Stresszoldók (pl. alkohol)
-  - Illegális árucikkek (pl. gyógyszer, alkatrész)
-  - Spórolás (kevésbé biztonságos)
+    - Étel (saját és család számára kötelező)
+    - Stresszoldók (pl. alkohol)
+    - Illegális árucikkek (pl. gyógyszer, alkatrész)
+    - Spórolás (kevésbé biztonságos)
 
 A tervezés részét képezi a fizikai energia, pénz és morál egyensúlya.
 
----
-
-## Cserekereskedelem és hiánygazdaság
+### Cserekereskedelem és Hiánygazdaság
 
 - Az állami boltok kínálata **szűkös**, gyakran kiszámíthatatlan.
-- Cserekereskedelem zajlik ismerősök, árusok, „hátsó ajtós” karakterek révén.
+- Cserekereskedelem zajlik ismerősök, árusok, "hátsó ajtós" karakterek révén.
 - Ritka tárgyakhoz (pl. gyógyszer, gyerekruha, babatápszer) csak kapcsolatokon vagy feketepiacon keresztül lehet hozzájutni.
 - A rendszer célja, hogy **bátorítsa a kockázatvállalást**, de magas áron.
 
----
+### Események és Morális Dilemmák
 
-## Események és morális dilemmák
+Minden nap aktiválódhat egy vagy több **esemény**, amelyek szituációs döntések elé állítják a játékost:
 
-- Minden nap aktiválódhat egy vagy több **esemény**, amelyek szituációs döntések elé állítják a játékost:
-  - Munkahelyi: elhallgatni egy hibát, vagy feldobni egy kollégát
-  - Otthoni: családtagok kérései, krízisek
-  - Közösségi: párttag megfigyel, vagy valaki segítséget kér
+- Munkahelyi: elhallgatni egy hibát, vagy feldobni egy kollégát
+- Otthoni: családtagok kérései, krízisek
+- Közösségi: párttag megfigyel, vagy valaki segítséget kér
 
 Ezek a döntések azonnali vagy hosszútávú következményekkel járnak:
+
 - Pozitív: plusz pénz, jó kapcsolat
 - Negatív: lebukás, stressz, haláleset
 
----
-
-## Kockázat és következmény rendszer
+### Kockázat és Következmény Rendszer
 
 A játékban minden törvénytelen vagy etikailag szürke tett lebukással fenyeget.
 
-- **Első lebukás**:  
-  - Piotr börtönbe kerül néhány napra.  
-  - Nem tud dolgozni → nincs bevétel.  
-  - A család éhezik.  
-  - Reputáció nagyot zuhan.
+- **Első lebukás**:
+    - Piotr börtönbe kerül néhány napra.
+    - Nem tud dolgozni → nincs bevétel.
+    - A család éhezik.
+    - Reputáció nagyot zuhan.
 
-- **Második lebukás**:  
-  - Piotr a Gulágra kerül → ez egy alternatív játékszakasz.  
-  - Nincs visszaút, a cél innentől a puszta túlélés.  
-  - A család sorsa végérvényesen bizonytalanná válik.
+- **Második lebukás**:
+    - Piotr a Gulágra kerül → ez egy alternatív játékszakasz.
+    - Nincs visszaút, a cél innentől a puszta túlélés.
+    - A család sorsa végérvényesen bizonytalanná válik.
 
----
-
-## Végjáték és értékelés
+### Végjáték és Értékelés
 
 A játék 1988. decemberében indul, és **1989 nyaráig** tart.
 
 A végkifejlet függ:
+
 - Hány családtag él túl
 - Piotr mentális és fizikai állapotától
 - Reputáció és erkölcsi integritás szintjétől
 - Mennyi pénz és kapcsolat maradt
 
 Többféle befejezés lehetséges, az alábbi témák mentén:
+
 - Megmenekülés és újrakezdés
 - Családi tragédia
 - Morális bukás vagy megmaradás
 - Gulág-túlélés
 
----
-
-## Összefoglalás
+### Összefoglalás
 
 A játékmechanika célja, hogy a játékos **napról napra meghozza a nehéz döntéseket**:
 
@@ -605,57 +588,51 @@ A játékmechanika célja, hogy a játékos **napról napra meghozza a nehéz d�
 - Kockáztasson-e a túlélésért vagy maradjon erkölcsös
 - Hogyan lavírozzon a hiánygazdaság és a család túlélése között
 
-> „A mindennapokban nem a hősiesség, hanem a jó döntés a legnagyobb fegyver.”
+> "A mindennapokban nem a hősiesség, hanem a jó döntés a legnagyobb fegyver."
 
-# Játéklogika – kiegészítések
+## Játéklogika – Kiegészítések
 
 Az alábbi pontosítások **felülírják / kiegészítik** a korábban leírt szabályokat.
 
----
-
-## Alkohol–éhség szinergia
+### Alkohol–Éhség Szinergia
 
 | Változó | Jelölés | Hatás |
 |---------|---------|-------|
 | Alkoholszint | `alkohol` (0‑100) | 50 felett **negatív módosító** az ételekre |
 | Éhség | `ehseg` (0‑100) | 0 = halál |
 
-### Szabályok
+#### Szabályok
 
-**Alkoholhatár (50) – „függőségi küszöb”**  
-   - Ha `alkohol` > 50, akkor az ételek **hatékonysága csökken**.  
-   - A csökkentés mértéke:  
-     \[
-     \text{módosító} = \frac{\,\text{alkohol} - 50\,}{3}
-     \]  
-     *Azaz 65‑ös alkoholnál a kaja 5 ponttal (15÷3) kevesebbet tölt az éhségből.*
+- **Alkoholhatár (50) – "függőségi küszöb"**
+    - Ha `alkohol` > 50, akkor az ételek **hatékonysága csökken**.
+    - A csökkentés mértéke:
+    $$
+        \text{módosító} = \frac{\,\text{alkohol} - 50\,}{3}
+    $$
+    *Azaz 65‑ös alkoholnál a kaja 5 ponttal (15/3) kevesebbet tölt az éhségből.*
+- **Fokozódó kényszer**
+    - Amint `alkohol` lecsökken **50‑re**, ott **"padlózik"**: magától nem megy 50 alá.
+    - A küszöb ezután **egyre magasabbra tolódik**:
+        - Először 60 → 70 → 80 → 90.
+        - Ha a játékos nem tartja a *következő* küszöböt, **stressz‑büntetést** kap, és az ételek még kevésbé hatnak (lásd lentebb).
+- **Stressz‑büntetés és éhségszankció**
+    - Ha az aktuális "kötelező" szint alá esik az alkohol:
+        - `stressz` azonnal +15
+        - Az ételek **hatékonysága feleződik** a normál értékhez képest, amíg vissza nem éri a küszöböt.
 
-**Fokozódó kényszer**  
-   - Amint `alkohol` lecsökken **50‑re**, ott **„padlózik”**: magától nem megy 50 alá.  
-   - A küszöb ezután **egyre magasabbra tolódik**:
-     - Először 60 → 70 → 80 → 90.  
-     - Ha a játékos nem tartja a *következő* küszöböt, **stressz‑büntetést** kap, és az ételek még kevésbé hatnak (lásd 3.).
+### Időciklus Finomítása
 
-**Stressz‑büntetés és éhségszankció**  
-   - Ha az aktuális „kötelező” szint alá esik az alkohol:  
-     - `stressz` azonnal +15  
-     - Az ételek **hatékonysága feleződik** a normál értékhez képest, amíg vissza nem éri a küszöböt.
+#### Napi Főidő: 08:00 – 20:00
 
----
-
-## Időciklus finomítása
-
-### Napi főidő: **08:00 – 20:00**
-
-- **3 fő blokk** (délelőtt, délután, kora este) = *produktív idő*.  
+- **3 fő blokk** (délelőtt, délután, kora este) = *produktív idő*.
 - Tevékenységek (munka, csere, vásárlás) ezeken belül zajlanak.
 
-### Szabadidő: **20:00 – lefekvés**
+#### Szabadidő: 20:00 – lefekvés
 
 - Szabadon etetés, beszélgetés, olvasás, iszogatás.
 - **Alváskezdés**: bármikor, de lásd alábbi szabályt.
 
-### Alvás–stressz kapcsolat
+#### Alvás–Stressz Kapcsolat
 
 | Alvással töltött idő | Hatás a következő nap reggelén |
 |----------------------|--------------------------------|
@@ -663,6 +640,4 @@ Az alábbi pontosítások **felülírják / kiegészítik** a korábban leírt s
 | 5–6,9 óra            | nincs változás |
 | **< 5 óra**          | `stressz` +15 (kimerült) |
 
-*Az alvás az alkoholszintet **nem** csökkenti tovább a küszöbnél.*
-
----
+*Az alvás az alkoholszintet ***nem*** csökkenti tovább a küszöbnél.*

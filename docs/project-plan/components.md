@@ -1,6 +1,6 @@
 # Komponensek
 
-## Játékmenethez kapcsolódó komponensek
+## Játékmenethez Kapcsolódó Komponensek
 
 -   **Főjáték ciklus** -- A játékmenet napokra bontva zajlik, minden nap
     munkavégzéssel, eseményekkel és esti pihenéssel telik.
@@ -29,7 +29,7 @@
     lebukás esetén börtön, majd végső esetben Gulág vár rá --
     visszafordíthatatlan következményekkel.
 
-## Munkarendszer komponensei
+## Munkarendszer Komponensei
 
 -   **Autószerelő műhely (3D)** -- A játékos egy interaktív műhelyben
     autókat javít, szerszámokat kezel, és többnapos munkafolyamatokat
@@ -47,7 +47,7 @@
     munkatípus között, figyelembe véve a bevételt, kockázatot és
     időigényt.
 
-## Gazdasági és kereskedelmi komponensek
+## Gazdasági és Kereskedelmi Komponensek
 
 -   **Pénzrendszer** -- A megszerzett fizetés felhasználható alapvető
     szükségletekre, eszközökre vagy állapotjavító termékekre.
@@ -59,7 +59,7 @@
 -   **Kiadáskezelő modul** -- A kiadásaink közvetlen hatással vannak a
     mutatóinkra, túlélésünkre, vagy akár a családtagok sorsára.
 
-## Morális döntési rendszer
+## Morális Döntési Rendszer
 
 -   **Eseményalapú döntések** -- A játékos folyamatosan erkölcsi
     dilemmákba kerül, amelyek hosszú távon is befolyásolják a játékot.
@@ -71,7 +71,7 @@
     véget a játéknak, de negatívan befolyásolja az alkohol- és
     stresszszinteket.
 
-## Felhasználói felület és grafikai komponensek
+## Felhasználói Felület és Grafikai Komponensek
 
 -   **Főképernyő (alap layout)** -- A játék alapképernyője, ahonnan
     minden más rész elérhető, a játék struktúráját képezi.
@@ -90,7 +90,7 @@
     döntéseket és következményeket szövegesen írjuk ki a játékos
     számára.
 
-## Tesztelési és naplózási komponensek
+## Tesztelési és Naplózási Komponensek
 
 - **Naplózási rendszer** -- A játékos fejlődését naplófájlban vagy a
   menüben nyomon lehet követni, statisztikák és pontszámok formájában.

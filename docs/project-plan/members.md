@@ -1,4 +1,4 @@
-# Csoport tagjai és a projekt struktúrája
+# Csoport Tagjai és a Projekt Struktúrája
 
 A "*Túlélés a Szocializmusban*" című játék fejlesztését egy
 összeszokott, több területet lefedő fejlesztői csapat végzi, amelynek
@@ -8,34 +8,38 @@ egészen a tesztelésig.
 
 ## Csapattagok
 
--   **Adamcsik Bendegúz** -- Fejlesztő\
+-   **Adamcsik Bendegúz** -- Fejlesztő
+
     Részt vesz a játék logikai rendszereinek kialakításában, a
     felhasználói felület programozásában és az eseménykezelés
     implementálásában.
 
--   **Dobozi Botond** -- Fejlesztő\
+-   **Dobozi Botond** -- Fejlesztő
+
     A játékmenet alapmechanikáinak kidolgozásán és az interakciók
     technikai megvalósításán dolgozik, továbbá hozzájárul a grafikai
     elemek és textúrák integrálásához.
 
--   **Sándor János** -- Projektmenedzser, Fejlesztő\
+-   **Sándor János** -- Projektmenedzser, Fejlesztő
+
     A projekt koordinációjáért és szervezéséért felel, emellett aktív
     szerepet vállal a fejlesztési munkálatokban, különös tekintettel a
     struktúraépítésre és kódkarbantartásra.
 
--   **Sebe Zsolt** -- Fejlesztő\
+-   **Sebe Zsolt** -- Fejlesztő
+
     Főként a technikai háttérrendszereken, a játékos állapotkezelésén,
     valamint a grafikai háttér és munkafelületek összehangolásán
     dolgozik.
 
-## Fejlesztési struktúra
+## Fejlesztési Struktúra
 
--   **Projektmenedzsment:**\
+-   **Projektmenedzsment:**
     A projekt vezetését és ütemezését **Sándor János** látja el,
     biztosítva a csapat közötti hatékony kommunikációt és a feladatok
     gördülékeny elosztását.
 
--   **Fejlesztési feladatok megosztása:**\
+-   **Fejlesztési feladatok megosztása:**
     A fejlesztés minden területe -- legyen az **backend**, **frontend**,
     **grafikai tervezés**, vagy **tesztelés** -- **közösen** zajlik.
     Minden csapattag aktívan részt vesz az összes részkomponens
