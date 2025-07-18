@@ -47,3 +47,8 @@ NapiNapló
 JátékÁllapot
 
 - Globális mutatók, például reputáció, idő előrehaladása és túlélési esélyek, amelyek a játék egészére hatnak.
+
+### Osztálydiagram
+
+![A játék osztálydiagramja](../../pictures/classdiagram.png)
+
