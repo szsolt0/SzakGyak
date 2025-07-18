@@ -50,7 +50,7 @@ JátékÁllapot
 
 ### Osztálydiagram
 
-![A játék osztálydiagramja](../../pictures/classdiagram.png)
+![A játék osztálydiagramja](classdiagram.png)
 
 ### Osztályok Felsorolása
 
