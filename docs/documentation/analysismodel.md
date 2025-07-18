@@ -153,3 +153,55 @@ FamilyHUD
 Wealth
 
 - A Wealth osztály a játékos vagy család anyagi helyzetét kezeli és jeleníti meg. Attribútuma a pénzösszeg és esetleges vagyoni elemek. Metódusai a gazdasági változások nyomon követését és frissítését biztosítják.
+
+### Alrendszerek
+
+#### Menürendszer (UI menük)
+
+Ez az alrendszer kezeli a játék fő- és beállítási menüit, a szünet menüt és a beállításokat.
+
+- Main menu
+- New game
+- Continue
+- Settings
+- Controls
+- Audio
+- Video
+- Pause menus
+
+#### Interakciók és karakterek
+
+Ebben az alrendszerben vannak a játékos és NPC-k, valamint az egymással való interakciók.
+
+- Interactions
+- Family members
+- Player
+- Car NPC
+- Shop NPC
+- Desktop NPC
+
+#### Környezet és helyszínek
+
+Ez az alrendszer az egyes helyszíneket és környezeti elemeket kezeli.
+
+- Office
+- Shop
+- Repair shop
+- Gulag
+
+#### Objektumok és eszközök
+
+Itt vannak az olyan tárgyak és eszközök, amik a játékban előfordulnak.
+
+- IDs
+- Papers
+- Tools
+- Cash register
+
+#### Játékfelület (HUD)
+
+Ez az alrendszer a játékos és család állapotának, vagyoni helyzetének kijelzéséért felel.
+
+- CharacterHUD
+- FamilyHUD
+- Wealth
