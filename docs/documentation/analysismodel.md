@@ -50,7 +50,7 @@ JátékÁllapot
 
 ### Osztálydiagram
 
-![A játék osztálydiagramja](../../pictures/classdiagram.png)
+![A játék osztálydiagramja](classdiagram.png)
 
 ### Osztályok Felsorolása
 
@@ -205,3 +205,7 @@ Ez az alrendszer a játékos és család állapotának, vagyoni helyzetének kij
 - CharacterHUD
 - FamilyHUD
 - Wealth
+
+## Alrendszerek
+
+
