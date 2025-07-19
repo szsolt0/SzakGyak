@@ -205,3 +205,245 @@ Ez az alrendszer a játékos és család állapotának, vagyoni helyzetének kij
 - CharacterHUD
 - FamilyHUD
 - Wealth
+
+
+## Menü alrendszer (UI menük)
+
+### Statikus modell
+
+Az alrendszer főbb osztályai a játék főmenü, új játék indítása, folytatás, beállítások, irányítás, hang- és videóbeállítások, valamint a szüneteltetési menük. Ezek az osztályok a játék indításának, konfigurálásának és szüneteltetésének kezeléséért felelősek.
+
+### Kapcsolatok pontosítása
+
+- A Main menu kapcsolódik a New game, Continue és Settings osztályokhoz, mivel innen indíthatók ezek a funkciók.
+- A Settings kapcsolódik a Controls, Audio és Video osztályokhoz, mint alfunkciók.
+- A Pause menus kapcsolatban állhat a Main menu-vel, mivel mindkettő menüket jelenít meg, de eltérő játékállapotokhoz.
+- Az egyes menük között navigációs kapcsolatok figyelhetők meg, melyek a felhasználói választásokhoz kötődnek.
+
+### Attribútumok azonosítása
+
+- **Main menu:**
+    - menuItems: List<String> — a menüpontok listája
+    - selectedItem: String — aktuálisan kiválasztott menüpont
+- **New game:**
+    - initialCharacters: List<Player> — induló karakterek
+    - initialSettings: Settings — alapértelmezett játékbeállítások
+- **Continue:**
+    - saveFiles: List<SaveFile> — elérhető mentések
+    - selectedSave: SaveFile — kiválasztott mentés
+- **Settings:**
+    - controlSettings: Controls
+    - audioSettings: Audio
+    - videoSettings: Video
+- **Controls:**
+    - keyBindings: Map<String, String> — billentyűkiosztás
+- **Audio:**
+    - volumeLevel: int
+    - mute: bool
+- **Video:**
+    - resolution: String
+    - graphicsQuality: String
+- **Pause menus:**
+    - menuOptions: List<String>
+    - isPaused: bool
+
+### Dinamikus modell
+
+(A dinamikus modell az alrendszer működésének időbeli folyamatát írja le, például menük közti váltás, események kezelése. Ezt a feladat szerint most nem részletezzük.)
+
+### Funkcionális modell
+
+(A funkcionális modell az alrendszer funkcióit, működési logikáját írja le, pl. új játék indítása, mentés betöltése. Szintén nem dolgozzuk ki most.)
+
+### Analízis modell osztálydiagramja
+
+(A diagram megjeleníti a menürendszer osztályait és kapcsolatait, lásd korábbi diagram.)
+
+## Interakciók és Karakterek alrendszer
+
+### Statikus modell
+
+Ez az alrendszer kezeli a játékos, a különféle NPC-k (boltos, autós, asztali), valamint a családtagok közötti interakciókat. Felel a karakterek alapviselkedéséért és a kommunikációs lehetőségekért.
+
+### Kapcsolatok pontosítása
+
+- A `Player` osztály kapcsolatban van minden `NPC`-vel (`Car NPC`, `Shop NPC`, `Desktop NPC`), mivel ezekkel léphet interakcióba.
+- A `Family members` kapcsolatban vannak a `Player`-rel, mivel az ő állapotuk (pl. éhségszint) a játékos tevékenységétől függ.
+- Az `Interactions` osztály összeköti a `Player`-t a többi karakterrel, és kezeli az interakciós eseményeket.
+- Az összes NPC örökölhet egy közös `NPC` alaposztályból (általános tulajdonságok és metódusok).
+
+### Attribútumok azonosítása
+
+- **Player:**
+    - position: Vector2
+    - inventory: List<Item>
+    - money: int
+- **NPC (ősosztály):**
+    - name: String
+    - dialogLines: List<String>
+- **Car NPC:**
+    - carType: String
+    - isRepairNeeded: bool
+- **Shop NPC:**
+    - availableGoods: List<Item>
+    - shopName: String
+- **Desktop NPC:**
+    - documentsRequested: List<ID>
+- **Family member:**
+    - name: String
+    - hungerLevel: int
+- **Interactions:**
+    - currentInteraction: String
+    - target: Object
+
+### Dinamikus modell
+
+(A dinamikus modell az interakciók időbeli működését írja le, például egy beszélgetés elindítása vagy tranzakció végrehajtása.)
+
+### Funkcionális modell
+
+(Funkciók például: beszélgetés indítása, vásárlás, dokumentum átadás, családtag éhségállapotának frissítése.)
+
+### Analízis modell osztálydiagramja
+
+(A diagram ábrázolja a karaktereket, interakciókat, és azok kapcsolatait.)
+
+## Környezet és Helyszínek alrendszer
+
+### Statikus modell
+
+Ez az alrendszer kezeli a játék különböző statikus és interaktív helyszíneit, mint az iroda, bolt, szerszámosműhely, kassza, iratok, azonosítók, illetve a Gulag. Ezek fontos környezeti elemek, amelyekkel a játékos közvetlenül vagy közvetetten kapcsolatba léphet.
+
+### Kapcsolatok pontosítása
+
+- Az `Office` tartalmazhat `Desk` objektumokat, rajtuk pedig lehetnek `Papers` és `IDs`.
+- A `Player` kapcsolatban van a `Shop`, `Cash register`, `Repair shop` és az `Office` helyszínekkel interakció céljából.
+- A `Tools` a `Repair shop` részei, melyeket a játékos használhat.
+- A `Gulag` helyszín különálló, narratív vagy következményalapú szerepet tölt be.
+
+### Attribútumok azonosítása
+
+- **Office:**
+    - location: Vector2
+    - documents: List<Paper>
+- **Paper:**
+    - title: String
+    - content: String
+- **ID:**
+    - name: String
+    - birthDate: Date
+    - validUntil: Date
+- **Shop:**
+    - inventory: List<Item>
+    - cashRegister: CashRegister
+- **Cash Register:**
+    - balance: int
+    - transactions: List<Transaction>
+- **Repair Shop:**
+    - tools: List<Tool>
+    - activeRepairs: List<RepairOrder>
+- **Tool:**
+    - toolName: String
+    - isAvailable: bool
+- **Gulag:**
+    - cellNumber: int
+    - guardPresence: bool
+
+### Dinamikus modell
+
+(A környezeti interakciók időbeli kezelése, például dokumentumok olvasása, bolt használata vagy javítási folyamatok elindítása.)
+
+### Funkcionális modell
+
+(Funkciók például: azonosítók ellenőrzése, vásárlás, eszközhasználat, vagy narratív események kezelése a Gulagban.)
+
+### Analízis modell osztálydiagramja
+
+(A diagram bemutatja a környezeti objektumok osztályait és azok összefüggéseit.)
+
+## Objektumok és Eszközök alrendszer
+
+### Statikus modell
+
+Ez az alrendszer kezeli azokat a tárgyakat és eszközöket, amelyekkel a játékos interakcióba léphet vagy felhasználhat a játékmenet során, például szerszámokat, dokumentumokat, pénzt, ID-kat vagy más használható itemeket.
+
+### Kapcsolatok pontosítása
+
+- Az `Item` az összes eszköz és objektum alaposztálya lehet.
+- A `Tool`, `Paper`, `ID` öröklik az `Item` osztályt.
+- A `Player` osztály inventory-jában `Item` objektumokat tárol.
+- A `Shop` és `Repair shop` is rendelkezik `Item` típusú objektumokkal, amelyeket a játékos vásárolhat vagy használhat.
+
+### Attribútumok azonosítása
+
+- **Item (ősosztály):**
+    - itemName: String
+    - isUsable: bool
+- **Tool:**
+    - toolType: String
+    - durability: int
+- **Paper:**
+    - title: String
+    - content: String
+- **ID:**
+    - ownerName: String
+    - expiryDate: Date
+- **Money:**
+    - amount: int
+    - currency: String
+- **Transaction (Shop esetén):**
+    - buyer: Player
+    - itemsPurchased: List<Item>
+    - totalCost: int
+
+### Dinamikus modell
+
+(Objektumok felvétele, használata, cseréje. Eszközök romlása vagy dokumentumok bemutatása időben történő működés során.)
+
+### Funkcionális modell
+
+(Funkciók például: eszközhasználat, dokumentum-ellenőrzés, ID érvényesség vizsgálata, tranzakciók lebonyolítása boltban.)
+
+### Analízis modell osztálydiagramja
+
+(A diagram megjeleníti az objektumok típusait, öröklődési viszonyait, és kapcsolataikat a játékossal és bolttal.)
+
+## Játékfelület alrendszer (Gameplay UI, HUD)
+
+### Statikus modell
+
+Ez az alrendszer tartalmazza a felhasználó által látott interfészeket, mint például a karakter állapotát mutató HUD, a családtagok állapotát jelző Family HUD, valamint a szünetmenük és a játékos vagyoni helyzetét mutató elemek.
+
+### Kapcsolatok pontosítása
+
+- A `CharacterHUD` kapcsolódik a `Player` osztályhoz, hogy valós időben jelenítse meg az állapotát (pl. energia, pénz).
+- A `FamilyHUD` kapcsolódik a `Family member` osztályokhoz, hogy megjelenítse az éhségszintet.
+- A `Pause menus` használható a `CharacterHUD`-on keresztül, mikor a játék szünetel.
+- A `Wealth` megjelenítése szintén a `Player`-től függ.
+
+### Attribútumok azonosítása
+
+- **CharacterHUD:**
+    - healthBar: int
+    - moneyDisplay: int
+    - isVisible: bool
+- **Pause menus:**
+    - options: List<String>
+    - isPaused: bool
+- **FamilyHUD:**
+    - familyStatus: List<int> — családtagok éhségszintjei
+- **Wealth:**
+    - currentMoney: int
+    - incomeRate: float
+
+### Dinamikus modell
+
+(Az állapotjelzők frissülnek a játék során a karakter változásainak megfelelően.)
+
+### Funkcionális modell
+
+(Funkciók például: HUD frissítése, játék szüneteltetése, vagyoni állapot megjelenítése.)
+
+### Analízis modell osztálydiagramja
+
+(A diagram bemutatja a HUD elemek és a játékos/család közötti adatkapcsolatokat.)
