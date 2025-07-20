@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg0avkdt422kq"
-path="res://.godot/imported/gulag_wallpaper.jpg-05aee8ea4fb97df2e5ac7fd7164b0c06.ctex"
+path="res://.godot/imported/gulag_wallpaper.jpg-228f3bf520fdfffb9806657ef28a2e74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets2/textures/gulag/gulag_wallpaper.jpg"
-dest_files=["res://.godot/imported/gulag_wallpaper.jpg-05aee8ea4fb97df2e5ac7fd7164b0c06.ctex"]
+source_file="res://assets/textures/gulag/gulag_wallpaper.jpg"
+dest_files=["res://.godot/imported/gulag_wallpaper.jpg-228f3bf520fdfffb9806657ef28a2e74.ctex"]
 
 [params]
 
