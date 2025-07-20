@@ -213,14 +213,14 @@ Ez az alrendszer a játékos és család állapotának, vagyoni helyzetének kij
 
 Az alrendszer főbb osztályai a játék főmenü, új játék indítása, folytatás, beállítások, irányítás, hang- és videóbeállítások, valamint a szüneteltetési menük. Ezek az osztályok a játék indításának, konfigurálásának és szüneteltetésének kezeléséért felelősek.
 
-### Kapcsolatok pontosítása
+#### Kapcsolatok pontosítása
 
 - A Main menu kapcsolódik a New game, Continue és Settings osztályokhoz, mivel innen indíthatók ezek a funkciók.
 - A Settings kapcsolódik a Controls, Audio és Video osztályokhoz, mint alfunkciók.
 - A Pause menus kapcsolatban állhat a Main menu-vel, mivel mindkettő menüket jelenít meg, de eltérő játékállapotokhoz.
 - Az egyes menük között navigációs kapcsolatok figyelhetők meg, melyek a felhasználói választásokhoz kötődnek.
 
-### Attribútumok azonosítása
+#### Attribútumok azonosítása
 
 - **Main menu:**
     - menuItems: List<String> — a menüpontok listája
@@ -251,13 +251,19 @@ Az alrendszer főbb osztályai a játék főmenü, új játék indítása, folyt
 
 (A dinamikus modell az alrendszer működésének időbeli folyamatát írja le, például menük közti váltás, események kezelése. Ezt a feladat szerint most nem részletezzük.)
 
+![A játék osztálydiagramja](menu_dinamic.jpg)
+
 ### Funkcionális modell
 
 (A funkcionális modell az alrendszer funkcióit, működési logikáját írja le, pl. új játék indítása, mentés betöltése. Szintén nem dolgozzuk ki most.)
 
+![A játék osztálydiagramja](menu_functional.jpg)
+
 ### Analízis modell osztálydiagramja
 
 (A diagram megjeleníti a menürendszer osztályait és kapcsolatait, lásd korábbi diagram.)
+
+![A játék osztálydiagramja](menu_class.jpg)
 
 ## Interakciók és Karakterek alrendszer
 
@@ -265,14 +271,14 @@ Az alrendszer főbb osztályai a játék főmenü, új játék indítása, folyt
 
 Ez az alrendszer kezeli a játékos, a különféle NPC-k (boltos, autós, asztali), valamint a családtagok közötti interakciókat. Felel a karakterek alapviselkedéséért és a kommunikációs lehetőségekért.
 
-### Kapcsolatok pontosítása
+#### Kapcsolatok pontosítása
 
 - A `Player` osztály kapcsolatban van minden `NPC`-vel (`Car NPC`, `Shop NPC`, `Desktop NPC`), mivel ezekkel léphet interakcióba.
 - A `Family members` kapcsolatban vannak a `Player`-rel, mivel az ő állapotuk (pl. éhségszint) a játékos tevékenységétől függ.
 - Az `Interactions` osztály összeköti a `Player`-t a többi karakterrel, és kezeli az interakciós eseményeket.
 - Az összes NPC örökölhet egy közös `NPC` alaposztályból (általános tulajdonságok és metódusok).
 
-### Attribútumok azonosítása
+#### Attribútumok azonosítása
 
 - **Player:**
     - position: Vector2
@@ -314,14 +320,14 @@ Ez az alrendszer kezeli a játékos, a különféle NPC-k (boltos, autós, aszta
 
 Ez az alrendszer kezeli a játék különböző statikus és interaktív helyszíneit, mint az iroda, bolt, szerszámosműhely, kassza, iratok, azonosítók, illetve a Gulag. Ezek fontos környezeti elemek, amelyekkel a játékos közvetlenül vagy közvetetten kapcsolatba léphet.
 
-### Kapcsolatok pontosítása
+#### Kapcsolatok pontosítása
 
 - Az `Office` tartalmazhat `Desk` objektumokat, rajtuk pedig lehetnek `Papers` és `IDs`.
 - A `Player` kapcsolatban van a `Shop`, `Cash register`, `Repair shop` és az `Office` helyszínekkel interakció céljából.
 - A `Tools` a `Repair shop` részei, melyeket a játékos használhat.
 - A `Gulag` helyszín különálló, narratív vagy következményalapú szerepet tölt be.
 
-### Attribútumok azonosítása
+#### Attribútumok azonosítása
 
 - **Office:**
     - location: Vector2
@@ -367,14 +373,14 @@ Ez az alrendszer kezeli a játék különböző statikus és interaktív helysz�
 
 Ez az alrendszer kezeli azokat a tárgyakat és eszközöket, amelyekkel a játékos interakcióba léphet vagy felhasználhat a játékmenet során, például szerszámokat, dokumentumokat, pénzt, ID-kat vagy más használható itemeket.
 
-### Kapcsolatok pontosítása
+#### Kapcsolatok pontosítása
 
 - Az `Item` az összes eszköz és objektum alaposztálya lehet.
 - A `Tool`, `Paper`, `ID` öröklik az `Item` osztályt.
 - A `Player` osztály inventory-jában `Item` objektumokat tárol.
 - A `Shop` és `Repair shop` is rendelkezik `Item` típusú objektumokkal, amelyeket a játékos vásárolhat vagy használhat.
 
-### Attribútumok azonosítása
+#### Attribútumok azonosítása
 
 - **Item (ősosztály):**
     - itemName: String
@@ -414,14 +420,14 @@ Ez az alrendszer kezeli azokat a tárgyakat és eszközöket, amelyekkel a ját�
 
 Ez az alrendszer tartalmazza a felhasználó által látott interfészeket, mint például a karakter állapotát mutató HUD, a családtagok állapotát jelző Family HUD, valamint a szünetmenük és a játékos vagyoni helyzetét mutató elemek.
 
-### Kapcsolatok pontosítása
+#### Kapcsolatok pontosítása
 
 - A `CharacterHUD` kapcsolódik a `Player` osztályhoz, hogy valós időben jelenítse meg az állapotát (pl. energia, pénz).
 - A `FamilyHUD` kapcsolódik a `Family member` osztályokhoz, hogy megjelenítse az éhségszintet.
 - A `Pause menus` használható a `CharacterHUD`-on keresztül, mikor a játék szünetel.
 - A `Wealth` megjelenítése szintén a `Player`-től függ.
 
-### Attribútumok azonosítása
+#### Attribútumok azonosítása
 
 - **CharacterHUD:**
     - healthBar: int
