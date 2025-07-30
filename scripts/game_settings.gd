@@ -9,7 +9,7 @@ func _ready() -> void:
 		config.load(SETTINGS_PATH)
 	else:
 		config.set_value("volume", "master", 40)
-		config.set_value("volume", "effect", 100)
+		config.set_value("volume", "sfx", 100)
 		config.set_value("volume", "music", 100)
 		config.set_value("volume", "ui", 100)
 

@@ -191,6 +191,10 @@ theme_override_font_sizes/font_size = 24
 text = "Back"
 metadata/_edit_lock_ = true
 
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/MasterVolume/Button" to="." method="_on_master_volume_drag_ended"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/SfxVolume/Button" to="." method="_on_sfx_volume_drag_ended"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/MusicVolume/Button" to="." method="_on_music_volume_drag_ended"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/UiVolume/Button" to="." method="_on_ui_volume_drag_ended"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VideoQuality/Button" to="." method="_on_video_quality_item_selected"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VideoAnimations/Button" to="." method="_on_video_animations_item_selected"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VideoFont/Button" to="." method="_on_video_font_item_selected"]
