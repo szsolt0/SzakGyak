@@ -33,6 +33,7 @@ kisebb csapatok és oktatási projektek számára is.
 [Godot Docs – Dokumentáció](https://docs.godotengine.org)
 
 
+
 ## Blender
 
 A Blender egy professzionális, nyílt forráskódú 3D grafikai szoftver, amely teljes körű
@@ -57,6 +58,7 @@ sőt játék assetek optimalizálására is. A Godot Engine-nel natívan kompati
 **Forrás:**  
 [Blender – Hivatalos oldal](https://www.blender.org)  
 [Blender Manual](https://docs.blender.org/manual/en/latest/)
+
 
 
 ## GitHub
@@ -102,6 +104,7 @@ amely professzionális eszközöket kínál képretusálásra, digitális festé
 **Forrás:**  
 [GIMP – Hivatalos oldal](https://www.gimp.org)  
 [GIMP Documentation](https://docs.gimp.org)
+
 
 
 ## Paint
