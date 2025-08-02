@@ -28,6 +28,10 @@ kisebb csapatok és oktatási projektek számára is.
 -   Közösségi fejlesztés: Teljesen nyílt forráskódú MIT licenc alatt – nincs zárt komponens vagy jogi akadály a
     kereskedelmi felhasználás előtt.
 
+**Forrás:**  
+[Godot Engine – Hivatalos oldal](https://godotengine.org)  
+[Godot Docs – Dokumentáció](https://docs.godotengine.org)
+
 
 ## Blender
 
@@ -50,6 +54,11 @@ sőt játék assetek optimalizálására is. A Godot Engine-nel natívan kompati
 -   Export: Godot számára ideális formátumok támogatása, mint például .glb, .gltf, .dae (Collada),
     valamint .fbx.
 
+**Forrás:**  
+[Blender – Hivatalos oldal](https://www.blender.org)  
+[Blender Manual](https://docs.blender.org/manual/en/latest/)
+
+
 ## GitHub
 
 A fejlesztési folyamat során a Git és a GitHub szolgál majd verziókezelésre,
@@ -69,3 +78,43 @@ kollaboratív munkavégzést akár elosztott csapatokban is.
 
 -   Csapatmunka és projektmenedzsment: Issues, Pull Requestek, ezek segítik a
     fejlesztési folyamat átláthatóságát és hatékonyságát.
+
+**Forrás:**  
+[GitHub – Hivatalos oldal](https://github.com)  
+[Git – Hivatalos oldal](https://git-scm.com)  
+[GitHub Docs](https://docs.github.com)
+
+
+
+## GIMP
+
+A GIMP (GNU Image Manipulation Program) egy ingyenes, nyílt forráskódú képszerkesztő program,  
+amely professzionális eszközöket kínál képretusálásra, digitális festészetre és grafikai elemek készítésére.
+
+### Főbb Jellemzők
+
+-   Rétegalapú szerkesztés, maszkolás, átlátszóság, blending módok.
+-   Komplex képkorrekciós és retusálási lehetőségek.
+-   Szöveg- és alakzatkezelés, rajzeszközök (ecsetek, ceruza, klónozás stb.).
+-   Támogatja a .psd, .png, .jpg, .xcf, .tiff formátumokat.
+-   Közvetlen exportálás játék assetekként, pl. UI elemek vagy sprite sheetek formájában.
+
+**Forrás:**  
+[GIMP – Hivatalos oldal](https://www.gimp.org)  
+[GIMP Documentation](https://docs.gimp.org)
+
+
+## Paint
+
+A Microsoft Paint egy alapvető, egyszerű képszerkesztő program, amely része a Windows operációs rendszernek.  
+Könnyen használható egyszerű vázlatok, mockupok és kézi tervek gyors elkészítésére.
+
+### Főbb Jellemzők
+
+-   Rajzolás, színezés, szövegbeillesztés.
+-   Egyszerű képméretezés, kivágás, elforgatás.
+-   BMP, JPEG, PNG és GIF formátumok mentése.
+-   Ideális gyors prototípus-vázlatokhoz, például UI-tervekhez vagy layout-ötletekhez.
+
+**Forrás:**  
+[Microsoft Paint – Windows Support](https://support.microsoft.com/en-us/windows/get-microsoft-paint)
