@@ -11,11 +11,5 @@ config_version=5
 [application]
 
 config/name="SzakGyak"
-run/main_scene="uid://ig3kocnbgc0a"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-GameSettings="*res://scripts/game_settings.gd"
-MenuStack="*res://scripts/menu_stack.gd"
