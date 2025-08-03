@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://brenq6kg8pnib"]
+
+[ext_resource type="Texture2D" uid="uid://om2y7qbnlhjq" path="res://assets/textures/office/wallpaper.png" id="1_4g2wo"]
+[ext_resource type="Texture2D" uid="uid://tk3fecxobxx0" path="res://assets/textures/office/desktop.png" id="2_3obsa"]
+[ext_resource type="Texture2D" uid="uid://djev6qjrgl21b" path="res://assets/textures/office/paper.png" id="3_pqwco"]
+[ext_resource type="Texture2D" uid="uid://qdkrc0doircd" path="res://assets/textures/office/idcard.png" id="4_3qdk0"]
+[ext_resource type="Texture2D" uid="uid://cf3u4hatbhywn" path="res://assets/textures/office/boss.png" id="5_4g2wo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3obsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4g2wo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Office" type="Node2D"]
+position = Vector2(0, -1)
+
+[node name="root" type="Node2D" parent="."]
+
+[node name="Wallpaper" type="Sprite2D" parent="root"]
+position = Vector2(9, -101)
+scale = Vector2(1.13944, 0.438965)
+texture = ExtResource("1_4g2wo")
+
+[node name="Table" type="Sprite2D" parent="root"]
+z_index = 1
+position = Vector2(10, 145.262)
+scale = Vector2(1.14453, 0.354027)
+texture = ExtResource("2_3obsa")
+
+[node name="Paper" type="Sprite2D" parent="root"]
+z_index = 1
+position = Vector2(440, 150)
+scale = Vector2(1.38607, 1.53692)
+texture = ExtResource("3_pqwco")
+
+[node name="Idcard" type="Sprite2D" parent="root"]
+z_index = 1
+position = Vector2(175, 51)
+scale = Vector2(1.17133, 0.728507)
+texture = ExtResource("4_3qdk0")
+
+[node name="Boss" type="Node2D" parent="root"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="root/Boss"]
+position = Vector2(-445, -14)
+scale = Vector2(0.846976, 0.7609)
+sprite_frames = SubResource("SpriteFrames_3obsa")
+
+[node name="Timer" type="Timer" parent="root/Boss"]
+
+[node name="Text" type="CanvasLayer" parent="root"]
+
+[node name="Camera" type="Camera2D" parent="root"]
+limit_smoothed = true
+
+[node name="PaperStack" type="Node2D" parent="root"]
+
+[node name="Paper1" type="Sprite2D" parent="root/PaperStack"]
+z_index = 1
+position = Vector2(-452, 159)
+scale = Vector2(1.38607, 1.53692)
+texture = ExtResource("3_pqwco")
+
+[node name="Paper2" type="Sprite2D" parent="root/PaperStack"]
+z_index = 1
+position = Vector2(-449, 149)
+scale = Vector2(1.38607, 1.53692)
+texture = ExtResource("3_pqwco")
+
+[node name="Paper3" type="Sprite2D" parent="root/PaperStack"]
+z_index = 1
+position = Vector2(-449, 136)
+scale = Vector2(1.38607, 1.53692)
+texture = ExtResource("3_pqwco")
+
+[node name="IDStack" type="Node2D" parent="root"]
+
+[node name="Idcard1" type="Sprite2D" parent="root/IDStack"]
+z_index = 1
+position = Vector2(-188, 66)
+scale = Vector2(1.17133, 0.728507)
+texture = ExtResource("4_3qdk0")
+
+[node name="Idcard2" type="Sprite2D" parent="root/IDStack"]
+z_index = 1
+position = Vector2(-186, 57)
+scale = Vector2(1.17133, 0.728507)
+texture = ExtResource("4_3qdk0")
+
+[node name="Idcard3" type="Sprite2D" parent="root/IDStack"]
+z_index = 1
+position = Vector2(-186, 45)
+scale = Vector2(1.17133, 0.728507)
+texture = ExtResource("4_3qdk0")

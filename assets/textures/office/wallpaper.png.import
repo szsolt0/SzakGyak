@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsjiwitcje2co"
-path="res://.godot/imported/desktop.webp-2e2e5df7c733d0afcb073aab99776909.ctex"
+uid="uid://om2y7qbnlhjq"
+path="res://.godot/imported/wallpaper.png-47e0f8af84baf6952c7b5a70690f04cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/office/desktop.webp"
-dest_files=["res://.godot/imported/desktop.webp-2e2e5df7c733d0afcb073aab99776909.ctex"]
+source_file="res://assets/textures/office/wallpaper.png"
+dest_files=["res://.godot/imported/wallpaper.png-47e0f8af84baf6952c7b5a70690f04cc.ctex"]
 
 [params]
 

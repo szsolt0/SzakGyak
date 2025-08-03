@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwas4x66q7d7k"
-path="res://.godot/imported/office_wallpaper.webp-2ea413b36310b84c1908700061a29c13.ctex"
+uid="uid://c0px3r0uwio7s"
+path="res://.godot/imported/CAR.bmp-2a244caf8b03ce95d67f36ab82e1e1f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/office/office_wallpaper.webp"
-dest_files=["res://.godot/imported/office_wallpaper.webp-2ea413b36310b84c1908700061a29c13.ctex"]
+source_file="res://docs/documentation/CAR.bmp"
+dest_files=["res://.godot/imported/CAR.bmp-2a244caf8b03ce95d67f36ab82e1e1f5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cprpqqssqceqt"
-path="res://.godot/imported/blank_paper.png-d2cb35b912125f1ef2cb793613ee89a8.ctex"
+uid="uid://cf3u4hatbhywn"
+path="res://.godot/imported/boss.png-863693551bc6cbefda80250b78a81392.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/office/blank_paper.png"
-dest_files=["res://.godot/imported/blank_paper.png-d2cb35b912125f1ef2cb793613ee89a8.ctex"]
+source_file="res://assets/textures/office/boss.png"
+dest_files=["res://.godot/imported/boss.png-863693551bc6cbefda80250b78a81392.ctex"]
 
 [params]
 
