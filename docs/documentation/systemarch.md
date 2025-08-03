@@ -1,11 +1,11 @@
 
-# Rendszertervezés – *Túlélés a Szocializmusban*
+# Rendszertervezés
 
-## 1. Bevezetés
+## Bevezetés
 
 Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs játék rendszertervezését tartalmazza. A cél, hogy bemutassa a játék technikai architektúráját, moduláris felépítését, adatkezelési folyamatait, komponenseit és azok kapcsolatait.
 
-## 2. Áttekintés
+## Áttekintés
 
 - **Játékmotor**: Godot Engine (verzió: 4.x)
 - **Célplatform**: PC (Windows/Linux)
@@ -13,9 +13,9 @@ Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs 
 - **Fejlesztői eszközök**: Blender, GitHub, GIMP/Krita, VS Code
 - **Adatformátumok**: JSON, CSV (események, munkák, párbeszédek), PNG/JPG (grafikák), WAV/OGG (hang)
 
-## 3. Rendszerarchitektúra
+## Rendszerarchitektúra
 
-### 3.1 Moduláris Felépítés
+### Moduláris Felépítés
 
 ```
 +----------------------+
@@ -45,16 +45,16 @@ Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs 
 +----------------------+
 ```
 
-## 4. Főbb Modulok
+## Főbb Modulok
 
-### 4.1 Játékmenet Vezérlő
+### Játékmenet Vezérlő
 
 - Nap-idő rendszer (reggel 8 – este 8 óra ciklus)
 - Döntési pontok kezelése
 - Napi események triggerelése
 - Mentési/pályaállapot kezelése
 
-### 4.2 Karakterstátusz Rendszer
+### Karakterstátusz Rendszer
 
 - Játékos adatok:
   - Éhség (0–100)
@@ -64,7 +64,7 @@ Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs 
 - Hatások különböző tevékenységekből és eseményekből
 - Állapotváltozás logikája
 
-### 4.3 Munkahelyek
+### Munkahelyek
 
 - **Autószerelő (3D)**: 
   - Jármű azonosítás, alkatrészcserék minijáték formában
@@ -72,7 +72,7 @@ Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs 
 - **Bolti eladó (2D)**: 
   - Vásárlók kiszolgálása, készletkezelés, döntések (visszaadás, ellopás stb.)
 
-### 4.4 Eseményrendszer
+### Eseményrendszer
 
 - Véletlenszerű és scriptelt események
 - JSON/CSV alapú eseménytáblázat
@@ -82,15 +82,15 @@ Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs 
   - Betegségek
   - Sztrájkok, leállások
 
-### 4.5 Családrendszer
+### Családrendszer
 
 - Minden családtaghoz külön éhség- és egészségérték tartozik
 - Reakciók eseményekre (pl. gyerek megbetegedése)
 - Cél: a család életben tartása
 
-## 5. Adatmodellek
+## Adatmodellek
 
-### 5.1 Játékos.json
+### Játékos.json
 
 ```json
 {
@@ -106,16 +106,79 @@ Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs 
 }
 ```
 
-### 5.2 Esemény.csv
+### Esemény.csv
 
 ```csv
 id,típus,leírás,opció1,opció2,következmény1,következmény2
 E001,Hatósági ellenőrzés,"Megérkezik az ÁVÓ...","Kifizeted a bírságot","Tagadsz", "-100 pénz", "Reputáció -30"
 ```
 
-## 6. Felhasználói Interfész (UI)
+### Adatmodellek véglegesítése és funkcionális modell 
 
-### 6.1 Képernyők
+Az alábbi adatmodellek a játék legfontosabb logikai egységeit és állapotait reprezentálják. Ezek JSON-struktúraként vagy osztályszinten is implementálhatók a Godot játékmotorban (GDScript / C#).
+
+```json
+{
+  "name": "string",
+  "hunger": 0.0,
+  "stress": 0.0,
+  "reputation": 0.0,
+  "alcohol_addiction": 0.0,
+  "money": 0,
+  "inventory": [],
+  "job": "string",
+  "family": {
+    "members": 3,
+    "hunger_levels": [0.2, 0.3, 0.1]
+  },
+  "day": 1
+}
+```
+
+```json
+{
+  "job_id": "string",
+  "name": "Autószerelő",
+  "mechanics": "3D minijáték",
+  "reward": 150,
+  "stress_gain": 0.2,
+  "reputation_effect": 0.05,
+  "corruption_opportunity": true
+}
+```
+
+```json
+{
+  "event_id": "string",
+  "description": "Hatósági ellenőrzés",
+  "type": "morális / gazdasági / egészségi",
+  "consequences": {
+    "reputation": -0.1,
+    "money": -50,
+    "stress": +0.3
+  }
+}
+```
+
+```json
+{
+  "item_id": "string",
+  "name": "Konzerv",
+  "type": "food",
+  "hunger_restore": 0.3,
+  "value": 50,
+  "tradable": true
+}
+```
+
+ A játék fő funkcióit az alábbi modulokra lehet bontani: Statuszkezelő modul – A játékos és családtagjai állapotát (éhség, stressz, addikció) kezeli és frissíti napi szinten. Eseménymotor – Véletlenszerű és szkriptelt események kezelése a nap végén, különféle következményekkel. Munkarendszer – Foglalkozások logikája, teljesítmény, stressz, pénzkereset és korrupciós lehetőségek számítása...
+
+Felhasználói folyamatok (User Flows): a játékos belép a főmenübe, új játékot indít vagy mentést tölt be. Napi szinten tevékenységeket választ: munka, család, bolt, piálás stb. A nap végén történik az állapotfrissítés, eseménygenerálás és statisztikák frissítése. A játék különböző módokon érhet véget: börtön, halál, külföldre szökés, teljes rendszer túlélése stb.
+
+
+## Felhasználói Interfész (UI)
+
+### Képernyők
 
 - Főmenü
 - Munkaválasztó térkép
@@ -125,19 +188,19 @@ E001,Hatósági ellenőrzés,"Megérkezik az ÁVÓ...","Kifizeted a bírságot",
 - Döntési esemény képernyő
 - Játék vége képernyő (pontszám, statisztika, befejezés típusa)
 
-### 6.2 UI Funkciók
+### UI Funkciók
 
 - Egérrel történő navigáció
 - Tooltip rendszer (státuszleírások)
 - Felugró eseménydobozok, gombos választási lehetőségekkel
 
-## 7. Mentési és Betöltési Rendszer
+## Mentési és Betöltési Rendszer
 
 - Mentés struktúrája: JSON fájl a globális játékállapotról
 - Kézi mentés és visszatöltés támogatása
 - Slot-alapú mentés (3 különböző mentési lehetőség)
 
-## 8. Funkcionális Követelmények
+## Funkcionális Követelmények
 
 | Azonosító | Leírás |
 |-----------|--------|
@@ -148,7 +211,7 @@ E001,Hatósági ellenőrzés,"Megérkezik az ÁVÓ...","Kifizeted a bírságot",
 | F05       | A játék többféle befejezéssel zárulhat |
 | F06       | A döntések hatással vannak a karakterre és világra |
 
-## 9. Nem-funkcionális Követelmények
+## Nem-funkcionális Követelmények
 
 | Azonosító | Leírás |
 |-----------|--------|
@@ -157,27 +220,27 @@ E001,Hatósági ellenőrzés,"Megérkezik az ÁVÓ...","Kifizeted a bírságot",
 | NF03      | Könnyen lokalizálható szövegfájlok |
 | NF04      | A rendszer modulárisan bővíthető legyen új munkákkal és eseményekkel |
 
-## 10. Tesztelési Stratégia
+## Tesztelési Stratégia
 
 - **Egységtesztek**: státuszfrissítések, eseménylogika
 - **Integrációs tesztek**: UI és játékállapot szinkronizáció
 - **Felhasználói tesztelés**: különböző végkimenetelek próbája
 - **Teljesítményteszt**: régebbi gépeken való futás
 
-## 11. Verziókövetés és Fejlesztési Módszertan
+## Verziókövetés és Fejlesztési Módszertan
 
 - **GitHub**: privát repó, főág és fejlesztői ágak
 - **Branch Policy**: feature branch-ek, pull request, review kötelező
 - **Issue Tracking**: GitHub Issues / Projects
 - **Dokumentáció**: Markdown formátumban, repóban tárolva
 
-## 12. Biztonság és Mentési Mechanizmusok
+## Biztonság és Mentési Mechanizmusok
 
 - Mentés titkosítás nem szükséges, de backup javasolt
 - Hibakezelés: exception-logging, fallback értékek
 - Hiba esetén automatikus visszatérés az utolsó stabil mentéshez
 
-## 13. Jövőbeli Bővítések
+## Jövőbeli Bővítések
 
 - Harmadik munkalehetőség (irodai adminisztrátor)
 - Statisztikai és naplózási rendszer
@@ -185,7 +248,7 @@ E001,Hatósági ellenőrzés,"Megérkezik az ÁVÓ...","Kifizeted a bírságot",
 - Android/iOS port
 - Multiplayer támogatás (későbbi verzióban)
 
-## 14. Zárszó
+## Zárszó
 
 A "Túlélés a Szocializmusban" nem csupán egy játék, hanem társadalmi és etikai reflexió is. A rendszerterv célja, hogy egy jól strukturált, modulárisan bővíthető és hosszú távon fenntartható alapot biztosítson ehhez a különleges játéktípushoz.
 
