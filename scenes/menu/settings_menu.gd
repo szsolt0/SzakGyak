@@ -9,7 +9,33 @@ extends Control
 @onready var video_anim_btn: OptionButton = $MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VideoAnimations/Button
 @onready var video_font_btn: OptionButton = $MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VideoFont/Button
 
+@onready var menu_btn_translation_map: Dictionary[Node, StringName] = {
+	master_volume_btn: &"SETTINGS_BTN_MASTER_VOLUME",
+	sfx_volume_btn: &"SETTINGS_BTN_SFX_VOLUME",
+	music_volume_btn: &"SETTINGS_BTN_MUSIC_VOLUME",
+	ui_volume_btn: &"SETTINGS_BTN_UI_VOLUME",
+
+	video_quality_btn: &"SETTINGS_BTN_VIDEO_QUALITY",
+	video_anim_btn: &"SETTINGS_BTN_VIDEO_ANIMATIONS",
+	video_font_btn: &"SETTINGS_BTN_VIDEO_FONT",
+}
+
+@onready var menu_labels_translation_map: Dictionary[Node, StringName] = {
+	$MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VolumeLabel: &"SETTINGS_LABEL_VOLUME",
+	$MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VideoLabel: &"SETTINGS_LABEL_VIDEO",
+}
+
+func _load_translations() -> void:
+	for button in menu_btn_translation_map.keys():
+		var label: Label = button.get_parent().get_node("Label")
+		label.text = tr(menu_btn_translation_map.get(button))
+	
+	for label in menu_labels_translation_map.keys():
+		label.text = tr(menu_labels_translation_map.get(label))
+
 func _ready() -> void:
+	_load_translations()
+
 	# helpful shorthand
 	var gs := GameSettings
 	
