@@ -129,9 +129,17 @@ func commit() -> void:
 	config.set_value("main", "lang", _main_lang)
 	config.set_value("main", "content-warn-ack", _content_warn_ack)
 
-	var err := config.save(SETTINGS_PATH)
+	var err := config.save(SETTINGS_PATH + ".tmp")
 	if err != OK:
-		push_error("failed to save settings to '%s'" % SETTINGS_PATH)
+		push_error("settings: failed to create tmp file: '%s'" % SETTINGS_PATH)
+		return
+	
+	err = DirAccess.rename_absolute(SETTINGS_PATH + ".tmp", SETTINGS_PATH)
+	if err != OK:
+		push_error("settings: failed to rename settings")
+	
+	
+	DirAccess.remove_absolute(SETTINGS_PATH + ".tmp")
 
 
 # --- volume ---
