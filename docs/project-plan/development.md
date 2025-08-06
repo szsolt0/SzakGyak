@@ -1,66 +1,133 @@
-# Fejlesztési Terv
+# Fejlesztési Terv – Részletes Projektütemezés
 
-A játékfejlesztés 8 hetes időtartamra lett tervezve, amely során minden hétnek
-meghatározott célja és fókusza van. A csapat összehangolt munkával, heti három
-egyeztetéssel és folyamatos együttműködéssel halad előre a játék végleges formájáig.
+A játékfejlesztés egy **8 hetes projekt** keretében valósul meg, amely során a csapat meghatározott feladatokat és célokat teljesít hétről hétre. A projektmenedzsment Scrum-szerű, heti háromszori egyeztetésen alapul. A cél egy **játszható, kiadásra kész játék** fejlesztése, amely reflektál a szocializmus alatti munkavállalói dilemmákra.
 
-## Koncepcióalkotás és Tervezés
+## 1–2. hét: **Koncepcióalkotás és Tervezés**
 
-(1--2. hét)
+### Cél:
 
-Fő cél: A játék világának és mechanikáinak alapozása, valamint a fejlesztéshez szükséges dokumentációk elkészítése.
+A játék alapötletének konkretizálása, mechanikák definiálása, fejlesztési alapok lefektetése.
 
-- A játék részletes koncepciójának kidolgozása: világ, hangulat, fő mechanikák.
-- Játékrendszer tervezése: mutatók (éhség, stressz, reputáció), morális döntések struktúrája.
-- Három munkatípus (állami, maszek, informális) funkcionális felépítésének meghatározása.
-- Alap felhasználói felület és képernyőváltás logikájának vázolása.
-- Github repository, mkdocs és Godot projekt inicializálása.
-- Csapat szerepköreinek és feladatainak felosztása.
-- Projektterv, vízió és SRS (Software Requirements Specification) dokumentum összeállítása, véglegesítése a csapattagokkal és a gyakorlatvezetővel.
+### Konkrét tevékenységek:
 
-## Grafikai Elemek és Textúrák Fejlesztése
+- **Játékkoncepció véglegesítése**:
 
-(3--4. hét)
+  - A történeti háttér, játékos célok és játékmenet fő struktúrájának meghatározása.
+  - Alap játéktörténet átbeszélése: a játékos és családja túlélése a szocializmusban.
 
-Fő cél: A rendszer logikai modelljének és a játék vizuális világának létrehozása.
+- **Mechanikák és mutatók kidolgozása**:
 
-- Analízis modell elkészítése: rendszer szintű logikai struktúra, folyamatmodellek.
-- Godot projekt mappaszerkezetének kialakítása.
-- Grafikai elemek megtervezése és felosztása a csapattagok között:
-    - Munkakörnyezetek (autószerelő műhely, bolt, iroda) hátterei és tárgyi elemei.
-    - Családi ház, UI-elemek (mutatósávok, karakterikonok, eseményszövegek).
-- Egységes 2D-s stílus kialakítása, szocialista korszakhoz illeszkedő látványvilág.
-- Kezdeti animációk, alap textúrák és interakciós vizuális visszajelzések készítése.
-- Analízis modell és grafikai anyagok véglegesítése, bemutatása a gyakorlatvezetőnek.
+  - Éhség, stressz, reputáció, alkoholszint mint játékmechanikai változók definiálása.
+  - Morális döntések rendszerének vázolása.
 
-## Rendszertervezés és Prototípus
+- **Projektterv összeállítása**:
 
-(5--6. hét)
+  - Projektstruktúrák, sprintciklusok kialakítása.
+  - Work-log sablon létrehozása, csapattagok aktivitásának nyomon követésére.
+  - Játékkomponensek és eszközkategóriák (grafika, UI, mechanikák, dokumentáció) strukturált szétválasztása.
 
-Fő cél: A játékmenet technikai alapjainak megvalósítása és az első játszható verzió elkészítése.
+- **Csapatmunka és szerepkiosztás**:
 
-- Rendszerterv elemeinek felosztása a csapattagok között.
-- Godot scriptjeinek és node-oknak a megtervezése, leosztása.
-- A játékmenet fő logikáinak implementálása:
-    - Mutatók frissülése, munkavégzés, események.
-    - Képernyőváltási rendszer (navigáció jobbra–balra, fel–le).
-    - Morális döntési rendszer működő verziója.
-    - Alap játékkör: munkavégzés – pihenés – új nap.
-- Script-részek integrálása és összehangolása.
-- Alap visszajelzések (éhség, pénzmozgás, eseménymegjelenítés).
-- prototípus létrehozása és alap tesztelése.
-- Rendszerterv véglegesítése, bemutatása a gyakorlatvezetőnek.
+  - Projektmenedzser kiválasztása.
+  - Munkafolyamatok (grafika, fejlesztés, dokumentáció) átbeszélése.
+  - Eszközök egyeztetése: Git/GitHub, Godot Engine, MkDocs.
 
-## Véglegesítés és Kiadásra Kész Verzió
+- **Technikai beállítások és tréningek**:
 
-(7--8. hét)
+  - Main GitHub repository létrehozása.
+  - MkDocs dokumentációs keretrendszer telepítése és konfigurálása.
+  - Forkolás, pull requestek és merge működésének gyakorlása.
+  - Weboldalszerkesztés MkDocs alatt: kezdőoldal szerkesztése, nav-struktúra kiépítése.
 
-Fő cél: A játék végleges funkcióinak kialakítása, tesztelése és kiadásra kész verzió elkészítése.
+- **Egyeztetés a gyakorlatvezetővel**:
+  - Projektterv és koncepció átbeszélése.
+  - Technikai megvalósítási lehetőségek és kihívások megbeszélése.
 
-- Tesztelési terv felosztása, egyes elemek külön megvalósítása csapattagok által.
-- Játékmechanikák finomhangolása, munkák közötti egyensúly beállítása.
-- UI-átalakítás, optimalizálás, bugfixek belső tesztelések alapján.
-- Véletlenszerű események bővítése, morális döntések következményeinek implementálása.
-- Naplózási és pontozási rendszer beépítése.
-- Játék végi állapotok programozása (éhenhalás, rendszerváltás).
-- Végső build létrehozása és bemutatása a gyakorlatvezetőnek.
+### Kiosztandó feladatok:
+
+- Projektmenedzser: munkafolyamat koordinálása, határidők nyilvántartása.
+- Dokumentációfelelős(ök): projektterv, vízió, SRS, work-log kidolgozása.
+- Technikai felelős: repositoryk létrehozása, Git/Godot struktúra inicializálása.
+- Webfelelős: MkDocs betanulása, weboldal felépítése és tesztelése.
+- Konzultációs felelős: egyeztetés szervezése és dokumentálása a gyakorlatvezetővel.
+
+### Elvárt eredmények a 2. hét végére:
+
+- Projektterv és vízió dokumentum elkészítése.
+- GitHub repository és forkolt tárolók létrehozása.
+- MkDocs oldal alapszintű működése.
+- Csapaton belüli szerepkörök tisztázása.
+- Webes dokumentációs szerkezet alapjainak kiépítése.
+- Eredmények bemutatása a gyakorlatvezetőnek.
+
+## 3–4. hét: **Grafikai Elemek és Logikai Modell**
+
+### Cél:
+
+A játék vizuális megjelenésének és rendszerlogikájának alapjainak megteremtése.
+
+### Konkrét tevékenységek:
+
+- **Analízis modell kidolgozása**:
+  - Use case diagram, osztálydiagram, állapotgép (napok ciklusa, események).
+  - Munkafolyamatok: reggel–munka–este–pihenés.
+- **Grafikai munka szétosztása**:
+  - Helyszínek: autószerelő műhely, élelmiszerbolt, iroda, otthon.
+  - UI elemek: statussávok, karakterikonok, naplóablak, döntési gombok.
+  - Tárgyi elemek: bútorok, gépek, használati tárgyak.
+- **Stílusirányelvek lefektetése**:
+  - Szocialista realista stílus (2D pixel art alapokon), tompított színpaletta.
+- **Elsődleges prototípus assetek**:
+  - 3 háttér, 3 karakter sprite, 2 animáció, 3 interakciós UI-visszajelzés.
+- **Analízis modell dokumentálása** és egyeztetés a gyakorlatvezetővel.
+
+## 5–6. hét: **Rendszertervezés és Játszható Prototípus**
+
+### Cél:
+
+A játék technikai működésének implementálása és játszható verzió bemutatása.
+
+### Konkrét tevékenységek:
+
+- **Rendszerterv véglegesítése**:
+  - Modulstruktúra (UI, játékmenet, események, döntések, mentés).
+  - Adatkezelés és állapotkövetés módja (pl. JSON alapú mentés).
+- **Godot rendszer implementáció**:
+  - Scene tree struktúra kialakítása.
+  - Script-ek leosztása: statussáv frissítések, navigáció, eseménykezelés.
+- **Funkciók implementálása**:
+  - Munkarendszer: választható állások, fizetés, következmények.
+  - Döntési pontok, morális választások (pl. kenőpénz elfogadása).
+  - Életciklus: reggel indulás → munka → este haza → napi visszajelzés.
+- **UI logika és képernyőváltások** (navigációs nyilak, hotspot interakció).
+- **Prototípus tesztelése**:
+  - Belső, csapatszintű tesztelés: működik-e a napi ciklus?
+  - Feedback gyűjtés és korrekció.
+
+## 7–8. hét: **Finomhangolás és Kiadásra Kész Verzió**
+
+### Cél:
+
+A játék véglegesítése, tesztelése, és publikálásra alkalmas állapotba hozása.
+
+### Konkrét tevékenységek:
+
+- **Funkciók bővítése és finomhangolása**:
+  - Munkák közti egyensúly: pénz/stressz kockázatok igazítása.
+  - Döntések következményeinek kódolása (pl. állami munka → reputáció növelés).
+- **Véletlenszerű eseményrendszer implementálása**:
+  - Pl. NAV-ellenőrzés, gyerekszületés, beteg családtag.
+- **Tesztelés**:
+  - Manuális és strukturált tesztelés (felhasználói tesztelők is bevonva).
+  - Hibajegyzék vezetése, bugfixek végrehajtása.
+- **UI optimalizálás és polish**:
+  - Animációk, átmenetek, hanghatások.
+  - Napló, statisztikák, pontozás megjelenítése.
+- **Játék végi állapotok programozása**:
+  - Lehetséges befejezések: éhenhalás, kiégés, rendszerváltás, emigráció stb.
+- **Végleges build összeállítása és prezentálása a gyakorlatvezetőnek.**
+  - Dokumentációk leadása: végső SRS, fejlesztési napló, felhasználói útmutató.
+
+### Megjegyzés a projektmenedzsmenthez:
+
+Minden hét végén **belső review** zajlik, ahol a csapat értékeli az aktuális állapotot, rögzíti a problémákat, és kijelöli a következő sprint feladatait. A projekt során Jira-táblát vagy Exceles nyilvántartást is alkalmazunk a státuszok követésére.
