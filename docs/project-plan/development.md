@@ -120,24 +120,58 @@ A játék vizuális stílusának kialakítása, az analízis modell alapjainak l
 
 ### Cél:
 
-A játék technikai működésének implementálása és játszható verzió bemutatása.
+A játék technikai működésének implementálása, az alap játékrendszer megalkotása, és egy kezdetleges, tesztelhető demo verzió elkészítése.
 
 ### Konkrét tevékenységek:
 
-- **Rendszerterv véglegesítése**:
-  - Modulstruktúra (UI, játékmenet, események, döntések, mentés).
-  - Adatkezelés és állapotkövetés módja (pl. JSON alapú mentés).
-- **Godot rendszer implementáció**:
-  - Scene tree struktúra kialakítása.
-  - Script-ek leosztása: statussáv frissítések, navigáció, eseménykezelés.
-- **Funkciók implementálása**:
-  - Munkarendszer: választható állások, fizetés, következmények.
-  - Döntési pontok, morális választások (pl. kenőpénz elfogadása).
-  - Életciklus: reggel indulás → munka → este haza → napi visszajelzés.
-- **UI logika és képernyőváltások** (navigációs nyilak, hotspot interakció).
-- **Prototípus tesztelése**:
-  - Belső, csapatszintű tesztelés: működik-e a napi ciklus?
-  - Feedback gyűjtés és korrekció.
+- **Rendszerterv véglegesítése és dokumentálása**:
+
+  - A rendszerterv dokumentációjának elkezdése, részletes átbeszélése és lezárása.
+  - Moduláris rendszer kialakítása: UI, eseménykezelés, játékmenet, mentés/betöltés.
+  - Adatkezelési stratégia rögzítése: JSON-alapú mentési rendszer.
+
+- **Godot mappa- és projektstruktúra kialakítása**:
+
+  - Egységes mappastruktúra megbeszélése és kialakítása a Godot projekten belül.
+  - `tscn` világok koncepciójának kidolgozása: minden csapattag egy-egy játéktérért felel.
+  - Külön világok (pl. shop, office, carshop) létrehozása külön `.tscn` fájlokként.
+
+- **Script rendszer tervezése és megvalósítása**:
+
+  - Scriptelési elvek és konvenciók átbeszélése, közös struktúra kialakítása.
+  - Feladatmegosztás a csapattagok között: különböző funkciók (HUD frissítés, navigáció, események kezelése) szétosztása.
+  - Scriptek fejlesztésének megkezdése és integrációja az egyes játékrészekbe.
+
+- **Grafikai munka előrehaladása**:
+
+  - A grafikai elemek kb. 80%-os elkészítettsége: háttérképek, tárgyak, UI elemek, karakterek.
+  - Már létező grafikai assetek integrálása a Godot jelenetekbe.
+
+- **Játszható demo prototípus elkészítése**:
+  - A létrehozott `tscn` világok és scriptek összehangolása.
+  - Interaktív ciklus kialakítása: reggel → munkahely → este → visszajelzés.
+  - Belső, csapatszintű prototípus-tesztelés.
+  - Hibák azonosítása, első visszajelzések alapján korrekciók.
+
+### Kiosztandó feladatok:
+
+- **Godot technikai felelős**:
+  - Mappastruktúra és projekt setup koordinálása.
+- **Scriptfelelős(ök)**:
+  - Script struktúra kialakítása, scriptek leosztása és integrálás.
+- **Grafikusok**:
+  - Hátralévő assetek elkészítése és jelenetekbe illesztése.
+- **Dokumentációfelelős**:
+  - Rendszerterv dokumentáció megírása és karbantartása.
+
+### Elvárt eredmények a 6. hét végére:
+
+- Rendszerterv végleges és dokumentált formában elérhető.
+- Egységes Godot mappa- és projektstruktúra.
+- Script rendszer működő elemei: alap játékmeneti logika megvalósítva.
+- Játszható prototípus létrehozása a külön játéktér- és scriptmodulok integrálásával.
+- Grafikai elemek többségének elkészítése és beépítése.
+- Belső tesztelés és első hibajegyzék összeállítása.
 
 ## 7–8. hét: **Finomhangolás és Kiadásra Kész Verzió**
 
