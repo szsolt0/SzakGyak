@@ -64,22 +64,57 @@ A játék alapötletének konkretizálása, mechanikák definiálása, fejleszt�
 
 ### Cél:
 
-A játék vizuális megjelenésének és rendszerlogikájának alapjainak megteremtése.
+A játék vizuális stílusának kialakítása, az analízis modell alapjainak lefektetése, valamint a játékmenet logikai struktúrájának és kezelőfelületének megtervezése.
 
 ### Konkrét tevékenységek:
 
-- **Analízis modell kidolgozása**:
-  - Use case diagram, osztálydiagram, állapotgép (napok ciklusa, események).
-  - Munkafolyamatok: reggel–munka–este–pihenés.
-- **Grafikai munka szétosztása**:
-  - Helyszínek: autószerelő műhely, élelmiszerbolt, iroda, otthon.
-  - UI elemek: statussávok, karakterikonok, naplóablak, döntési gombok.
-  - Tárgyi elemek: bútorok, gépek, használati tárgyak.
-- **Stílusirányelvek lefektetése**:
-  - Szocialista realista stílus (2D pixel art alapokon), tompított színpaletta.
-- **Elsődleges prototípus assetek**:
-  - 3 háttér, 3 karakter sprite, 2 animáció, 3 interakciós UI-visszajelzés.
-- **Analízis modell dokumentálása** és egyeztetés a gyakorlatvezetővel.
+- **Analízis modell megalapozása**:
+
+  - Megbeszélés az analízis modellbe kerülő elemekről (use case diagram, osztálydiagram, állapotdiagram).
+  - Alap játékmeneti ciklus és események rendszerezése (pl. reggel → munka → este → pihenés).
+  - A játéklogika és történet szorosabb integrációja: játékos feladatai, célok, morális döntések helye és szerepe.
+
+- **Grafikai koncepciók kidolgozása**:
+
+  - Minden csapattag prezentálta saját elképzelését a játék kinézetéről.
+  - A látványvilág közös kialakítása megbeszélés és konszenzus alapján.
+  - Stílusirányzat kiválasztása: **2D pixel art**, tompított, szocialista korszakra jellemző színpalettával.
+
+- **Felhasználói felület (HUD) és menürendszer tervezése**:
+
+  - Játék közbeni HUD elemek megbeszélése és listázása:
+    - Status HUD (éhség, stressz, reputáció, alkoholszint).
+    - Family HUD (családtagok állapota).
+    - Time és pénzegység (gold) kijelzés.
+  - Main Menu struktúrájának megbeszélése: új játék, folytatás, kilépés.
+
+- **Grafikai elemek elkészítése**:
+  - HUD és Main Menu grafikai elemeinek megalkotása.
+  - Három helyszínhez tartozó alap assetek elkészítése:
+    - **Shop** (bolt).
+    - **Carshop** (autószerelő műhely).
+    - **Office** (iroda).
+  - Egységes vizuális nyelv kialakítása a helyszínek között.
+
+### Kiosztandó feladatok:
+
+- **Analízis felelős(ök)**:
+  - Use case, osztálydiagram és állapotgép kidolgozása.
+- **Grafikusok**:
+  - HUD és helyszínek látványvilágának kidolgozása.
+- **UI/UX felelős**:
+  - Menürendszer és HUD felhasználói útvonalainak és elrendezésének tervezése.
+- **Történetfelelős**:
+  - A játéktörténet és játékmeneti döntési pontok részletezése.
+
+### Elvárt eredmények a 4. hét végére:
+
+- A játék látványvilágának alapjainak rögzítése és elfogadása.
+- Legalább három helyszínhez tartozó grafikai assetek elkészítése.
+- HUD és Main Menu fő grafikai elemeinek elkészítése.
+- Analízis modell kezdeti verziója (use case, osztálydiagram, állapotgép).
+- A játékmenet logikájának alapvető struktúrája és dokumentálása.
+- Továbblépés előkészítése a rendszertervezés irányába (5–6. hét).
 
 ## 5–6. hét: **Rendszertervezés és Játszható Prototípus**
 
