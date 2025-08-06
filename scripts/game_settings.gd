@@ -1,7 +1,8 @@
 extends Node
 
-const SETTINGS_PATH := "user://settings.ini"
-const PIXEL_FONT_PATH := "res://assets/fonts/pixel_font.tres"
+const SETTINGS_PATH := &"user://settings.ini"
+const PIXEL_FONT_PATH := &"res://assets/fonts/Tiny5-Regular.ttf"
+const TRANSLATIONS_PATH := &"res://translations"
 
 # volume
 var _master_volume: int = 40
@@ -22,7 +23,7 @@ var _main_lang: String = "ask" # TODO: implement this
 # WARNING: DO NOT MODIFY.
 var _content_warn_ack: bool = false
 
-func _load_from_file() -> void:
+func _load_settings() -> void:
 	var config := ConfigFile.new()
 	var err := config.load(SETTINGS_PATH)
 	
@@ -67,6 +68,9 @@ func _load_from_file() -> void:
 	_content_warn_ack = bool(config.get_value("main", "content-warn-ack", false))
 
 func _apply_all() -> void:
+	# a rather "dirty" way to apply all settings, but it works
+	# it just sets every setting to it's current value
+
 	set_master_volume(get_master_volume())
 	set_sfx_volume(get_sfx_volume())
 	set_ui_volume(get_ui_volume())
@@ -75,10 +79,17 @@ func _apply_all() -> void:
 	set_video_quality(get_video_quality())
 	set_video_font(get_video_font())
 	set_video_animations(get_video_animations())
+	
+	set_main_lang(get_main_lang())
 
 func reload() -> void:
-	_load_from_file()
+	_load_all_translation()
+	_load_settings()
 	_apply_all()
+	
+	# temporary solution until settings menu has lang option
+	# valid values ar "hu_HU" and "en_US"
+	set_main_lang("en_US")
 
 func _ready() -> void:
 	reload()
@@ -155,19 +166,19 @@ func get_ui_volume() -> int:
 
 # --- video ---
 
-const FONT_OVERRIDE := [
-	"Label",
-	"Button",
-	"LineEdit",
-	"TextEdit",
-	"CheckBox",
-	"OptionButton",
-	"RichTextLabel"
+const FONT_OVERRIDE: Array[StringName] = [
+	&"Label",
+	&"Button",
+	&"LineEdit",
+	&"TextEdit",
+	&"CheckBox",
+	&"OptionButton",
+	&"RichTextLabel"
 ]
 
 func _set_font(path: String) -> void:
 	var font := FontFile.new()
-	font.load_dynamic_font("res://assets/fonts/Tiny5-Regular.ttf")
+	font.load_dynamic_font(PIXEL_FONT_PATH)
 
 	var theme := ThemeDB.get_default_theme()
 	
@@ -205,7 +216,7 @@ func set_video_font(val: FontStyle) -> void:
 	
 	match val:
 		FontStyle.PIXEL:
-			_set_font("res://assets/fonts/Tiny5-Regular.ttf")
+			_set_font(PIXEL_FONT_PATH)
 		FontStyle.READABLE:
 			_clear_font()
 
@@ -215,8 +226,45 @@ func get_video_font() -> FontStyle:
 
 # --- main ---
 
+func _load_translation(lang: StringName) -> void:
+	var path := TRANSLATIONS_PATH + "/" + str(lang)
+	var stack: Array = [path]
+	
+	# recursively travel the directory to load all translations
+	while stack.size() > 0:
+		var current_path = stack.pop_back()
+		var dir = DirAccess.open(current_path)
+		if not dir:
+			push_error("Could not open: " + current_path)
+			continue
+
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			var full_path = current_path + "/" + file_name
+			if dir.current_is_dir():
+				if not file_name.begins_with("."):
+					stack.push_back(full_path)
+			else:
+				if file_name.ends_with(".translation"):
+					var trans = load(full_path)
+					if trans:
+						TranslationServer.add_translation(trans)
+			file_name = dir.get_next()
+		dir.list_dir_end()
+
+func _load_all_translation() -> void:
+	# remove existing translations (if any)
+	TranslationServer.clear()
+
+	var path := DirAccess.open(TRANSLATIONS_PATH)
+	
+	for lang in path.get_directories():
+		_load_translation(lang)
+
 func set_main_lang(val: String) -> void:
 	_main_lang = val
+	TranslationServer.set_locale(val)
 
 func get_main_lang() -> String:
 	return _main_lang

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ig3kocnbgc0a"]
 
-[ext_resource type="Script" uid="uid://ddgqk3vgehcib" path="res://scenes/menu/main_menu.gd" id="1_nl8w3"]
+[ext_resource type="Script" uid="uid://d0cpmmkh88rmo" path="res://scenes/menu/main_menu.gd" id="1_nl8w3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -31,19 +31,16 @@ theme_override_constants/separation = 16
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
-text = "Play"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
-text = "Settings"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
-text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
