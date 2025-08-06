@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://dmui1pc5cxhhn" path="res://assets/textures/shop/Shop_Background.png" id="1_cimqq"]
 [ext_resource type="Texture2D" uid="uid://dsn66f70fqhks" path="res://assets/textures/shop/Table.png" id="2_yltc6"]
+
 [ext_resource type="Script" uid="uid://ct2rfdrygww18" path="res://scenes/shop/register_button.gd" id="3_fpbbi"]
+
 [ext_resource type="Texture2D" uid="uid://c2s5qmnqy5ccn" path="res://assets/textures/shop/Cash_register0.png" id="4_m0qts"]
 
 [node name="Shop" type="Node2D"]
