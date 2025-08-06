@@ -1,4 +1,4 @@
-# Fejlesztési Terv – Részletes Projektütemezés
+# Fejlesztési Terv
 
 A játékfejlesztés egy **8 hetes projekt** keretében valósul meg, amely során a csapat meghatározott feladatokat és célokat teljesít hétről hétre. A projektmenedzsment Scrum-szerű, heti háromszori egyeztetésen alapul. A cél egy **játszható, kiadásra kész játék** fejlesztése, amely reflektál a szocializmus alatti munkavállalói dilemmákra.
 
