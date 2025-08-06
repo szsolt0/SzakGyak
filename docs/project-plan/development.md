@@ -177,26 +177,72 @@ A játék technikai működésének implementálása, az alap játékrendszer me
 
 ### Cél:
 
-A játék véglegesítése, tesztelése, és publikálásra alkalmas állapotba hozása.
+A játék véglegesítése, teljes funkcionalitás megvalósítása, tesztelése és kiadásra alkalmas állapotba hozása.
 
 ### Konkrét tevékenységek:
 
 - **Funkciók bővítése és finomhangolása**:
-  - Munkák közti egyensúly: pénz/stressz kockázatok igazítása.
-  - Döntések következményeinek kódolása (pl. állami munka → reputáció növelés).
+
+  - A konzultációkon korábban kijelölt összes játékfunkció megvalósítása.
+  - Munkarendszer kiegyensúlyozása: fizetés, stressz, morális döntések hatásainak finomhangolása.
+  - Változók és rendszerek véglegesítése: reputáció, éhség, alkohol, család.
+
+- **Scriptek és jelenetek (tscn) javítása és kiegészítése**:
+
+  - Hibás vagy nem működő szkriptek javítása.
+  - Kiszámíthatatlan viselkedések és edge-case hibák kezelése.
+  - Különböző jelenetek (világok) és logikák végleges összekapcsolása.
+
 - **Véletlenszerű eseményrendszer implementálása**:
-  - Pl. NAV-ellenőrzés, gyerekszületés, beteg családtag.
+
+  - További események beépítése (pl. NAV-ellenőrzés, gyerekszületés, betegség).
+  - Események hatásának szimulációja és tesztelése.
+
 - **Tesztelés**:
-  - Manuális és strukturált tesztelés (felhasználói tesztelők is bevonva).
-  - Hibajegyzék vezetése, bugfixek végrehajtása.
-- **UI optimalizálás és polish**:
-  - Animációk, átmenetek, hanghatások.
-  - Napló, statisztikák, pontozás megjelenítése.
-- **Játék végi állapotok programozása**:
-  - Lehetséges befejezések: éhenhalás, kiégés, rendszerváltás, emigráció stb.
-- **Végleges build összeállítása és prezentálása a gyakorlatvezetőnek.**
-  - Dokumentációk leadása: végső SRS, fejlesztési napló, felhasználói útmutató.
+
+  - Tesztelési terv összeállítása.
+  - Belső csapattagok és külső (felhasználói) tesztelők bevonása.
+  - Manuális hibakeresés, buglista vezetése, prioritás szerinti javítás.
+  - Játék gépigényének felmérése különböző rendszereken.
+
+- **UI és grafikai polish**:
+
+  - Animációk, vizuális átmenetek, hanghatások integrálása.
+  - Napló és statisztikai visszajelzések pontos megjelenítése.
+  - Teljes textúrakészlet lezárása, stílusbeli egységesség biztosítása.
+  - Kisebb textúrák finomhangolása, újraírás, ahol szükséges.
+
+- **Játék végi állapotok beépítése**:
+
+  - Többféle lehetséges befejezés: éhenhalás, emigráció, kiégés, rendszerváltás.
+  - Befejezésekhez tartozó logika és animációk implementálása.
+
+- **Végső dokumentáció és build**:
+  - Végső SRS, fejlesztési napló és felhasználói útmutató elkészítése.
+  - Kész játék exportálása és végleges build létrehozása.
+  - Prezentáció a gyakorlatvezető felé: játék bemutatása, dokumentációk leadása.
+
+### Kiosztandó feladatok:
+
+- **Tesztelési felelős**:
+  - Teszttervek készítése, hibák összegyűjtése és priorizálása.
+- **Technikai felelős**:
+  - Script- és jelenetlogika véglegesítése, hibák javítása.
+- **Grafikai felelős(ök)**:
+  - Textúrák lezárása, polish, UI finomhangolás.
+- **Dokumentációfelelős**:
+  - Végső dokumentumok megszerkesztése és formázása.
+- **Konzultációs felelős**:
+  - Konzultációkon vállalt célok teljesülésének ellenőrzése.
+
+### Elvárt eredmények a 8. hét végére:
+
+- Végleges, játszható és stabil játékverzió elkészítése.
+- A játékban megtervezett összes funkció működik.
+- Teljes grafikai stílus és UI megvalósítása.
+- Befejezett és ellenőrzött dokumentációcsomag.
+- Sikeres prezentáció és játék kiadása.
 
 ### Megjegyzés a projektmenedzsmenthez:
 
-Minden hét végén **belső review** zajlik, ahol a csapat értékeli az aktuális állapotot, rögzíti a problémákat, és kijelöli a következő sprint feladatait. A projekt során Jira-táblát vagy Exceles nyilvántartást is alkalmazunk a státuszok követésére.
+Minden hét végén **belső review** zajlik, ahol a csapat értékeli az aktuális állapotot, rögzíti a problémákat, és kijelöli a következő sprint feladatait. A projekt során Exceles nyilvántartást is alkalmazunk a státuszok követésére, ahol a munkakiosztás látható, illetve minden csapattag saját feladatainak vázolása repository commit-tal együtt.
