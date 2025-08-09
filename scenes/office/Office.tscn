@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://brenq6kg8pnib"]
 
-[ext_resource type="Texture2D" uid="uid://om2y7qbnlhjq" path="res://assets/textures/office/wallpaper.png" id="1_4g2wo"]
-[ext_resource type="Texture2D" uid="uid://tk3fecxobxx0" path="res://assets/textures/office/desktop.png" id="2_3obsa"]
-[ext_resource type="Texture2D" uid="uid://djev6qjrgl21b" path="res://assets/textures/office/paper.png" id="3_pqwco"]
-[ext_resource type="Texture2D" uid="uid://qdkrc0doircd" path="res://assets/textures/office/idcard.png" id="4_3qdk0"]
-[ext_resource type="Texture2D" uid="uid://cf3u4hatbhywn" path="res://assets/textures/office/boss.png" id="5_4g2wo"]
+[ext_resource type="Texture2D" uid="uid://b0b57r2hu32w" path="res://assets/textures/office/wallpaper.png" id="1_4g2wo"]
+[ext_resource type="Texture2D" uid="uid://dvcjnuok1oqqu" path="res://assets/textures/office/desktop.png" id="2_3obsa"]
+[ext_resource type="Texture2D" uid="uid://2vvvcprwbjb7" path="res://assets/textures/office/paper.png" id="3_pqwco"]
+[ext_resource type="Texture2D" uid="uid://cniiwckhbxi5c" path="res://assets/textures/office/idcard.png" id="4_3qdk0"]
+[ext_resource type="Texture2D" uid="uid://bagpqkt20xgxf" path="res://assets/textures/office/boss.png" id="5_4g2wo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3obsa"]
 animations = [{
