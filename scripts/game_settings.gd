@@ -1,3 +1,5 @@
+# 
+
 extends Node
 
 const SETTINGS_PATH := &"user://settings.ini"
@@ -89,7 +91,7 @@ func reload() -> void:
 	
 	# temporary solution until settings menu has lang option
 	# valid values ar "hu_HU" and "en_US"
-	set_main_lang("en_US")
+	set_main_lang("hu_HU")
 
 func _ready() -> void:
 	reload()
@@ -137,15 +139,24 @@ func commit() -> void:
 	err = DirAccess.rename_absolute(SETTINGS_PATH + ".tmp", SETTINGS_PATH)
 	if err != OK:
 		push_error("settings: failed to rename settings")
-	
-	
-	DirAccess.remove_absolute(SETTINGS_PATH + ".tmp")
+		DirAccess.remove_absolute(SETTINGS_PATH + ".tmp")
 
 
 # --- volume ---
 
+var _master_volume_bus := AudioServer.get_bus_index(&"Master")
+var _sfx_volume_bus := AudioServer.get_bus_index(&"Sfx")
+var _music_volume_bus := AudioServer.get_bus_index(&"Music")
+var _ui_volume_bus := AudioServer.get_bus_index(&"Ui")
+
+
+func _set_bus_volume(bus_index: int, val: int) -> void:
+	var db_volume := lerpf(-80, 0, val / 100.0)
+	AudioServer.set_bus_volume_linear(bus_index, val as float / 100.0)
+
 func set_master_volume(val: int) -> void:
 	_master_volume = clampi(val, 0, 100)
+	_set_bus_volume(_master_volume_bus, _master_volume)
 
 func get_master_volume() -> int:
 	return _master_volume
@@ -153,6 +164,7 @@ func get_master_volume() -> int:
 
 func set_sfx_volume(val: int) -> void:
 	_sfx_volume = clampi(val, 0, 100)
+	_set_bus_volume(_sfx_volume_bus, _sfx_volume)
 
 func get_sfx_volume() -> int:
 	return _sfx_volume
@@ -160,6 +172,7 @@ func get_sfx_volume() -> int:
 
 func set_music_volume(val: int) -> void:
 	_music_volume = clampi(val, 0, 100)
+	_set_bus_volume(_music_volume_bus, _music_volume)
 
 func get_music_volume() -> int:
 	return _music_volume
@@ -167,6 +180,7 @@ func get_music_volume() -> int:
 
 func set_ui_volume(val: int) -> void:
 	_ui_volume = clampi(val, 0, 100)
+	_set_bus_volume(_ui_volume_bus, _ui_volume)
 
 func get_ui_volume() -> int:
 	return _ui_volume
