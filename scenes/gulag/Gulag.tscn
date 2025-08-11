@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6mqah8kb5s71"]
+
+[ext_resource type="Texture2D" uid="uid://dg0avkdt422kq" path="res://assets/textures/gulag/gulag_wallpaper.jpg" id="1_4atna"]
+
+[node name="Gulag" type="Node2D"]
+
+[node name="root" type="Node2D" parent="."]
+
+[node name="Wallpaper" type="Sprite2D" parent="root"]
+position = Vector2(3.24997, -2.99988)
+scale = Vector2(0.51182, 0.333599)
+texture = ExtResource("1_4atna")
+
+[node name="Camera" type="Camera2D" parent="root"]

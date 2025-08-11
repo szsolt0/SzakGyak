@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2qc5tyd70kd4"]
+
+[ext_resource type="Texture2D" uid="uid://dmui1pc5cxhhn" path="res://assets/textures/shop/Shop_Background.png" id="1_cimqq"]
+[ext_resource type="Texture2D" uid="uid://dsn66f70fqhks" path="res://assets/textures/shop/Table.png" id="2_yltc6"]
+
+[ext_resource type="Script" uid="uid://ct2rfdrygww18" path="res://scenes/shop/register_button.gd" id="3_fpbbi"]
+
+[ext_resource type="Texture2D" uid="uid://c2s5qmnqy5ccn" path="res://assets/textures/shop/Cash_register0.png" id="4_m0qts"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(578, 205)
+scale = Vector2(5.59247, 5.59247)
+texture = ExtResource("1_cimqq")
+
+[node name="TableBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576.894, 513.125)
+scale = Vector2(5.58333, 5.58333)
+texture = ExtResource("2_yltc6")
+
+[node name="RegisterButton" type="Area2D" parent="."]
+script = ExtResource("3_fpbbi")
+
+[node name="Sprite2D" type="Sprite2D" parent="RegisterButton"]
+texture_filter = 1
+position = Vector2(973, 407)
+scale = Vector2(5.583, 5.583)
+texture = ExtResource("4_m0qts")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="RegisterButton"]
+position = Vector2(973, 407)
+scale = Vector2(5.583, 5.583)
+polygon = PackedVector2Array(-14.5083, -10.7469, -14.8665, -10.0304, -17.9115, 2.86584, -21.6729, 7.70195, -14.1501, 16.6577, 15.9413, 16.8368, 15.2248, 8.59753, 11.6425, 5.01522, 15.583, 1.79115, 15.4039, -5.9108, 12.0007, -10.0304, 10.3887, -18.628, -11.8216, -18.4489, -14.1501, -12.5381)
+
+[connection signal="mouse_entered" from="RegisterButton" to="RegisterButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RegisterButton" to="RegisterButton" method="_on_mouse_exited"]

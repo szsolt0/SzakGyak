@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://em3wtpfp07ib"]
+
+[ext_resource type="Texture2D" uid="uid://c6eu8nwqxtkwd" path="res://assets/textures/repairshop/Background.png" id="1_i16o3"]
+[ext_resource type="Texture2D" uid="uid://bhkc54pyduw2n" path="res://assets/textures/repairshop/Car.png" id="2_q4rlt"]
+[ext_resource type="Texture2D" uid="uid://puqxxyvnlsce" path="res://assets/textures/repairshop/Shelf.png" id="3_m1dyq"]
+[ext_resource type="Texture2D" uid="uid://74iyn7ye7ekv" path="res://assets/textures/repairshop/Hammer.png" id="4_1jo2a"]
+[ext_resource type="Texture2D" uid="uid://cexnbg80grvfo" path="res://assets/textures/repairshop/ScrewDriver.png" id="5_4p1p8"]
+[ext_resource type="Texture2D" uid="uid://bxqyjxgrncquo" path="res://assets/textures/repairshop/WindowCleaner.png" id="6_e41nk"]
+[ext_resource type="Texture2D" uid="uid://dftsydqb1xugo" path="res://assets/textures/repairshop/Wrench.png" id="7_wy1jm"]
+[ext_resource type="Texture2D" uid="uid://bh0obqpccpd66" path="res://assets/textures/repairshop/Tire.png" id="8_e41nk"]
+
+[node name="CarShop" type="Node2D"]
+
+[node name="root" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="root"]
+
+[node name="BG" type="Sprite2D" parent="root"]
+position = Vector2(-3, 1.19209e-07)
+scale = Vector2(0.750651, 0.629395)
+texture = ExtResource("1_i16o3")
+
+[node name="Auto" type="Sprite2D" parent="root"]
+position = Vector2(-289, 55)
+scale = Vector2(0.37793, 0.269531)
+texture = ExtResource("2_q4rlt")
+
+[node name="Shelf" type="Sprite2D" parent="root"]
+position = Vector2(363, 65.6562)
+scale = Vector2(0.19475, 0.109656)
+texture = ExtResource("3_m1dyq")
+
+[node name="Shelf2" type="Sprite2D" parent="root"]
+position = Vector2(363, -81)
+scale = Vector2(0.194875, 0.126875)
+texture = ExtResource("3_m1dyq")
+
+[node name="items" type="Node2D" parent="root"]
+
+[node name="Hammer" type="Sprite2D" parent="root/items"]
+position = Vector2(297, -110)
+scale = Vector2(0.105, 0.0729167)
+texture = ExtResource("4_1jo2a")
+
+[node name="Screwdriver" type="Sprite2D" parent="root/items"]
+position = Vector2(404, -96)
+scale = Vector2(0.0945833, 0.1)
+texture = ExtResource("5_4p1p8")
+
+[node name="WindowCleaner" type="Sprite2D" parent="root/items"]
+position = Vector2(304.594, 27.5312)
+scale = Vector2(0.0475937, 0.0434688)
+texture = ExtResource("6_e41nk")
+
+[node name="Wrench" type="Sprite2D" parent="root/items"]
+position = Vector2(404.969, 32.9843)
+scale = Vector2(0.0214691, 0.0195389)
+texture = ExtResource("7_wy1jm")
+
+[node name="Tire" type="Sprite2D" parent="root/items"]
+position = Vector2(-32, 106)
+rotation = -1.57079
+scale = Vector2(0.0355073, 0.0315189)
+texture = ExtResource("8_e41nk")
+
+[node name="Tire2" type="Sprite2D" parent="root/items"]
+position = Vector2(104, 106)
+rotation = -1.57079
+scale = Vector2(0.0394304, 0.0305173)
+texture = ExtResource("8_e41nk")
