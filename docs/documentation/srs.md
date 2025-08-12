@@ -551,6 +551,61 @@ Ezek a döntések azonnali vagy hosszútávú következményekkel járnak:
 - Pozitív: plusz pénz, jó kapcsolat
 - Negatív: lebukás, stressz, haláleset
 
+### Gazdasági helyzetek
+
+#### Pénzkeresés és Munkahelyek
+
+A játékban a pénz megszerzése kritikus fontosságú, hiszen a túlélés alapját képezi:
+ebből tudjuk megvásárolni az alapvető élelmiszereket, például kenyeret, és azokat
+az árucikkeket, melyek a család fenntartásához, a stressz csökkentéséhez vagy a
+túlélési esélyek növeléséhez szükségesek.
+
+#### Munkahelyek és jövedelmek
+
+##### Autószerelő műhely
+
+- Hosszabb munkaidő, több időráfordítás szükséges.
+- Cserébe a fizetés magasabb.
+- Stressz kockázata magasabb a komplex és időigényes feladatok miatt.
+
+##### Bolti eladó
+
+- Rövidebb, pörgősebb munkaidő, gyorsabb pénzkereseti lehetőség.
+- Általában kisebb jövedelem, de azonnali bevétel.
+- Fekete piaci eladásokkal kockázatot vállalhatunk, nagyobb haszonért cserébe.
+
+##### Irodai munka
+
+- Stabil, de kisebb fizetés, alacsony fizikai megterhelés.
+- Ismétlődő feladatok, kevés stressz.
+- Lehetőség különféle információk kezelése által extra juttatásokra vagy veszélyekre.
+
+#### Pénz és alapvető kiadások
+
+- **Napi bevétel:** a 3 munkahely összesített napi fizetése kb. 43 pénz.
+- **Kenyer ára:** 13 pénz / darab.
+- **Élelmiszerhasználat:**
+  - Egy kenyér 3 alkalommal használható, és egyszeri felhasználáskor 30 pontot csökkent az éhség szintjéből, amennyiben a játékos nincs alkoholfüggőség negatív hatása alatt.
+- **Alkohol ára:** 8 pénz / egység.
+- **Kezdő pénz:** nehézségi fokozattól függően 10-20 pénz között mozog.
+
+A jól megtervezett napi kenyérfogyasztás (pl. a 3 kenyeret szétosztani a családtagok között) hosszú távon stabilizálja az éhség szintjét, vagy legalább csak enyhén engedi azt növekedni. Ez kulcsfontosságú a túléléshez, hiszen a családtagok nem rendelkeznek saját aktív mutatókkal, viszont az éhségszintjük folyamatosan nő, ha nem kapnak elegendő ellátást.
+
+### Stressz, Alkohol és Pénzkeresés Kölcsönhatásai
+
+A stressz hatása a munkateljesítményre és így a pénzkeresetre jelentős:
+
+- **Magas stressz** esetén megnő a hibázás, félrekalkulálás esélye, ami csökkenti a munkából származó bevételt.
+- **Alkohol** segít csökkenteni a stresszt, minden fogyasztott egység 20 ponttal mérsékli azt, de egyben növeli az alkoholfüggőség kockázatát.
+- A függőség kialakulásához vezető kritikus határ a 75 pont, ettől kezdve a játékos egy súlyos negatív hatást (debuff-ot) kap:
+  - Az elfogyasztott élelmiszerek kevésbé csökkentik az éhség szintet a megadott képlet alapján.
+  - Az alkoholszint **soha nem csökkenhet a küszöb alá**, mert ez stressz büntetéssel jár (+15 stressz pont).
+- Az alkoholfüggőség szintjei, amiket be kell tartani, a következők: **50, 60, 70, 80, 90.**
+  - Amikor az alkoholszint leesik az aktuális küszöb alá, stresszbüntetés lép életbe, és az étel hatékonysága csökken.
+  - Ezek a szintek fokozatosan emelkednek, ami egyre nehezebbé teszi a függőség kordában tartását.
+
+Ez a rendszer egy folyamatos egyensúlyozásra készteti a játékost a stressz kezelése és az alkoholfogyasztás között, miközben az éhség és a pénzügyi források is állandó nyomás alatt vannak.
+
 ### Kockázat és Következmény Rendszer
 
 A játékban minden törvénytelen vagy etikailag szürke tett lebukással fenyeget.
@@ -606,6 +661,44 @@ Az alábbi pontosítások **felülírják / kiegészítik** a korábban leírt s
 | Alkoholszint | `alkohol` (0‑100) | 50 felett **negatív módosító** az ételekre |
 | Éhség        | `ehseg` (0‑100)   | 0 = halál                                  |
 
+A játékban az **éhség** 0 és 100 közötti értéken mozog.
+
+- Ha az éhség eléri a **0**-t, Piotr vagy egy családtag meghal.
+
+Az **alkohol** szint szintén 0–100 közötti érték, és a kettő között szoros kölcsönhatás van.
+
+### Kenyér
+
+- Ár: **13 pénz / darab**
+- Felhasználás: **3 adag** / kenyér
+- Egy adag kenyér **30 éhségpontot csökkent**, ha nincs alkohol-függőségi hatás.
+
+### Alkohol
+
+- Ár: **8 pénz / adag**
+- Hatás: **−20 stressz**
+- Mellékhatás: **+15 alkoholszint**
+
+### Alkoholfüggőség küszöbértékek
+
+- Kezdő küszöb: **50**
+- Fokozatos emelkedés: `50 → 60 → 70 → 80 → 90`
+- Ha az alkoholszint a **kötelező** küszöb alá esik:
+  - **+15 stressz naponta**
+  - Étkezés hatékonysága **csökken**
+    $$
+        \text{módosító} = \frac{\,\text{alkohol} - 50\,}{3}
+    $$
+
+### Kritikus állapot
+
+Amint az alkoholszint **75**-öt eléri:
+
+- Függőség hivatalosan kialakul
+- Étkezés **sosem** lesz teljes hatékonyságú
+- Az aktuális küszöb alá esés mindig **+15 stresszt** okoz
+- Az alkoholszintet **folyamatosan fenn kell tartani**
+
 #### Szabályok
 
 - **Alkoholhatár (50) – "függőségi küszöb"**
@@ -623,7 +716,7 @@ Az alábbi pontosítások **felülírják / kiegészítik** a korábban leírt s
 - **Stressz‑büntetés és éhségszankció**
   - Ha az aktuális "kötelező" szint alá esik az alkohol:
     - `stressz` azonnal +15
-    - Az ételek **hatékonysága feleződik** a normál értékhez képest, amíg vissza nem éri a küszöböt.
+    - Az ételek **hatékonysága csökken** a normál értékhez képest, amíg vissza nem éri a küszöböt.
 
 ### Időciklus Finomítása
 
