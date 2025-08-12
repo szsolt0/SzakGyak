@@ -1,123 +1,15 @@
-# Használni Tervezett Eszközök
-
-## Godot Engine
-
-A Godot Engine egy modern, nyílt forráskódú játékmotor 2D és 3D játékok fejlesztéséhez.
-Teljes mértékben ingyenes, licencdíjaktól mentes, így ideális választás független fejlesztők,
-kisebb csapatok és oktatási projektek számára is.
-
-### Főbb Jellemzők
-
--   GDScript: A Godot saját, Python-szerű szkriptnyelve, kifejezetten játékfejlesztésre optimalizálva.
-    Könnyen tanulható, gyorsan írható és szorosan integrált a motor rendszerébe.
-
--   Több platformra történő exportálás: Egérkattintással exportálható Windows, Linux, macOS, Android,
-    iOS és web (HTML5/WebAssembly) platformokra.
-
--   Vizualitás-centrikus felület: A Godot erőssége a vizuális szerkesztője, amely lehetővé teszi a
-    jelenetek (scenes) és csomópontok (nodes) logikus, moduláris kezelését.
-
--   Erőteljes 2D motor: Kiemelkedően jól teljesít 2D játékokban, külön 2D fizikával,
-    animációs rendszerrel, világítással és effektekkel.
-
--   Könnyű 3D integráció: A Godot 4.x verziótól kezdve jelentős fejlesztéseken esett át a 3D motor,
-    támogatja a Vulkan renderelést, PBR anyagokat és valós idejű világítást.
-
--   Modularitás és bővíthetőség: C# támogatás (Mono), C++ modulfejlesztés, valamint GDNative révén könnyen bővíthető.
-
--   Közösségi fejlesztés: Teljesen nyílt forráskódú MIT licenc alatt – nincs zárt komponens vagy jogi akadály a
-    kereskedelmi felhasználás előtt.
-
-**Forrás:**  
-[Godot Engine – Hivatalos oldal](https://godotengine.org)  
-[Godot Docs – Dokumentáció](https://docs.godotengine.org)
+# Felhasznált Eszközök
 
 
-
-## Blender
-
-A Blender egy professzionális, nyílt forráskódú 3D grafikai szoftver, amely teljes körű
-eszközkészletet kínál modellezésre, szobrászatra, animációra, textúrázásra, riggelésre, renderelésre,
-sőt játék assetek optimalizálására is. A Godot Engine-nel natívan kompatibilis,
-így tökéletes eszköz 3D játékfejlesztéshez.
-
-### Főbb Jellemzők
-
--   Modellezés: Poligon-alapú és szobrász eszközök kombinációja. Precíz UV mapping, modifiers,
-    retopológiai eszközök.
-
--   Animáció és riggelés: Csontváz alapú animáció, inverse kinematics (IK), shape key animáció,
-    NLA (non-linear animation) szerkesztő.
-
--   Textúrázás és anyagkezelés: Beépített textúrafestés, node-alapú anyagkezelés (Shader Editor),
-    támogatja a PBR workflow-t.
-
--   Export: Godot számára ideális formátumok támogatása, mint például .glb, .gltf, .dae (Collada),
-    valamint .fbx.
-
-**Forrás:**  
-[Blender – Hivatalos oldal](https://www.blender.org)  
-[Blender Manual](https://docs.blender.org/manual/en/latest/)
-
-
-
-## GitHub
-
-A fejlesztési folyamat során a Git és a GitHub szolgál majd verziókezelésre,
-forráskód-tárolásra és csapaton belüli együttműködésre. A GitHub iparági szabványként szolgál a
-szoftverfejlesztésben, lehetővé téve a kód változásainak pontos nyomon követését, valamint a
-kollaboratív munkavégzést akár elosztott csapatokban is.
-
-### Főbb Jellemzők
-
--   Verziókövetés (Git): A teljes projekt minden állapota rögzíthető és visszakereshető.
-    Lehetőség van külön fejlesztési ágak (branch-ek) kezelésére, hibajavításra, új funkciók tesztelésére anélkül,
-    hogy a stabil verzió sérülne.
-
--   Központi tárhely (GitHub): Távoli, biztonságos tárolási megoldás a forráskód számára.
-    A GitHub lehetővé teszi a verziók szinkronizálását több fejlesztő között, valamint a
-    kód automatikus mentését és visszaállítását.
-
--   Csapatmunka és projektmenedzsment: Issues, Pull Requestek, ezek segítik a
-    fejlesztési folyamat átláthatóságát és hatékonyságát.
-
-**Forrás:**  
-[GitHub – Hivatalos oldal](https://github.com)  
-[Git – Hivatalos oldal](https://git-scm.com)  
-[GitHub Docs](https://docs.github.com)
-
-
-
-## GIMP
-
-A GIMP (GNU Image Manipulation Program) egy ingyenes, nyílt forráskódú képszerkesztő program,  
-amely professzionális eszközöket kínál képretusálásra, digitális festészetre és grafikai elemek készítésére.
-
-### Főbb Jellemzők
-
--   Rétegalapú szerkesztés, maszkolás, átlátszóság, blending módok.
--   Komplex képkorrekciós és retusálási lehetőségek.
--   Szöveg- és alakzatkezelés, rajzeszközök (ecsetek, ceruza, klónozás stb.).
--   Támogatja a .psd, .png, .jpg, .xcf, .tiff formátumokat.
--   Közvetlen exportálás játék assetekként, pl. UI elemek vagy sprite sheetek formájában.
-
-**Forrás:**  
-[GIMP – Hivatalos oldal](https://www.gimp.org)  
-[GIMP Documentation](https://docs.gimp.org)
-
-
-
-## Paint
-
-A Microsoft Paint egy alapvető, egyszerű képszerkesztő program, amely része a Windows operációs rendszernek.  
-Könnyen használható egyszerű vázlatok, mockupok és kézi tervek gyors elkészítésére.
-
-### Főbb Jellemzők
-
--   Rajzolás, színezés, szövegbeillesztés.
--   Egyszerű képméretezés, kivágás, elforgatás.
--   BMP, JPEG, PNG és GIF formátumok mentése.
--   Ideális gyors prototípus-vázlatokhoz, például UI-tervekhez vagy layout-ötletekhez.
-
-**Forrás:**  
-[Microsoft Paint – Windows Support](https://support.microsoft.com/en-us/windows/get-microsoft-paint)
+| Eszköz neve                 | Legújabb verzió | Szerepe a projektben                          | Licenc                                                       | Link                                                                                             |
+| --------------------------- | --------------- | --------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| **Godot Engine**            | 4.4.1             | Játékmotor 2D/3D fejlesztéshez                | MIT                                                          | [godotengine.org](https://godotengine.org)                                                       |
+| **Blender**                 | 4.0             | 3D modellezés, animáció, asset készítés       | GPL v3                                                       | [blender.org](https://www.blender.org)                                                           |
+| **GIMP**                    | 2.10.36         | 2D képszerkesztés                             | GPL v3                                                       | [gimp.org](https://www.gimp.org)                                                                 |
+| **Microsoft Paint**         | -               | Textúrák készítése                            | Microsoft License                                            | [support.microsoft.com – Paint](https://support.microsoft.com/en-us/windows/get-microsoft-paint) |
+| **Visual Studio Code**      | 1.90            | Dokumentumszerkesztő, Git integráció          | MIT                                                          | [code.visualstudio.com](https://code.visualstudio.com)                                           |
+| **GitHub**                  | -               | Verziókezelés, forráskód tárolás, csapatmunka | GitHub TOS                                                   | [github.com](https://github.com)                                                                 |
+| **Visual Paradigm Online**  | -               | UML, osztálydiagram, folyamatábra készítés    | Freemium                                                     | [online.visual-paradigm.com](https://online.visual-paradigm.com)                                 |
+| **draw\.io / diagrams.net** | -               | Diagramok készítése, exportálás               | Apache 2.0                                                   | [drawio.com](https://drawio.com)                                                                 |
+| **Pixilart**                | -               | Pixelgrafika készítés                         | Saját assetek szabadon, közösségi assetek licenchez kötöttek | [pixilart.com](https://www.pixilart.com)                                                         |
+| **Google Fonts**            | -               | Webes és offline betűtípusok                  | OFL / Apache 2.0                                             | [fonts.google.com](https://fonts.google.com)                                                     |
