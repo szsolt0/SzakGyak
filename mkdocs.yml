@@ -2,22 +2,30 @@ site_name: SzakGyak
 repo_url: https://github.com/JanosSandor2002/SzakGyak
 
 nav:
-  - 'Project Terv': project-plan/
-  - 'Dokumentáció':
-    - documentation/vision.md
-    - documentation/srs.md
-    - documentation/analysismodel.md
-    - documentation/systemarch.md
-  - 'Munkanapló': 'https://docs.google.com/spreadsheets/d/1jSlDk9d3kgoSkNY78S58bChsSggCFRqs5fNXPh3aXEc'
+  - "Project Terv":
+      - project-plan/index.md
+      - project-plan/members.md
+      - project-plan/development.md
+      - project-plan/tools.md
+      - project-plan/components.md
+      - project-plan/referencies.md
+      - project-plan/tests.md
+      - project-plan/gannt.md
+  - "Dokumentáció":
+      - documentation/vision.md
+      - documentation/srs.md
+      - documentation/analysismodel.md
+      - documentation/systemarch.md
+  - "Munkanapló": "https://docs.google.com/spreadsheets/d/1jSlDk9d3kgoSkNY78S58bChsSggCFRqs5fNXPh3aXEc"
 
 plugins:
   - search
   - literate-nav
   - enumerate-headings:
       restart_increment_after:
-      - documentation/vision.md
+        - documentation/vision.md
 
-theme: 
+theme:
   name: material
   features:
     - navigation.tabs
@@ -43,7 +51,11 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.extra
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.arithmatex:
@@ -52,3 +64,5 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - js/mermaid-init.js
