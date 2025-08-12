@@ -1,3 +1,5 @@
+# This script manages the Main Menu UI.
+
 extends Node
 
 func _load_translations() -> void:
