@@ -18,4 +18,3 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameSettings="*res://scripts/game_settings.gd"
-MenuStack="*res://scripts/menu_stack.gd"
