@@ -81,6 +81,8 @@ gantt
         Játékosjson:b22, 2025-08-11, 20d
         FőbbModulok:b23, 2025-08-11, 20d
 
+    WarningSzöveg:b24, 2025-08-11, 1d
+
     section Fejlesztés
     Tscn kidolgozás:c1, 2025-08-04, 6d
         HUD:c2, 2025-08-04, 5d
