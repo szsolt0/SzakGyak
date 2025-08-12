@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cb4tt5jl0geqh"
+
+[deps]
+
+files=["res://translations/hu_HU/menu/warn.hu_HU.translation"]
+
+source_file="res://translations/hu_HU/menu/warn.csv"
+dest_files=["res://translations/hu_HU/menu/warn.hu_HU.translation"]
+
+[params]
+
+compress=true
+delimiter=0
