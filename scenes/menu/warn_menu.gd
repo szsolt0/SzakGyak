@@ -1,3 +1,6 @@
+# This script handles the content warning screen shown to players who have not
+# yet acknowledged the content warning.
+
 extends Control
 
 func _load_translations() -> void:

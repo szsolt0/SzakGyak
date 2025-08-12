@@ -1,4 +1,6 @@
-# 
+# This script manages game settings for audio, video, and language preferences.
+# It loads settings from a configuration file, applies them to the game, and
+# atomiclly saves changes back to disk.
 
 extends Node
 
@@ -25,6 +27,7 @@ var _main_lang: String = "ask" # TODO: implement this
 # WARNING: DO NOT MODIFY.
 var _content_warn_ack: bool = false
 
+## Load settings from config file.
 func _load_settings() -> void:
 	var config := ConfigFile.new()
 	var err := config.load(SETTINGS_PATH)
@@ -69,6 +72,7 @@ func _load_settings() -> void:
 	_main_lang = str(config.get_value("main", "lang", "ask"))
 	_content_warn_ack = bool(config.get_value("main", "content-warn-ack", false))
 
+## Apply all settings. (Only usefull after loading from config file.)
 func _apply_all() -> void:
 	# a rather "dirty" way to apply all settings, but it works
 	# it just sets every setting to it's current value
@@ -84,6 +88,7 @@ func _apply_all() -> void:
 	
 	set_main_lang(get_main_lang())
 
+## Load settings from config file and apply them.
 func reload() -> void:
 	_load_all_translation()
 	_load_settings()
@@ -96,6 +101,7 @@ func reload() -> void:
 func _ready() -> void:
 	reload()
 
+## Atomically save settings to config file.
 func commit() -> void:
 	var config := ConfigFile.new()
 	
@@ -274,6 +280,7 @@ func _load_translation(lang: StringName) -> void:
 						TranslationServer.add_translation(trans)
 			file_name = dir.get_next()
 		dir.list_dir_end()
+
 
 func _load_all_translation() -> void:
 	# remove existing translations (if any)
