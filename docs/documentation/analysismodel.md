@@ -2,7 +2,7 @@
 
 ## Bevezetés
 
-A „Piotr naplója – Egy család a holnap küszöbén” című játékterv egy narratív-
+A „Túlélés a Szocializmusban” című játékterv egy narratív-
 központú, morális döntésekre és túlélési stratégiákra építő szimuláció, amely
 egy fiktív szocialista ország gazdasági összeomlásának időszakában játszódik. A
 játék középpontjában Piotr, a családfő áll, aki napról napra küzd meg a
@@ -314,51 +314,80 @@ szüneteltetésének kezeléséért felelősek.
 
 #### Attribútumok azonosítása
 
-- **Main menu:**
+- **MainMenu**:
+
   - menuItems: List<String> — a menüpontok listája
   - selectedItem: String — aktuálisan kiválasztott menüpont
-- **New game:**
+  - show()
+  - hide()
+  - navigateUp()
+  - navigateDown()
+  - selectItem()
+  - Leírás: A játék főmenüjét kezeli, ahol a játékos választhat a fő opciók közül.
+
+- **Newgame**:
+
   - initialCharacters: List<Player> — induló karakterek
   - initialSettings: Settings — alapértelmezett játékbeállítások
-- **Continue:**
+  - startGame()
+  - setInitialCharacters(chars: List<Player>)
+  - setInitialSettings(settings: Settings)
+  - Leírás: Új játék indítását végzi az alapkarakterek és kezdőbeállítások alapján.
+
+- **Continue**:
+
   - saveFiles: List<SaveFile> — elérhető mentések
   - selectedSave: SaveFile — kiválasztott mentés
-- **Settings:**
+  - loadGame()
+  - showSaveList()
+  - selectSave(save: SaveFile)
+  - Leírás: Korábban elmentett játékállások listázását és betöltését végzi.
+
+- **Settings**:
+
   - controlSettings: Controls
   - audioSettings: Audio
   - videoSettings: Video
-- **Controls:**
+  - openSettings()
+  - saveSettings()
+  - resetSettings()
+  - Leírás: A játék vezérlési, hang- és grafikai beállításait kezeli.
+
+- **Controls**:
+
   - keyBindings: Map<String, String> — billentyűkiosztás
-- **Audio:**
+  - setKeyBinding(action: String, key: String)
+  - resetKeyBindings()
+  - Leírás: A játék vezérlőgombjainak kiosztását kezeli.
+
+- **Audio**:
+
   - volumeLevel: int
   - mute: bool
-- **Video:**
+  - setVolumeLevel(value: int)
+  - toggleMute()
+  - Leírás: A játék hangerejét és némítási beállításait kezeli.
+
+- **Video**:
   - resolution: String
   - graphicsQuality: String
-- **Pause menus:**
-  - menuOptions: List<String>
-  - isPaused: bool
+  - setResolution(res: String)
+  - setGraphicsQuality(level: String)
+  - Leírás: A játék grafikai beállításait, például felbontást és minőséget kezeli.
 
 ### Dinamikus modell
 
 (A dinamikus modell az alrendszer működésének időbeli folyamatát írja le,
 például menük közti váltás, események kezelése.)
 
-![A játék osztálydiagramja](diagrams/menu_dinamic.jpg)
-
-### Funkcionális modell
-
-(A funkcionális modell az alrendszer funkcióit, működési logikáját írja le,
-pl. új játék indítása, mentés betöltése.)
-
-![A játék osztálydiagramja](diagrams/menu_functional.jpg)
+![A játék osztálydiagramja](diagrams/menu_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
 (A diagram megjeleníti a menürendszer osztályait és kapcsolatait,
 lásd korábbi diagram.)
 
-![A játék osztálydiagramja](diagrams/menu_class.jpg)
+![A játék osztálydiagramja](diagrams/menu_class.png)
 
 ## Interakciók és Karakterek alrendszer
 
@@ -409,13 +438,6 @@ alapviselkedéséért és a kommunikációs lehetőségekért.
 beszélgetés elindítása vagy tranzakció végrehajtása.)
 
 ![A játék osztálydiagramja](diagrams/interactions_dinamic.jpg)
-
-### Funkcionális modell
-
-(Funkciók például: beszélgetés indítása, vásárlás, dokumentum átadás, családtag
-éhségállapotának frissítése.)
-
-![A játék osztálydiagramja](diagrams/interactions_functional.jpg)
 
 ### Analízis modell osztálydiagramja
 
@@ -476,13 +498,6 @@ használata vagy javítási folyamatok elindítása.)
 
 ![A játék osztálydiagramja](diagrams/environment_dinamic.jpg)
 
-### Funkcionális modell
-
-(Funkciók például: azonosítók ellenőrzése, vásárlás, eszközhasználat, vagy
-narratív események kezelése a Gulagban.)
-
-![A játék osztálydiagramja](diagrams/environment_functional.jpg)
-
 ### Analízis modell osztálydiagramja
 
 (A diagram bemutatja a környezeti objektumok osztályait és azok összefüggéseit.)
@@ -534,13 +549,6 @@ bemutatása időben történő működés során.)
 
 ![A játék osztálydiagramja](diagrams/objects_dinamic.jpg)
 
-### Funkcionális modell
-
-(Funkciók például: eszközhasználat, dokumentum-ellenőrzés, ID érvényesség
-vizsgálata, tranzakciók lebonyolítása boltban.)
-
-![A játék osztálydiagramja](diagrams/objects_functional.jpg)
-
 ### Analízis modell osztálydiagramja
 
 (A diagram megjeleníti az objektumok típusait, öröklődési viszonyait, és
@@ -589,13 +597,6 @@ Family HUD, valamint a szünetmenük és a játékos vagyoni helyzetét mutató 
 (Az állapotjelzők frissülnek a játék során a karakter változásainak megfelelően.)
 
 ![A játék osztálydiagramja](diagrams/game_dinamic.jpg)
-
-### Funkcionális modell
-
-(Funkciók például: HUD frissítése, játék szüneteltetése, vagyoni állapot
-megjelenítése.)
-
-![A játék osztálydiagramja](diagrams/game_functional.jpg)
 
 ### Analízis modell osztálydiagramja
 
