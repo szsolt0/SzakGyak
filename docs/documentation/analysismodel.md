@@ -71,14 +71,14 @@ JátékÁllapot
 
 ### Osztályok Felsorolása
 
-Main menu
+MainMenu
 
 - Az Main menu osztály a játék főmenüjét kezeli, ahol a játékos elindíthat új
   játékot, folytathat egy mentést, vagy módosíthatja a beállításokat. Tartalmazza
   a menüpontok listáját és a kiválasztott elemet. Metódusai felelősek a menü
   megjelenítéséért, a navigációért és a választás feldolgozásáért.
 
-New game
+NewGame
 
 - A New game osztály az új játék elindításáért felel, új játékállapotot hoz létre
   az alapértelmezett beállításokkal. Attribútumaiban tárolja az induló
@@ -126,7 +126,7 @@ Interactions
   aktuális interakció állapota és a résztvevő entitások szerepelnek. Metódusai az
   interakciók indításáért, folytatásáért és lezárásáért felelnek.
 
-Family members
+FamilyMember
 
 - A Family members osztály a játékbeli családtagokat reprezentálja. Attribútumai
   tartalmazzák a családtagok nevét, szerepét és kapcsolatait a játékos
@@ -140,20 +140,20 @@ Player
   tulajdonságait és aktuális helyzetét. Metódusai az irányítást, mozgást,
   interakciókat és a karakter speciális képességeit kezelik.
 
-Car NPC
+CarNpc
 
 - A Car NPC egy autóval rendelkező nem-játékos karakter, amely az autós
   közlekedést vagy egyéb, autóval kapcsolatos viselkedést modellez. Attribútumaiban
   szerepelhet az autó típusa, sebessége és helyzete. Metódusai a mozgás, navigáció
   és a játékossal való interakciók kezelését végzik.
 
-Shop NPC
+ShopNpc
 
 - A Shop NPC a boltos karaktert reprezentálja, aki árusít vagy vásárol a játékban.
   Attribútumai között szerepel az árukészlet és árak. Metódusai kezelik a
   kereskedelmi tranzakciókat, az áruk kínálatát és az árak módosítását.
 
-Desktop NPC
+DesktopNpc
 
 - A Desktop NPC olyan nem-játékos karakter, aki asztalnál dolgozik vagy a
   számítógépnél van. Attribútumai tartalmazhatják az aktuális tevékenységet és az
@@ -167,13 +167,13 @@ Office
   karakterek. Metódusai kezelik az iroda használatát és az eseményeket, amelyek
   ott történnek.
 
-IDs
+Id
 
 - Az IDs osztály azonosító kártyákat vagy dokumentumokat képvisel, melyek
   hozzáférést vagy személyazonosságot igazolnak. Attribútumai tartalmazzák az
   azonosító adatokat. Metódusai az azonosítás és hozzáférés ellenőrzését végzik.
 
-Papers
+Paper
 
 - A Papers osztály különféle dokumentumokat vagy papírokat foglal magában.
   Attribútumai a papírok tartalmát és státuszát tartalmazzák. Metódusai az olvasás,
@@ -185,20 +185,20 @@ Shop
   Attribútumaiban tárolja a készletet, az árakat és a vásárlókat. Metódusai a
   termékek kezelését, vásárlást és eladást biztosítják.
 
-Cash register
+CashRegister
 
 - A Cash register osztály a pénztárgépet képviseli, amely a fizetések
   lebonyolítását végzi. Attribútuma a tárolt pénzösszeg és a tranzakciók listája.
   Metódusai a fizetések rögzítéséért és az összeg kezeléséért felelősek.
 
-Repair shop
+RepairShop
 
 - A Repair shop egy javítóműhelyt modellez, ahol tárgyak vagy eszközök javítása
   zajlik. Attribútumai között szerepelnek a szerszámok, javítandó tárgyak és a
   munkafolyamat állapota. Metódusai a javítási folyamatok indítását, nyomon
   követését és befejezését végzik.
 
-Tools
+Tool
 
 - A Tools osztály a játékban található eszközöket képviseli, melyek különféle
   feladatokra használhatók. Attribútumaik lehetnek az eszköz típusa, állapota és
@@ -211,21 +211,21 @@ Gulag
   elemek szerepelnek. Metódusai a fogvatartás, események és menekülési lehetőségek
   kezelését végzik.
 
-CharacterHUD
+CharacterHud
 
 - A CharacterHUD a játékos karakterének állapotát jeleníti meg a képernyőn,
   például élet- és energiaértékeket. Attribútumai az aktuális állapotadatokat
   tartalmazzák. Metódusai az állapot frissítését és megjelenítését végzik valós
   időben.
 
-Pause menus
+PauseMenu
 
 - A Pause menus osztály a játék szüneteltetési menüit kezeli, amelyek megállítják
   a játékot és különböző opciókat kínálnak. Attribútumai a menüpontokat és azok
   állapotát tartalmazzák. Metódusai a menü megjelenítéséért, navigációjáért és
   bezárásáért felelnek.
 
-FamilyHUD
+FamilyHud
 
 - A FamilyHUD a családtagok állapotának kijelzését végzi, segítve a játékost a
   családi kapcsolatok nyomon követésében. Attribútumaiban a családtagok állapotai
@@ -245,28 +245,27 @@ Wealth
 Ez az alrendszer kezeli a játék fő- és beállítási menüit, a szünet menüt és a
 beállításokat.
 
-- Main menu
-- New game
+- MainMenu
+- NewGame
 - Continue
 - Settings
 - Controls
 - Audio
 - Video
-- Pause menus
 
-#### Interakciók és karakterek
+#### Interakciók és Karakterek
 
 Ebben az alrendszerben vannak a játékos és NPC-k, valamint az egymással való
 interakciók.
 
 - Interactions
-- Family members
+- FamilyMember
 - Player
-- Car NPC
-- Shop NPC
-- Desktop NPC
+- CarNpc
+- ShopNpc
+- DesktopNpc
 
-#### Környezet és helyszínek
+#### Környezet
 
 Ez az alrendszer az egyes helyszíneket és környezeti elemeket kezeli.
 
