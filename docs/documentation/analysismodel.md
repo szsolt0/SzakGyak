@@ -270,24 +270,21 @@ interakciók.
 Ez az alrendszer az egyes helyszíneket és környezeti elemeket kezeli.
 
 - Office
+    - Id
+    - Paper
 - Shop
+    - CashRegister
 - Repair shop
+    - Tool
 - Gulag
-
-#### Objektumok és eszközök
-
-Itt vannak az olyan tárgyak és eszközök, amik a játékban előfordulnak.
-
-- IDs
-- Papers
-- Tools
-- Cash register
 
 #### Játékfelület (HUD)
 
 Ez az alrendszer a játékos és család állapotának, vagyoni helyzetének
 kijelzéséért felel.
 
+- GameplayUi
+- PauseMenu
 - CharacterHUD
 - FamilyHUD
 - Wealth
@@ -315,64 +312,64 @@ szüneteltetésének kezeléséért felelősek.
 
 - **MainMenu**:
 
-  - menuItems: List<String> — a menüpontok listája
-  - selectedItem: String — aktuálisan kiválasztott menüpont
-  - show()
-  - hide()
-  - navigateUp()
-  - navigateDown()
-  - selectItem()
-  - Leírás: A játék főmenüjét kezeli, ahol a játékos választhat a fő opciók közül.
+    - menuItems: List<String> — a menüpontok listája
+    - selectedItem: String — aktuálisan kiválasztott menüpont
+    - show()
+    - hide()
+    - navigateUp()
+    - navigateDown()
+    - selectItem()
+    - Leírás: A játék főmenüjét kezeli, ahol a játékos választhat a fő opciók közül.
 
 - **Newgame**:
 
-  - initialCharacters: List<Player> — induló karakterek
-  - initialSettings: Settings — alapértelmezett játékbeállítások
-  - startGame()
-  - setInitialCharacters(chars: List<Player>)
-  - setInitialSettings(settings: Settings)
-  - Leírás: Új játék indítását végzi az alapkarakterek és kezdőbeállítások alapján.
+    - initialCharacters: List<Player> — induló karakterek
+    - initialSettings: Settings — alapértelmezett játékbeállítások
+    - startGame()
+    - setInitialCharacters(chars: List<Player>)
+    - setInitialSettings(settings: Settings)
+    - Leírás: Új játék indítását végzi az alapkarakterek és kezdőbeállítások alapján.
 
 - **Continue**:
 
-  - saveFiles: List<SaveFile> — elérhető mentések
-  - selectedSave: SaveFile — kiválasztott mentés
-  - loadGame()
-  - showSaveList()
-  - selectSave(save: SaveFile)
-  - Leírás: Korábban elmentett játékállások listázását és betöltését végzi.
+    - saveFiles: List<SaveFile> — elérhető mentések
+    - selectedSave: SaveFile — kiválasztott mentés
+    - loadGame()
+    - showSaveList()
+    - selectSave(save: SaveFile)
+    - Leírás: Korábban elmentett játékállások listázását és betöltését végzi.
 
 - **Settings**:
 
-  - controlSettings: Controls
-  - audioSettings: Audio
-  - videoSettings: Video
-  - openSettings()
-  - saveSettings()
-  - resetSettings()
-  - Leírás: A játék vezérlési, hang- és grafikai beállításait kezeli.
+    - controlSettings: Controls
+    - audioSettings: Audio
+    - videoSettings: Video
+    - openSettings()
+    - saveSettings()
+    - resetSettings()
+    - Leírás: A játék vezérlési, hang- és grafikai beállításait kezeli.
 
 - **Controls**:
 
-  - keyBindings: Map<String, String> — billentyűkiosztás
-  - setKeyBinding(action: String, key: String)
-  - resetKeyBindings()
-  - Leírás: A játék vezérlőgombjainak kiosztását kezeli.
+    - keyBindings: Map<String, String> — billentyűkiosztás
+    - setKeyBinding(action: String, key: String)
+    - resetKeyBindings()
+    - Leírás: A játék vezérlőgombjainak kiosztását kezeli.
 
 - **Audio**:
 
-  - volumeLevel: int
-  - mute: bool
-  - setVolumeLevel(value: int)
-  - toggleMute()
-  - Leírás: A játék hangerejét és némítási beállításait kezeli.
+    - volumeLevel: int
+    - mute: bool
+    - setVolumeLevel(value: int)
+    - toggleMute()
+    - Leírás: A játék hangerejét és némítási beállításait kezeli.
 
 - **Video**:
-  - resolution: String
-  - graphicsQuality: String
-  - setResolution(res: String)
-  - setGraphicsQuality(level: String)
-  - Leírás: A játék grafikai beállításait, például felbontást és minőséget kezeli.
+    - resolution: String
+    - graphicsQuality: String
+    - setResolution(res: String)
+    - setGraphicsQuality(level: String)
+    - Leírás: A játék grafikai beállításait, például felbontást és minőséget kezeli.
 
 ### Dinamikus modell
 
@@ -413,18 +410,18 @@ alapviselkedéséért és a kommunikációs lehetőségekért.
   - position: Vector2
   - inventory: List<Item>
   - money: int
-- **NPC (ősosztály):**
+- **Npc (ősosztály):**
   - name: String
   - dialogLines: List<String>
-- **Car NPC:**
+- **CarNpc:**
   - carType: String
   - isRepairNeeded: bool
-- **Shop NPC:**
+- **ShopNpc:**
   - availableGoods: List<Item>
   - shopName: String
-- **Desktop NPC:**
+- **DesktopNpc:**
   - documentsRequested: List<ID>
-- **Family member:**
+- **FamilyMember:**
   - name: String
   - hungerLevel: int
 - **Interactions:**
@@ -436,15 +433,15 @@ alapviselkedéséért és a kommunikációs lehetőségekért.
 (A dinamikus modell az interakciók időbeli működését írja le, például egy
 beszélgetés elindítása vagy tranzakció végrehajtása.)
 
-![A játék osztálydiagramja](diagrams/interactions_dinamic.jpg)
+![A játék osztálydiagramja](diagrams/interactions_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
 (A diagram ábrázolja a karaktereket, interakciókat, és azok kapcsolatait.)
 
-![A játék osztálydiagramja](diagrams/interactions_class.jpg)
+![A játék osztálydiagramja](diagrams/interactions_class.png)
 
-## Környezet és Helyszínek alrendszer
+## Környezet alrendszer
 
 ### Statikus modell
 
@@ -495,65 +492,13 @@ közvetetten kapcsolatba léphet.
 (A környezeti interakciók időbeli kezelése, például dokumentumok olvasása, bolt
 használata vagy javítási folyamatok elindítása.)
 
-![A játék osztálydiagramja](diagrams/environment_dinamic.jpg)
+![A játék osztálydiagramja](diagrams/environment_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
 (A diagram bemutatja a környezeti objektumok osztályait és azok összefüggéseit.)
 
-![A játék osztálydiagramja](diagrams/environment_class.jpg)
-
-## Objektumok és Eszközök alrendszer
-
-### Statikus modell
-
-Ez az alrendszer kezeli azokat a tárgyakat és eszközöket, amelyekkel a játékos
-interakcióba léphet vagy felhasználhat a játékmenet során, például szerszámokat,
-dokumentumokat, pénzt, ID-kat vagy más használható itemeket.
-
-#### Kapcsolatok pontosítása
-
-- Az `Item` az összes eszköz és objektum alaposztálya lehet.
-- A `Tool`, `Paper`, `ID` öröklik az `Item` osztályt.
-- A `Player` osztály inventory-jában `Item` objektumokat tárol.
-- A `Shop` és `Repair shop` is rendelkezik `Item` típusú objektumokkal,
-  amelyeket a játékos vásárolhat vagy használhat.
-
-#### Attribútumok azonosítása
-
-- **Item (ősosztály):**
-  - itemName: String
-  - isUsable: bool
-- **Tool:**
-  - toolType: String
-  - durability: int
-- **Paper:**
-  - title: String
-  - content: String
-- **ID:**
-  - ownerName: String
-  - expiryDate: Date
-- **Money:**
-  - amount: int
-  - currency: String
-- **Transaction (Shop esetén):**
-  - buyer: Player
-  - itemsPurchased: List<Item>
-  - totalCost: int
-
-### Dinamikus modell
-
-(Objektumok felvétele, használata, cseréje. Eszközök romlása vagy dokumentumok
-bemutatása időben történő működés során.)
-
-![A játék osztálydiagramja](diagrams/objects_dinamic.jpg)
-
-### Analízis modell osztálydiagramja
-
-(A diagram megjeleníti az objektumok típusait, öröklődési viszonyait, és
-kapcsolataikat a játékossal és bolttal.)
-
-![A játék osztálydiagramja](diagrams/objects_class.jpg)
+![A játék osztálydiagramja](diagrams/environment_class.png)
 
 ## Játékfelület alrendszer (Gameplay UI, HUD)
 
@@ -595,10 +540,10 @@ Family HUD, valamint a szünetmenük és a játékos vagyoni helyzetét mutató 
 
 (Az állapotjelzők frissülnek a játék során a karakter változásainak megfelelően.)
 
-![A játék osztálydiagramja](diagrams/game_dinamic.jpg)
+![A játék osztálydiagramja](diagrams/game_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
-(A diagram bemutatja a HUD elemek és a játékos/család közötti adatkapcsolatokat.)
+(A diagram bemutatja a HUD elemek és a játékos/család közötti adatkapcsolatokat)
 
-![A játék osztálydiagramja](diagrams/game_class.jpg)
+![A játék osztálydiagramja](diagrams/game_class.png)
