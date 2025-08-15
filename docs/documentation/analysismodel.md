@@ -300,7 +300,7 @@ szüneteltetésének kezeléséért felelősek.
 
 #### Kapcsolatok pontosítása
 
-- A Main menu kapcsolódik a New game, Continue és Settings osztályokhoz,
+- A Main menu kapcsolódik a NewGame, Continue és Settings osztályokhoz,
   mivel innen indíthatók ezek a funkciók.
 - A Settings kapcsolódik a Controls, Audio és Video osztályokhoz, mint alfunkciók.
 - A Pause menus kapcsolatban állhat a Main menu-vel, mivel mindkettő menüket
@@ -395,38 +395,56 @@ alapviselkedéséért és a kommunikációs lehetőségekért.
 
 #### Kapcsolatok pontosítása
 
-- A `Player` osztály kapcsolatban van minden `NPC`-vel (`Car NPC`, `Shop NPC`,
-  `Desktop NPC`), mivel ezekkel léphet interakcióba.
-- A `Family members` kapcsolatban vannak a `Player`-rel, mivel az ő állapotuk
+- A `Player` osztály kapcsolatban van minden `Npc`-vel (`CarNpc`, `ShopNpc`,
+  `DesktopNpc`), mivel ezekkel léphet interakcióba.
+- A `FamilyMember` kapcsolatban van a `Player`-rel, mivel az ő állapotuk
   (pl. éhségszint) a játékos tevékenységétől függ.
 - Az `Interactions` osztály összeköti a `Player`-t a többi karakterrel, és
   kezeli az interakciós eseményeket.
-- Az összes NPC örökölhet egy közös `NPC` alaposztályból (általános
+- Az összes NPC örökölhet egy közös `Npc` alaposztályból (általános
   tulajdonságok és metódusok).
 
 #### Attribútumok azonosítása
 
-- **Player:**
-  - position: Vector2
-  - inventory: List<Item>
-  - money: int
-- **Npc (ősosztály):**
-  - name: String
-  - dialogLines: List<String>
-- **CarNpc:**
-  - carType: String
-  - isRepairNeeded: bool
-- **ShopNpc:**
-  - availableGoods: List<Item>
-  - shopName: String
-- **DesktopNpc:**
-  - documentsRequested: List<ID>
-- **FamilyMember:**
-  - name: String
-  - hungerLevel: int
-- **Interactions:**
-  - currentInteraction: String
-  - target: Object
+- **FamilyMember**:
+    - hunger: int
+    - setHunger()
+    - Leírás: Egy családtagot reprezentál, akinek az éhségszintjét lehet beállítani.
+
+- **Player**:
+    - hunger: int
+    - reputation: int
+    - stress: int
+    - alcohol: int
+    - setHunger(value: int)
+    - setReputation(value: int)
+    - setStress(value: int)
+    - setAlcohol(value: int)
+    - Leírás: A játékos karaktert képviseli, különböző állapotértékekkel, melyeket be lehet állítani.
+
+- **Interactions**:
+    - participants: List
+    - interactionType: String
+    - processInteraction()
+    - endInteraction()
+    - Leírás: A játékbeli interakciókat kezeli két vagy több résztvevő között.
+
+- **Npc**:
+    - name: String
+    - money: int
+    - Leírás: Általános nem-játékos karakter, amelyből különböző NPC típusok származnak.
+
+- **CarNpc (Npc-ből származik)**:
+    - carModel: String
+    - Leírás: Járművet használó NPC, amely egy adott autómodellel rendelkezik.
+
+- **ShopNpc (Npc-ből származik)**:
+    - shoppingList: List<String>
+    - Leírás: Vásárlási listával rendelkező NPC, tipikusan bolti eladó vagy vásárló.
+
+- **DesktopNpc (Npc-ből származik)**:
+    - documentationList: List<String>
+    - Leírás: Dokumentumokat kezelő NPC, tipikusan asztali számítógépes munkát végez.
 
 ### Dinamikus modell
 
@@ -452,40 +470,71 @@ közvetetten kapcsolatba léphet.
 
 #### Kapcsolatok pontosítása
 
-- Az `Office` tartalmazhat `Desk` objektumokat, rajtuk pedig lehetnek `Papers`
-  és `IDs`.
-- A `Player` kapcsolatban van a `Shop`, `Cash register`, `Repair shop` és az
+- Az `Office` tartalmazhat `Desk` objektumokat, rajtuk pedig lehetnek `Paper`
+  és `Id`.
+- A `Player` kapcsolatban van a `Shop`, `CashRegister`, `RepairShop` és az
   `Office` helyszínekkel interakció céljából.
-- A `Tools` a `Repair shop` részei, melyeket a játékos használhat.
+- A `Tool` a `RepairShop` részei, melyeket a játékos használhat.
 - A `Gulag` helyszín különálló, narratív vagy következményalapú szerepet tölt be.
 
 #### Attribútumok azonosítása
 
-- **Office:**
-  - location: Vector2
-  - documents: List<Paper>
-- **Paper:**
-  - title: String
-  - content: String
-- **ID:**
-  - name: String
-  - birthDate: Date
-  - validUntil: Date
-- **Shop:**
-  - inventory: List<Item>
-  - cashRegister: CashRegister
-- **Cash Register:**
-  - balance: int
-  - transactions: List<Transaction>
-- **Repair Shop:**
-  - tools: List<Tool>
-  - activeRepairs: List<RepairOrder>
+-**Environment**:
+    - name: String
+    - elements: List
+    - picture: Image
+    - loadEnvironment(environment: String)
+    - unloadEnvironment(environment: String)
+    - render()
+    - Leírás: A játék világának adott környezetét reprezentálja, betölthető és kirajzolható objektumokkal.
+
+- **Office (Environment-ből származik)**:
+    - picture: Image
+    - loadOffice()
+    - loadCustomer()
+    - loadEvents()
+    - Leírás: Iroda környezet, ahol ügyfelekkel és eseményekkel lehet interakcióba lépni.
+
+- **Paper**:
+    - name: String
+    - Leírás: Papíralapú dokumentum, amelyet az Office-ban lehet kezelni.
+
+- **Id**:
+    - name: String
+    - Leírás: Személyazonosító dokumentum, például igazolvány.
+
+- **Gulag (Environment-ből származik)**:
+    - elements: List
+    - picture: Image
+    - render()
+    - Leírás: Büntetőtábor környezet, speciális tárgyakkal és objektumokkal.
+
+- **Shop (Environment-ből származik)**:
+    - elements: List
+    - picture: Image
+    - cashRegister: CashRegister
+    - render()
+    - Leírás: Bolt környezet, ahol eladások és vásárlások zajlanak.
+
+- **RepairShop**:
+    - elements: List
+    - picture: Image
+    - car: Object (3D)
+    - tool: Tool
+    - render()
+    - Leírás: Javítóműhely környezet, járművekkel és szerszámokkal.
+
+- **CashRegister**:
+    - money: int
+    - receive(value: int)
+    - send(value: int)
+    - Leírás: Pénztárgép, amely képes pénzt fogadni és kiadni.
+
 - **Tool:**
-  - toolName: String
-  - isAvailable: bool
-- **Gulag:**
-  - cellNumber: int
-  - guardPresence: bool
+
+    - elements: List
+    - setTools(elements: List)
+    - Leírás: Szerszámgyűjtemény, amely beállítható és használható.
 
 ### Dinamikus modell
 
@@ -520,21 +569,39 @@ Family HUD, valamint a szünetmenük és a játékos vagyoni helyzetét mutató 
 
 #### Attribútumok azonosítása
 
-- **CharacterHUD:**
-  - Stressbar: int
-  - Alcoholbar: int
-  - Hungerbar: int
-  - reputationbar: int
-  - moneyDisplay: int
-  - isVisible: bool
-- **Pause menus:**
-  - options: List<String>
-  - isPaused: bool
-- **FamilyHUD:**
-  - familyStatus: List<int> — családtagok éhségszintjei
-- **Wealth:**
-  - currentMoney: int
-  - incomeRate: float
+- **GameplayUi**:
+    - mainMenu: MainMenu
+    - pauseMenu: PauseMenu
+    - hud: CharacterHud
+    - familyHud: FamilyHud
+    - display(menu: Object)
+    - openPause(paused: boolean)
+    - Leírás: A játék közbeni kezelőfelület fő modulja, amely más HUD elemeket és menüket kezel.
+
+- **CharacterHud**:
+    - hunger: int
+    - reputation: int
+    - alcohol: int
+    - stress: int
+    - setStats()
+    - Leírás: A játékos karakter állapotát mutató felület.
+
+- **FamilyHud**:
+    - icons: image
+    - hunger: int
+    - setFamilyHud()
+    - Leírás: A családtagok állapotát mutató felület, például éhségszint.
+
+- **PauseMenu**:
+    - paused: boolean
+    - openSettings()
+    - quit()
+    - pause()
+    - Leírás: A játék szüneteltetésére szolgáló menü, ahol beállításokat is lehet nyitni.
+
+- **Wealth**:
+    - gold: int
+    - Leírás: A játékos aranyát/pénzét nyilvántartó rendszer.
 
 ### Dinamikus modell
 
