@@ -2,7 +2,7 @@
 
 ## Bevezetés
 
-A „Piotr naplója – Egy család a holnap küszöbén” című játékterv egy narratív-
+A „Túlélés a Szocializmusban” című játékterv egy narratív-
 központú, morális döntésekre és túlélési stratégiákra építő szimuláció, amely
 egy fiktív szocialista ország gazdasági összeomlásának időszakában játszódik. A
 játék középpontjában Piotr, a családfő áll, aki napról napra küzd meg a
@@ -71,14 +71,14 @@ JátékÁllapot
 
 ### Osztályok Felsorolása
 
-Main menu
+MainMenu
 
 - Az Main menu osztály a játék főmenüjét kezeli, ahol a játékos elindíthat új
   játékot, folytathat egy mentést, vagy módosíthatja a beállításokat. Tartalmazza
   a menüpontok listáját és a kiválasztott elemet. Metódusai felelősek a menü
   megjelenítéséért, a navigációért és a választás feldolgozásáért.
 
-New game
+NewGame
 
 - A New game osztály az új játék elindításáért felel, új játékállapotot hoz létre
   az alapértelmezett beállításokkal. Attribútumaiban tárolja az induló
@@ -126,7 +126,7 @@ Interactions
   aktuális interakció állapota és a résztvevő entitások szerepelnek. Metódusai az
   interakciók indításáért, folytatásáért és lezárásáért felelnek.
 
-Family members
+FamilyMember
 
 - A Family members osztály a játékbeli családtagokat reprezentálja. Attribútumai
   tartalmazzák a családtagok nevét, szerepét és kapcsolatait a játékos
@@ -140,20 +140,20 @@ Player
   tulajdonságait és aktuális helyzetét. Metódusai az irányítást, mozgást,
   interakciókat és a karakter speciális képességeit kezelik.
 
-Car NPC
+CarNpc
 
 - A Car NPC egy autóval rendelkező nem-játékos karakter, amely az autós
   közlekedést vagy egyéb, autóval kapcsolatos viselkedést modellez. Attribútumaiban
   szerepelhet az autó típusa, sebessége és helyzete. Metódusai a mozgás, navigáció
   és a játékossal való interakciók kezelését végzik.
 
-Shop NPC
+ShopNpc
 
 - A Shop NPC a boltos karaktert reprezentálja, aki árusít vagy vásárol a játékban.
   Attribútumai között szerepel az árukészlet és árak. Metódusai kezelik a
   kereskedelmi tranzakciókat, az áruk kínálatát és az árak módosítását.
 
-Desktop NPC
+DesktopNpc
 
 - A Desktop NPC olyan nem-játékos karakter, aki asztalnál dolgozik vagy a
   számítógépnél van. Attribútumai tartalmazhatják az aktuális tevékenységet és az
@@ -167,13 +167,13 @@ Office
   karakterek. Metódusai kezelik az iroda használatát és az eseményeket, amelyek
   ott történnek.
 
-IDs
+Id
 
 - Az IDs osztály azonosító kártyákat vagy dokumentumokat képvisel, melyek
   hozzáférést vagy személyazonosságot igazolnak. Attribútumai tartalmazzák az
   azonosító adatokat. Metódusai az azonosítás és hozzáférés ellenőrzését végzik.
 
-Papers
+Paper
 
 - A Papers osztály különféle dokumentumokat vagy papírokat foglal magában.
   Attribútumai a papírok tartalmát és státuszát tartalmazzák. Metódusai az olvasás,
@@ -185,20 +185,20 @@ Shop
   Attribútumaiban tárolja a készletet, az árakat és a vásárlókat. Metódusai a
   termékek kezelését, vásárlást és eladást biztosítják.
 
-Cash register
+CashRegister
 
 - A Cash register osztály a pénztárgépet képviseli, amely a fizetések
   lebonyolítását végzi. Attribútuma a tárolt pénzösszeg és a tranzakciók listája.
   Metódusai a fizetések rögzítéséért és az összeg kezeléséért felelősek.
 
-Repair shop
+RepairShop
 
 - A Repair shop egy javítóműhelyt modellez, ahol tárgyak vagy eszközök javítása
   zajlik. Attribútumai között szerepelnek a szerszámok, javítandó tárgyak és a
   munkafolyamat állapota. Metódusai a javítási folyamatok indítását, nyomon
   követését és befejezését végzik.
 
-Tools
+Tool
 
 - A Tools osztály a játékban található eszközöket képviseli, melyek különféle
   feladatokra használhatók. Attribútumaik lehetnek az eszköz típusa, állapota és
@@ -211,21 +211,21 @@ Gulag
   elemek szerepelnek. Metódusai a fogvatartás, események és menekülési lehetőségek
   kezelését végzik.
 
-CharacterHUD
+CharacterHud
 
 - A CharacterHUD a játékos karakterének állapotát jeleníti meg a képernyőn,
   például élet- és energiaértékeket. Attribútumai az aktuális állapotadatokat
   tartalmazzák. Metódusai az állapot frissítését és megjelenítését végzik valós
   időben.
 
-Pause menus
+PauseMenu
 
 - A Pause menus osztály a játék szüneteltetési menüit kezeli, amelyek megállítják
   a játékot és különböző opciókat kínálnak. Attribútumai a menüpontokat és azok
   állapotát tartalmazzák. Metódusai a menü megjelenítéséért, navigációjáért és
   bezárásáért felelnek.
 
-FamilyHUD
+FamilyHud
 
 - A FamilyHUD a családtagok állapotának kijelzését végzi, segítve a játékost a
   családi kapcsolatok nyomon követésében. Attribútumaiban a családtagok állapotai
@@ -245,50 +245,46 @@ Wealth
 Ez az alrendszer kezeli a játék fő- és beállítási menüit, a szünet menüt és a
 beállításokat.
 
-- Main menu
-- New game
+- MainMenu
+- NewGame
 - Continue
 - Settings
 - Controls
 - Audio
 - Video
-- Pause menus
 
-#### Interakciók és karakterek
+#### Interakciók és Karakterek
 
 Ebben az alrendszerben vannak a játékos és NPC-k, valamint az egymással való
 interakciók.
 
 - Interactions
-- Family members
+- FamilyMember
 - Player
-- Car NPC
-- Shop NPC
-- Desktop NPC
+- CarNpc
+- ShopNpc
+- DesktopNpc
 
-#### Környezet és helyszínek
+#### Környezet
 
 Ez az alrendszer az egyes helyszíneket és környezeti elemeket kezeli.
 
 - Office
+    - Id
+    - Paper
 - Shop
+    - CashRegister
 - Repair shop
+    - Tool
 - Gulag
-
-#### Objektumok és eszközök
-
-Itt vannak az olyan tárgyak és eszközök, amik a játékban előfordulnak.
-
-- IDs
-- Papers
-- Tools
-- Cash register
 
 #### Játékfelület (HUD)
 
 Ez az alrendszer a játékos és család állapotának, vagyoni helyzetének
 kijelzéséért felel.
 
+- GameplayUi
+- PauseMenu
 - CharacterHUD
 - FamilyHUD
 - Wealth
@@ -304,7 +300,7 @@ szüneteltetésének kezeléséért felelősek.
 
 #### Kapcsolatok pontosítása
 
-- A Main menu kapcsolódik a New game, Continue és Settings osztályokhoz,
+- A Main menu kapcsolódik a NewGame, Continue és Settings osztályokhoz,
   mivel innen indíthatók ezek a funkciók.
 - A Settings kapcsolódik a Controls, Audio és Video osztályokhoz, mint alfunkciók.
 - A Pause menus kapcsolatban állhat a Main menu-vel, mivel mindkettő menüket
@@ -314,51 +310,80 @@ szüneteltetésének kezeléséért felelősek.
 
 #### Attribútumok azonosítása
 
-- **Main menu:**
-  - menuItems: List<String> — a menüpontok listája
-  - selectedItem: String — aktuálisan kiválasztott menüpont
-- **New game:**
-  - initialCharacters: List<Player> — induló karakterek
-  - initialSettings: Settings — alapértelmezett játékbeállítások
-- **Continue:**
-  - saveFiles: List<SaveFile> — elérhető mentések
-  - selectedSave: SaveFile — kiválasztott mentés
-- **Settings:**
-  - controlSettings: Controls
-  - audioSettings: Audio
-  - videoSettings: Video
-- **Controls:**
-  - keyBindings: Map<String, String> — billentyűkiosztás
-- **Audio:**
-  - volumeLevel: int
-  - mute: bool
-- **Video:**
-  - resolution: String
-  - graphicsQuality: String
-- **Pause menus:**
-  - menuOptions: List<String>
-  - isPaused: bool
+- **MainMenu**:
+
+    - menuItems: List<String> — a menüpontok listája
+    - selectedItem: String — aktuálisan kiválasztott menüpont
+    - show()
+    - hide()
+    - navigateUp()
+    - navigateDown()
+    - selectItem()
+    - Leírás: A játék főmenüjét kezeli, ahol a játékos választhat a fő opciók közül.
+
+- **Newgame**:
+
+    - initialCharacters: List<Player> — induló karakterek
+    - initialSettings: Settings — alapértelmezett játékbeállítások
+    - startGame()
+    - setInitialCharacters(chars: List<Player>)
+    - setInitialSettings(settings: Settings)
+    - Leírás: Új játék indítását végzi az alapkarakterek és kezdőbeállítások alapján.
+
+- **Continue**:
+
+    - saveFiles: List<SaveFile> — elérhető mentések
+    - selectedSave: SaveFile — kiválasztott mentés
+    - loadGame()
+    - showSaveList()
+    - selectSave(save: SaveFile)
+    - Leírás: Korábban elmentett játékállások listázását és betöltését végzi.
+
+- **Settings**:
+
+    - controlSettings: Controls
+    - audioSettings: Audio
+    - videoSettings: Video
+    - openSettings()
+    - saveSettings()
+    - resetSettings()
+    - Leírás: A játék vezérlési, hang- és grafikai beállításait kezeli.
+
+- **Controls**:
+
+    - keyBindings: Map<String, String> — billentyűkiosztás
+    - setKeyBinding(action: String, key: String)
+    - resetKeyBindings()
+    - Leírás: A játék vezérlőgombjainak kiosztását kezeli.
+
+- **Audio**:
+
+    - volumeLevel: int
+    - mute: bool
+    - setVolumeLevel(value: int)
+    - toggleMute()
+    - Leírás: A játék hangerejét és némítási beállításait kezeli.
+
+- **Video**:
+    - resolution: String
+    - graphicsQuality: String
+    - setResolution(res: String)
+    - setGraphicsQuality(level: String)
+    - Leírás: A játék grafikai beállításait, például felbontást és minőséget kezeli.
 
 ### Dinamikus modell
 
 (A dinamikus modell az alrendszer működésének időbeli folyamatát írja le,
 például menük közti váltás, események kezelése.)
 
-![A játék osztálydiagramja](diagrams/menu_dinamic.jpg)
-
-### Funkcionális modell
-
-(A funkcionális modell az alrendszer funkcióit, működési logikáját írja le,
-pl. új játék indítása, mentés betöltése.)
-
-![A játék osztálydiagramja](diagrams/menu_functional.jpg)
+![A játék osztálydiagramja](diagrams/menu_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
 (A diagram megjeleníti a menürendszer osztályait és kapcsolatait,
 lásd korábbi diagram.)
 
-![A játék osztálydiagramja](diagrams/menu_class.jpg)
+![A játék osztálydiagramja](diagrams/menu_class.png)
 
 ## Interakciók és Karakterek alrendszer
 
@@ -370,60 +395,71 @@ alapviselkedéséért és a kommunikációs lehetőségekért.
 
 #### Kapcsolatok pontosítása
 
-- A `Player` osztály kapcsolatban van minden `NPC`-vel (`Car NPC`, `Shop NPC`,
-  `Desktop NPC`), mivel ezekkel léphet interakcióba.
-- A `Family members` kapcsolatban vannak a `Player`-rel, mivel az ő állapotuk
+- A `Player` osztály kapcsolatban van minden `Npc`-vel (`CarNpc`, `ShopNpc`,
+  `DesktopNpc`), mivel ezekkel léphet interakcióba.
+- A `FamilyMember` kapcsolatban van a `Player`-rel, mivel az ő állapotuk
   (pl. éhségszint) a játékos tevékenységétől függ.
 - Az `Interactions` osztály összeköti a `Player`-t a többi karakterrel, és
   kezeli az interakciós eseményeket.
-- Az összes NPC örökölhet egy közös `NPC` alaposztályból (általános
+- Az összes NPC örökölhet egy közös `Npc` alaposztályból (általános
   tulajdonságok és metódusok).
 
 #### Attribútumok azonosítása
 
-- **Player:**
-  - position: Vector2
-  - inventory: List<Item>
-  - money: int
-- **NPC (ősosztály):**
-  - name: String
-  - dialogLines: List<String>
-- **Car NPC:**
-  - carType: String
-  - isRepairNeeded: bool
-- **Shop NPC:**
-  - availableGoods: List<Item>
-  - shopName: String
-- **Desktop NPC:**
-  - documentsRequested: List<ID>
-- **Family member:**
-  - name: String
-  - hungerLevel: int
-- **Interactions:**
-  - currentInteraction: String
-  - target: Object
+- **FamilyMember**:
+    - hunger: int
+    - setHunger()
+    - Leírás: Egy családtagot reprezentál, akinek az éhségszintjét lehet beállítani.
+
+- **Player**:
+    - hunger: int
+    - reputation: int
+    - stress: int
+    - alcohol: int
+    - setHunger(value: int)
+    - setReputation(value: int)
+    - setStress(value: int)
+    - setAlcohol(value: int)
+    - Leírás: A játékos karaktert képviseli, különböző állapotértékekkel, melyeket be lehet állítani.
+
+- **Interactions**:
+    - participants: List
+    - interactionType: String
+    - processInteraction()
+    - endInteraction()
+    - Leírás: A játékbeli interakciókat kezeli két vagy több résztvevő között.
+
+- **Npc**:
+    - name: String
+    - money: int
+    - Leírás: Általános nem-játékos karakter, amelyből különböző NPC típusok származnak.
+
+- **CarNpc (Npc-ből származik)**:
+    - carModel: String
+    - Leírás: Járművet használó NPC, amely egy adott autómodellel rendelkezik.
+
+- **ShopNpc (Npc-ből származik)**:
+    - shoppingList: List<String>
+    - Leírás: Vásárlási listával rendelkező NPC, tipikusan bolti eladó vagy vásárló.
+
+- **DesktopNpc (Npc-ből származik)**:
+    - documentationList: List<String>
+    - Leírás: Dokumentumokat kezelő NPC, tipikusan asztali számítógépes munkát végez.
 
 ### Dinamikus modell
 
 (A dinamikus modell az interakciók időbeli működését írja le, például egy
 beszélgetés elindítása vagy tranzakció végrehajtása.)
 
-![A játék osztálydiagramja](diagrams/interactions_dinamic.jpg)
-
-### Funkcionális modell
-
-(Funkciók például: beszélgetés indítása, vásárlás, dokumentum átadás, családtag
-éhségállapotának frissítése.)
-
-![A játék osztálydiagramja](diagrams/interactions_functional.jpg)
+![A játék osztálydiagramja](diagrams/interactions_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
 (A diagram ábrázolja a karaktereket, interakciókat, és azok kapcsolatait.)
 
-![A játék osztálydiagramja](diagrams/interactions_class.jpg)
+![A játék osztálydiagramja](diagrams/interactions_class.png)
 
-## Környezet és Helyszínek alrendszer
+## Környezet alrendszer
 
 ### Statikus modell
 
@@ -434,119 +470,84 @@ közvetetten kapcsolatba léphet.
 
 #### Kapcsolatok pontosítása
 
-- Az `Office` tartalmazhat `Desk` objektumokat, rajtuk pedig lehetnek `Papers`
-  és `IDs`.
-- A `Player` kapcsolatban van a `Shop`, `Cash register`, `Repair shop` és az
+- Az `Office` tartalmazhat `Desk` objektumokat, rajtuk pedig lehetnek `Paper`
+  és `Id`.
+- A `Player` kapcsolatban van a `Shop`, `CashRegister`, `RepairShop` és az
   `Office` helyszínekkel interakció céljából.
-- A `Tools` a `Repair shop` részei, melyeket a játékos használhat.
+- A `Tool` a `RepairShop` részei, melyeket a játékos használhat.
 - A `Gulag` helyszín különálló, narratív vagy következményalapú szerepet tölt be.
 
 #### Attribútumok azonosítása
 
-- **Office:**
-  - location: Vector2
-  - documents: List<Paper>
-- **Paper:**
-  - title: String
-  - content: String
-- **ID:**
-  - name: String
-  - birthDate: Date
-  - validUntil: Date
-- **Shop:**
-  - inventory: List<Item>
-  - cashRegister: CashRegister
-- **Cash Register:**
-  - balance: int
-  - transactions: List<Transaction>
-- **Repair Shop:**
-  - tools: List<Tool>
-  - activeRepairs: List<RepairOrder>
+-**Environment**:
+    - name: String
+    - elements: List
+    - picture: Image
+    - loadEnvironment(environment: String)
+    - unloadEnvironment(environment: String)
+    - render()
+    - Leírás: A játék világának adott környezetét reprezentálja, betölthető és kirajzolható objektumokkal.
+
+- **Office (Environment-ből származik)**:
+    - picture: Image
+    - loadOffice()
+    - loadCustomer()
+    - loadEvents()
+    - Leírás: Iroda környezet, ahol ügyfelekkel és eseményekkel lehet interakcióba lépni.
+
+- **Paper**:
+    - name: String
+    - Leírás: Papíralapú dokumentum, amelyet az Office-ban lehet kezelni.
+
+- **Id**:
+    - name: String
+    - Leírás: Személyazonosító dokumentum, például igazolvány.
+
+- **Gulag (Environment-ből származik)**:
+    - elements: List
+    - picture: Image
+    - render()
+    - Leírás: Büntetőtábor környezet, speciális tárgyakkal és objektumokkal.
+
+- **Shop (Environment-ből származik)**:
+    - elements: List
+    - picture: Image
+    - cashRegister: CashRegister
+    - render()
+    - Leírás: Bolt környezet, ahol eladások és vásárlások zajlanak.
+
+- **RepairShop**:
+    - elements: List
+    - picture: Image
+    - car: Object (3D)
+    - tool: Tool
+    - render()
+    - Leírás: Javítóműhely környezet, járművekkel és szerszámokkal.
+
+- **CashRegister**:
+    - money: int
+    - receive(value: int)
+    - send(value: int)
+    - Leírás: Pénztárgép, amely képes pénzt fogadni és kiadni.
+
 - **Tool:**
-  - toolName: String
-  - isAvailable: bool
-- **Gulag:**
-  - cellNumber: int
-  - guardPresence: bool
+
+    - elements: List
+    - setTools(elements: List)
+    - Leírás: Szerszámgyűjtemény, amely beállítható és használható.
 
 ### Dinamikus modell
 
 (A környezeti interakciók időbeli kezelése, például dokumentumok olvasása, bolt
 használata vagy javítási folyamatok elindítása.)
 
-![A játék osztálydiagramja](diagrams/environment_dinamic.jpg)
-
-### Funkcionális modell
-
-(Funkciók például: azonosítók ellenőrzése, vásárlás, eszközhasználat, vagy
-narratív események kezelése a Gulagban.)
-
-![A játék osztálydiagramja](diagrams/environment_functional.jpg)
+![A játék osztálydiagramja](diagrams/environment_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
 (A diagram bemutatja a környezeti objektumok osztályait és azok összefüggéseit.)
 
-![A játék osztálydiagramja](diagrams/environment_class.jpg)
-
-## Objektumok és Eszközök alrendszer
-
-### Statikus modell
-
-Ez az alrendszer kezeli azokat a tárgyakat és eszközöket, amelyekkel a játékos
-interakcióba léphet vagy felhasználhat a játékmenet során, például szerszámokat,
-dokumentumokat, pénzt, ID-kat vagy más használható itemeket.
-
-#### Kapcsolatok pontosítása
-
-- Az `Item` az összes eszköz és objektum alaposztálya lehet.
-- A `Tool`, `Paper`, `ID` öröklik az `Item` osztályt.
-- A `Player` osztály inventory-jában `Item` objektumokat tárol.
-- A `Shop` és `Repair shop` is rendelkezik `Item` típusú objektumokkal,
-  amelyeket a játékos vásárolhat vagy használhat.
-
-#### Attribútumok azonosítása
-
-- **Item (ősosztály):**
-  - itemName: String
-  - isUsable: bool
-- **Tool:**
-  - toolType: String
-  - durability: int
-- **Paper:**
-  - title: String
-  - content: String
-- **ID:**
-  - ownerName: String
-  - expiryDate: Date
-- **Money:**
-  - amount: int
-  - currency: String
-- **Transaction (Shop esetén):**
-  - buyer: Player
-  - itemsPurchased: List<Item>
-  - totalCost: int
-
-### Dinamikus modell
-
-(Objektumok felvétele, használata, cseréje. Eszközök romlása vagy dokumentumok
-bemutatása időben történő működés során.)
-
-![A játék osztálydiagramja](diagrams/objects_dinamic.jpg)
-
-### Funkcionális modell
-
-(Funkciók például: eszközhasználat, dokumentum-ellenőrzés, ID érvényesség
-vizsgálata, tranzakciók lebonyolítása boltban.)
-
-![A játék osztálydiagramja](diagrams/objects_functional.jpg)
-
-### Analízis modell osztálydiagramja
-
-(A diagram megjeleníti az objektumok típusait, öröklődési viszonyait, és
-kapcsolataikat a játékossal és bolttal.)
-
-![A játék osztálydiagramja](diagrams/objects_class.jpg)
+![A játék osztálydiagramja](diagrams/environment_class.png)
 
 ## Játékfelület alrendszer (Gameplay UI, HUD)
 
@@ -568,37 +569,48 @@ Family HUD, valamint a szünetmenük és a játékos vagyoni helyzetét mutató 
 
 #### Attribútumok azonosítása
 
-- **CharacterHUD:**
-  - Stressbar: int
-  - Alcoholbar: int
-  - Hungerbar: int
-  - reputationbar: int
-  - moneyDisplay: int
-  - isVisible: bool
-- **Pause menus:**
-  - options: List<String>
-  - isPaused: bool
-- **FamilyHUD:**
-  - familyStatus: List<int> — családtagok éhségszintjei
-- **Wealth:**
-  - currentMoney: int
-  - incomeRate: float
+- **GameplayUi**:
+    - mainMenu: MainMenu
+    - pauseMenu: PauseMenu
+    - hud: CharacterHud
+    - familyHud: FamilyHud
+    - display(menu: Object)
+    - openPause(paused: boolean)
+    - Leírás: A játék közbeni kezelőfelület fő modulja, amely más HUD elemeket és menüket kezel.
+
+- **CharacterHud**:
+    - hunger: int
+    - reputation: int
+    - alcohol: int
+    - stress: int
+    - setStats()
+    - Leírás: A játékos karakter állapotát mutató felület.
+
+- **FamilyHud**:
+    - icons: image
+    - hunger: int
+    - setFamilyHud()
+    - Leírás: A családtagok állapotát mutató felület, például éhségszint.
+
+- **PauseMenu**:
+    - paused: boolean
+    - openSettings()
+    - quit()
+    - pause()
+    - Leírás: A játék szüneteltetésére szolgáló menü, ahol beállításokat is lehet nyitni.
+
+- **Wealth**:
+    - gold: int
+    - Leírás: A játékos aranyát/pénzét nyilvántartó rendszer.
 
 ### Dinamikus modell
 
 (Az állapotjelzők frissülnek a játék során a karakter változásainak megfelelően.)
 
-![A játék osztálydiagramja](diagrams/game_dinamic.jpg)
-
-### Funkcionális modell
-
-(Funkciók például: HUD frissítése, játék szüneteltetése, vagyoni állapot
-megjelenítése.)
-
-![A játék osztálydiagramja](diagrams/game_functional.jpg)
+![A játék osztálydiagramja](diagrams/game_dinamic.png)
 
 ### Analízis modell osztálydiagramja
 
-(A diagram bemutatja a HUD elemek és a játékos/család közötti adatkapcsolatokat.)
+(A diagram bemutatja a HUD elemek és a játékos/család közötti adatkapcsolatokat)
 
-![A játék osztálydiagramja](diagrams/game_class.jpg)
+![A játék osztálydiagramja](diagrams/game_class.png)
