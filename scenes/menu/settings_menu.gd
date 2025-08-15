@@ -1,3 +1,5 @@
+# This script manages the Settings Menu UI.
+
 extends Control
 
 @onready var master_volume_btn: HSlider = $MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/MasterVolume/Button

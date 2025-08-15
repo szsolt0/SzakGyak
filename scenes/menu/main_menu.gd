@@ -1,3 +1,5 @@
+# This script manages the Main Menu UI.
+
 extends Node
 
 func _load_translations() -> void:
@@ -6,6 +8,9 @@ func _load_translations() -> void:
 	$VBoxContainer/Quit.text = tr(&"BTN_QUIT")
 
 func _ready() -> void:
+	if not GameSettings.get_content_warn_ack():
+		get_tree().change_scene_to_file("res://scenes/menu/warn_menu.tscn")
+
 	_load_translations()
 
 func _on_play_pressed() -> void:

@@ -99,7 +99,7 @@ alapértelmezett beállításokkal.
 Az alábbi értékek adhatók meg a beállítási fájlban:
 
 | Név                | Típus                   | Leírás                             | Default  |
-|--------------------|-------------------------|------------------------------------|----------|
+| ------------------ | ----------------------- | ---------------------------------- | -------- |
 | `[volume]`         |                         | Hangerő szabályok                  |          |
 | `master`           | int [0, 100]            | Master hangerő                     | `40`     |
 | `effect`           | int [0, 100]            | Effektusok hangereje               | `100`    |
@@ -202,7 +202,6 @@ A játék tervezése során számos korlátozást kellett figyelembe venni, amel
 - **Platformfüggetlenség (minimálisan)**: Az alapverzió PC-re készül, de a vezérlési logikát és UI-t úgy alakítottuk ki, hogy későbbi portolás (pl. mobil vagy konzol) se igényeljen jelentős újratervezést.
 - **Erőforráskorlátok**: A fejlesztés során kis csapat dolgozik a játékon, így a technikai megvalósítások és tartalombővítések reálisan tervezettek.
 
-
 ## A Játék Súgórendszere
 
 A játék különféle módokon nyújt segítséget a felhasználó számára, hogy teljes mértékben elsajátíthassa a különböző funkciókat.
@@ -211,7 +210,6 @@ A játék funkcióit egyszerű és könnyen megjegyezhető módon implementálju
 A játék funkcióit és minijátékait a játékos dinamikusan ismeri meg, ami megkönnyíti azok megjegyzését.
 A játékos nem kap egyszerre túl sok információt – a funkciókat fokozatosan ismeri meg.
 Ez a fokozatosság hozzájárul a hatékonyabb tanuláshoz és a pozitív játékélményhez.
-
 
 ### Használt Eszközök
 
@@ -228,7 +226,6 @@ Ez a fokozatosság hozzájárul a hatékonyabb tanuláshoz és a pozitív játé
   Rövid, állandó szöveges jelölések, amelyek a bonyolultabb funkciókat néhány szóban megnevezik.
   Ezek nem részletes magyarázatok, hanem gyors beazonosítást segítő címkék.
   Például egy gomb fölött megjelenő statikus címke.
-
 
 ## Felhasznált Kész Komponensek
 
@@ -249,7 +246,6 @@ Ugyanakkor a fejlesztés során különféle generatív mesterséges intelligenc
 
 Fontos megjegyezni, hogy minden AI által generált tartalom utólagos ellenőrzésen és testreszabáson megy keresztül, így a végső termék teljes mértékben megfelel a projekt minőségi és jogi elvárásainak.
 
-
 ## Interfészek
 
 A játék stílusa szovjet propaganda szerű karikatúra. a navigálás a menüpontok illetve minden más részén a játéknak az egérrel valósul meg
@@ -265,6 +261,7 @@ A projekt során az alábbi interfészeket használjuk a különböző komponens
 
 Egyszerű minimalisztikus statikus hátérkép itt csak gombok találhatóak amik stílushoz megfelelően textúrázottak.
 Főmenü gombjai:
+
 - beállítások: beállítások menüpontra navigál
 - új játék: elindítja az új játékot (az elejéről)
 - játék folytatása: betölti az előző mentést
@@ -275,15 +272,15 @@ Főmenü gombjai:
 Beállítások elemei:
 
 - grafika (címke)
-    - teljesképernyős ki/be
-    - felbontás: 3840x2160 / 2560x1440 / 1920x1080 / 1600x900 / 1366x768 / 1280x720 / 1024x768 / 800x600
-    - világosság 0-100%
+  - teljesképernyős ki/be
+  - felbontás: 3840x2160 / 2560x1440 / 1920x1080 / 1600x900 / 1366x768 / 1280x720 / 1024x768 / 800x600
+  - világosság 0-100%
 - audió/nyelv (címke)
-    - nyelv Magyar/English
-    - főhangerő 0-100%
-    - zene hangerő 0-100%
-    - effekt hangerő 0-100%
-- segítség ki/be : kikapcsolja a felbukkanó segítő leírásokat és  kijelöléseket
+  - nyelv Magyar/English
+  - főhangerő 0-100%
+  - zene hangerő 0-100%
+  - effekt hangerő 0-100%
+- segítség ki/be : kikapcsolja a felbukkanó segítő leírásokat és kijelöléseket
 - kész gomb: visszavisz az előzőleg használt oldalra
 
 #### Játék UI
@@ -295,8 +292,8 @@ Játék UI elemei:
 - éhségmérő csík
 - józanságmérő csík
 - beállítások ikon
-    - mentés és kilépés főmenü/játék bezárása
-    - beállítások
+  - mentés és kilépés főmenü/játék bezárása
+  - beállítások
 - óra: időt méri illetve az eltelt napokat
 - család ikon: megnyitja a család felugró ablakot amin a családtagok vannak és az ő éhségmérőjük
 
@@ -309,13 +306,13 @@ Játék UI elemei:
 ### Koncepciós Rajzok
 
 Kezdőképernyő
-![kezdőképernyő](Kezdokepernyo.PNG)
+![kezdőképernyő](conceptarts/kezdokepernyo.png)
 
 Beállítások
-![beállítások](settings.png)
+![beállítások](conceptarts/settings.png)
 
 Játék nézet
-![UI](CAR.bmp)
+![UI](conceptarts/car.bmp)
 
 ## Alkalmazott Szabványok
 
@@ -374,6 +371,8 @@ Egy állami tulajdonban lévő, lepusztult autószerelő műhelyben dolgozik, ah
 - Ha hibázik, **büntetést vonhat maga után**, de néha lopott alkatrészekből is lehet pénzt csinálni – ha nem bukik le.
 - A brigádban gyakoriak a konfliktusok, de egyben a legnagyobb az "összetartás".
 
+![Autószerelő](conceptarts/carshop_concept.png)
+
 #### Játékmenet
 
 - **2D-s tér**, amelyben **a kocsi 3D-ben, ortogonálisan jelenik meg**, a játékos **forgathatja a járművet**.
@@ -390,19 +389,20 @@ Részmunkaidőben a helyi közértnél is besegít. Az állandó sorban állás 
 - A reputáció itt kulcsfontosságú – ha Piotr lebukik csúszópénz elfogadásánál, az állását és a lakását is elveszítheti.
 - Mihalina néha segít be adminisztratív munkában, de gyerekek mellett ez ritka.
 
+![Autószerelő](conceptarts/shop_concept.png)
+
 #### Játékmenet
 
 - **2D-s tér**, ahol a kamera **a pult mögül néz előre**.
 - A vásárlók **balról jobbra** érkeznek a boltba.
 - Vásárlók **elmondják mit kérnek**, a játékos a kézikönyv alapján **meghatározza az árakat** és **fejben kiszámolja** az összeget.
 - Fizetés után:
-    - **Megnyitjuk a pénztárgépet**, betesszük a pénzt.
-    - A játék **automatikusan kiszámolja a visszajárót**, amit átadunk.
-    - **Bezárjuk a kasszát**.
+  - **Megnyitjuk a pénztárgépet**, betesszük a pénzt.
+  - A játék **automatikusan kiszámolja a visszajárót**, amit átadunk.
+  - **Bezárjuk a kasszát**.
 - **Hibás visszajáró**:
-    - Ha **többet adunk**, a vevő nem szól, de **a nap végén levonás jár**, és **a reputáció is csökken**.
-    - Ha **kevesebbet adunk**, a vevő reklamál – **súlyos reputációvesztés** jár.
-
+  - Ha **többet adunk**, a vevő nem szól, de **a nap végén levonás jár**, és **a reputáció is csökken**.
+  - Ha **kevesebbet adunk**, a vevő reklamál – **súlyos reputációvesztés** jár.
 
 ### Irodai Munka – "Tollak és titkok" (Tervezett vagy Későbbi Szakasz)
 
@@ -411,15 +411,17 @@ Később lehetőség nyílik egy irodai munkára a pártbizottság egyik osztál
 - A fizetés jobb, a stressz más jellegű.
 - A munkából származó adatokkal vissza is lehet élni – ha Piotr elad infókat, gyorsan sok pénzhez juthat, de nagy kockázattal.
 
+![Autószerelő](conceptarts/office_concept.png)
+
 #### Játékmenet
 
 - **2D-s tér**, ahol **az asztalt és dokumentumokat** látjuk felülnézetből.
 - A játékosnak **hibákat kell keresnie**:
-    - **Szöveges dokumentumokban elgépelések**, hamis adatok.
-    - **Személyi aktákban hibás betűk vagy dátumok**.
+  - **Szöveges dokumentumokban elgépelések**, hamis adatok.
+  - **Személyi aktákban hibás betűk vagy dátumok**.
 - Bizonyos dokumentumokat **ki lehet szivárogtatni**, ezért:
-    - Jutalom (pénz, árucikk, információ).
-    - **Ha lebukik**, súlyos reputációvesztés, akár teljes ellehetetlenülés.
+  - Jutalom (pénz, árucikk, információ).
+  - **Ha lebukik**, súlyos reputációvesztés, akár teljes ellehetetlenülés.
 
 ### A Mindennapi Dráma
 
@@ -449,9 +451,11 @@ A történet az év végére fokozatosan eljut a **rendszerváltás hajnaláig**
 - **Piotr bukása:**
   Lebukik, Gulágra kerül – a játék új szintre vált, ahol már csak egy cél van: nem meghalni.
 
+![Autószerelő](conceptarts/gulag_concept.png)
+
 ### Hangvétel és Stílus
 
-A történet személyes, keserédes, realista. Tele van *belső monológokkal*, *családi párbeszédekkel*, *utalásokkal a korszakra*, és azzal a soha ki nem mondott kérdéssel:
+A történet személyes, keserédes, realista. Tele van _belső monológokkal_, _családi párbeszédekkel_, _utalásokkal a korszakra_, és azzal a soha ki nem mondott kérdéssel:
 
 > **"Megéri még becsületesnek lenni?"**
 
@@ -467,13 +471,13 @@ A mechanikák célja, hogy folyamatos döntéskényszerbe helyezzék a játékos
 
 - A játék **napokra** van bontva.
 - Minden nap **reggeltől estig szabadon tervezhető**:
-    - A játékos **időblokkokban** dönthet arról, hogy mikor melyik munkahelyen dolgozik, mikor intéz otthoni feladatokat, mikor pihen vagy cserekereskedik.
-    - Egy nap több különböző tevékenységet is tartalmazhat (pl. délelőtt műhely, délután bolt, este csere).
+  - A játékos **időblokkokban** dönthet arról, hogy mikor melyik munkahelyen dolgozik, mikor intéz otthoni feladatokat, mikor pihen vagy cserekereskedik.
+  - Egy nap több különböző tevékenységet is tartalmazhat (pl. délelőtt műhely, délután bolt, este csere).
 - A nap végén következik az **összegzés és állapotfrissítés**:
-    - Bevétel és kiadás összesítése
-    - Éhség, stressz, alkoholszint, reputáció frissítése
-    - Családtagok állapotának ellenőrzése
-    - Események aktiválása (esély alapú vagy szkriptelt)
+  - Bevétel és kiadás összesítése
+  - Éhség, stressz, alkoholszint, reputáció frissítése
+  - Családtagok állapotának ellenőrzése
+  - Események aktiválása (esély alapú vagy szkriptelt)
 
 ### Munkahelyi Interakciók
 
@@ -502,14 +506,14 @@ A mechanikák célja, hogy folyamatos döntéskényszerbe helyezzék a játékos
 A játékosnak és családtagjainak túlélése több mutatótól függ:
 
 - **Éhség** – Folyamatosan nő.
-    - Ha **teljesen lemerül**, **Piotr vagy egy családtag meghal**.
-    - Étkezésre időt és pénzt kell fordítani.
+  - Ha **teljesen lemerül**, **Piotr vagy egy családtag meghal**.
+  - Étkezésre időt és pénzt kell fordítani.
 - **Stressz** – Növekszik munka, események vagy konfliktusok hatására.
-    - Magas szinten mentális problémákhoz vagy rossz döntésekhez vezethet.
+  - Magas szinten mentális problémákhoz vagy rossz döntésekhez vezethet.
 - **Alkoholfüggőség** – Alkohol csökkenti a stresszt, de rendszeres fogyasztás esetén kialakul a függőség.
-    - Ez automatikus fogyasztást, reputációcsökkenést és munkaképesség-romlást okozhat.
+  - Ez automatikus fogyasztást, reputációcsökkenést és munkaképesség-romlást okozhat.
 - **Reputáció** – A játékos társadalmi megítélése.
-    - Befolyásolja, ki bízik benne, milyen lehetőségei lesznek, mekkora a lebukás esélye.
+  - Befolyásolja, ki bízik benne, milyen lehetőségei lesznek, mekkora a lebukás esélye.
 
 **Családtagok** nem rendelkeznek saját mutatókkal, de az **éhségszintjük folyamatosan csökken**.
 Ha nem jutnak megfelelő ellátáshoz, megbetegedhetnek vagy meghalhatnak.
@@ -520,10 +524,10 @@ A játékos minden nap:
 
 - **szabadon osztja be idejét**: mikor, hol és mennyit dolgozik.
 - **önállóan dönt** arról, mire költi a megszerzett pénzt:
-    - Étel (saját és család számára kötelező)
-    - Stresszoldók (pl. alkohol)
-    - Illegális árucikkek (pl. gyógyszer, alkatrész)
-    - Spórolás (kevésbé biztonságos)
+  - Étel (saját és család számára kötelező)
+  - Stresszoldók (pl. alkohol)
+  - Illegális árucikkek (pl. gyógyszer, alkatrész)
+  - Spórolás (kevésbé biztonságos)
 
 A tervezés részét képezi a fizikai energia, pénz és morál egyensúlya.
 
@@ -547,20 +551,76 @@ Ezek a döntések azonnali vagy hosszútávú következményekkel járnak:
 - Pozitív: plusz pénz, jó kapcsolat
 - Negatív: lebukás, stressz, haláleset
 
+### Gazdasági helyzetek
+
+#### Pénzkeresés és Munkahelyek
+
+A játékban a pénz megszerzése kritikus fontosságú, hiszen a túlélés alapját képezi:
+ebből tudjuk megvásárolni az alapvető élelmiszereket, például kenyeret, és azokat
+az árucikkeket, melyek a család fenntartásához, a stressz csökkentéséhez vagy a
+túlélési esélyek növeléséhez szükségesek.
+
+#### Munkahelyek és jövedelmek
+
+##### Autószerelő műhely
+
+- Hosszabb munkaidő, több időráfordítás szükséges.
+- Cserébe a fizetés magasabb.
+- Stressz kockázata magasabb a komplex és időigényes feladatok miatt.
+
+##### Bolti eladó
+
+- Rövidebb, pörgősebb munkaidő, gyorsabb pénzkereseti lehetőség.
+- Általában kisebb jövedelem, de azonnali bevétel.
+- Fekete piaci eladásokkal kockázatot vállalhatunk, nagyobb haszonért cserébe.
+
+##### Irodai munka
+
+- Stabil, de kisebb fizetés, alacsony fizikai megterhelés.
+- Ismétlődő feladatok, kevés stressz.
+- Lehetőség különféle információk kezelése által extra juttatásokra vagy veszélyekre.
+
+#### Pénz és alapvető kiadások
+
+- **Napi bevétel:** a 3 munkahely összesített napi fizetése kb. 43 pénz.
+- **Kenyer ára:** 13 pénz / darab.
+- **Élelmiszerhasználat:**
+  - Egy kenyér 3 alkalommal használható, és egyszeri felhasználáskor 30 pontot csökkent az éhség szintjéből, amennyiben a játékos nincs alkoholfüggőség negatív hatása alatt.
+- **Alkohol ára:** 8 pénz / egység.
+- **Kezdő pénz:** nehézségi fokozattól függően 10-20 pénz között mozog.
+
+A jól megtervezett napi kenyérfogyasztás (pl. a 3 kenyeret szétosztani a családtagok között) hosszú távon stabilizálja az éhség szintjét, vagy legalább csak enyhén engedi azt növekedni. Ez kulcsfontosságú a túléléshez, hiszen a családtagok nem rendelkeznek saját aktív mutatókkal, viszont az éhségszintjük folyamatosan nő, ha nem kapnak elegendő ellátást.
+
+### Stressz, Alkohol és Pénzkeresés Kölcsönhatásai
+
+A stressz hatása a munkateljesítményre és így a pénzkeresetre jelentős:
+
+- **Magas stressz** esetén megnő a hibázás, félrekalkulálás esélye, ami csökkenti a munkából származó bevételt.
+- **Alkohol** segít csökkenteni a stresszt, minden fogyasztott egység 20 ponttal mérsékli azt, de egyben növeli az alkoholfüggőség kockázatát.
+- A függőség kialakulásához vezető kritikus határ a 75 pont, ettől kezdve a játékos egy súlyos negatív hatást (debuff-ot) kap:
+  - Az elfogyasztott élelmiszerek kevésbé csökkentik az éhség szintet a megadott képlet alapján.
+  - Az alkoholszint **soha nem csökkenhet a küszöb alá**, mert ez stressz büntetéssel jár (+15 stressz pont).
+- Az alkoholfüggőség szintjei, amiket be kell tartani, a következők: **50, 60, 70, 80, 90.**
+  - Amikor az alkoholszint leesik az aktuális küszöb alá, stresszbüntetés lép életbe, és az étel hatékonysága csökken.
+  - Ezek a szintek fokozatosan emelkednek, ami egyre nehezebbé teszi a függőség kordában tartását.
+
+Ez a rendszer egy folyamatos egyensúlyozásra készteti a játékost a stressz kezelése és az alkoholfogyasztás között, miközben az éhség és a pénzügyi források is állandó nyomás alatt vannak.
+
 ### Kockázat és Következmény Rendszer
 
 A játékban minden törvénytelen vagy etikailag szürke tett lebukással fenyeget.
 
 - **Első lebukás**:
-    - Piotr börtönbe kerül néhány napra.
-    - Nem tud dolgozni → nincs bevétel.
-    - A család éhezik.
-    - Reputáció nagyot zuhan.
+
+  - Piotr börtönbe kerül néhány napra.
+  - Nem tud dolgozni → nincs bevétel.
+  - A család éhezik.
+  - Reputáció nagyot zuhan.
 
 - **Második lebukás**:
-    - Piotr a Gulágra kerül → ez egy alternatív játékszakasz.
-    - Nincs visszaút, a cél innentől a puszta túlélés.
-    - A család sorsa végérvényesen bizonytalanná válik.
+  - Piotr a Gulágra kerül → ez egy alternatív játékszakasz.
+  - Nincs visszaút, a cél innentől a puszta túlélés.
+  - A család sorsa végérvényesen bizonytalanná válik.
 
 ### Végjáték és Értékelés
 
@@ -596,35 +656,73 @@ Az alábbi pontosítások **felülírják / kiegészítik** a korábban leírt s
 
 ### Alkohol–Éhség Szinergia
 
-| Változó | Jelölés | Hatás |
-|---------|---------|-------|
+| Változó      | Jelölés           | Hatás                                      |
+| ------------ | ----------------- | ------------------------------------------ |
 | Alkoholszint | `alkohol` (0‑100) | 50 felett **negatív módosító** az ételekre |
-| Éhség | `ehseg` (0‑100) | 0 = halál |
+| Éhség        | `ehseg` (0‑100)   | 0 = halál                                  |
+
+A játékban az **éhség** 0 és 100 közötti értéken mozog.
+
+- Ha az éhség eléri a **0**-t, Piotr vagy egy családtag meghal.
+
+Az **alkohol** szint szintén 0–100 közötti érték, és a kettő között szoros kölcsönhatás van.
+
+### Kenyér
+
+- Ár: **13 pénz / darab**
+- Felhasználás: **3 adag** / kenyér
+- Egy adag kenyér **30 éhségpontot csökkent**, ha nincs alkohol-függőségi hatás.
+
+### Alkohol
+
+- Ár: **8 pénz / adag**
+- Hatás: **−20 stressz**
+- Mellékhatás: **+15 alkoholszint**
+
+### Alkoholfüggőség küszöbértékek
+
+- Kezdő küszöb: **50**
+- Fokozatos emelkedés: `50 → 60 → 70 → 80 → 90`
+- Ha az alkoholszint a **kötelező** küszöb alá esik:
+  - **+15 stressz naponta**
+  - Étkezés hatékonysága **csökken**
+    $$
+        \text{módosító} = \frac{\,\text{alkohol} - 50\,}{3}
+    $$
+
+### Kritikus állapot
+
+Amint az alkoholszint **75**-öt eléri:
+
+- Függőség hivatalosan kialakul
+- Étkezés **sosem** lesz teljes hatékonyságú
+- Az aktuális küszöb alá esés mindig **+15 stresszt** okoz
+- Az alkoholszintet **folyamatosan fenn kell tartani**
 
 #### Szabályok
 
 - **Alkoholhatár (50) – "függőségi küszöb"**
-    - Ha `alkohol` > 50, akkor az ételek **hatékonysága csökken**.
-    - A csökkentés mértéke:
+  - Ha `alkohol` > 50, akkor az ételek **hatékonysága csökken**.
+  - A csökkentés mértéke:
     $$
         \text{módosító} = \frac{\,\text{alkohol} - 50\,}{3}
     $$
-    *Azaz 65‑ös alkoholnál a kaja 5 ponttal (15/3) kevesebbet tölt az éhségből.*
+    _Azaz 65‑ös alkoholnál a kaja 5 ponttal (15/3) kevesebbet tölt az éhségből._
 - **Fokozódó kényszer**
-    - Amint `alkohol` lecsökken **50‑re**, ott **"padlózik"**: magától nem megy 50 alá.
-    - A küszöb ezután **egyre magasabbra tolódik**:
-        - Először 60 → 70 → 80 → 90.
-        - Ha a játékos nem tartja a *következő* küszöböt, **stressz‑büntetést** kap, és az ételek még kevésbé hatnak (lásd lentebb).
+  - Amint `alkohol` lecsökken **50‑re**, ott **"padlózik"**: magától nem megy 50 alá.
+  - A küszöb ezután **egyre magasabbra tolódik**:
+    - Először 60 → 70 → 80 → 90.
+    - Ha a játékos nem tartja a _következő_ küszöböt, **stressz‑büntetést** kap, és az ételek még kevésbé hatnak (lásd lentebb).
 - **Stressz‑büntetés és éhségszankció**
-    - Ha az aktuális "kötelező" szint alá esik az alkohol:
-        - `stressz` azonnal +15
-        - Az ételek **hatékonysága feleződik** a normál értékhez képest, amíg vissza nem éri a küszöböt.
+  - Ha az aktuális "kötelező" szint alá esik az alkohol:
+    - `stressz` azonnal +15
+    - Az ételek **hatékonysága csökken** a normál értékhez képest, amíg vissza nem éri a küszöböt.
 
 ### Időciklus Finomítása
 
 #### Napi Főidő: 08:00 – 20:00
 
-- **3 fő blokk** (délelőtt, délután, kora este) = *produktív idő*.
+- **3 fő blokk** (délelőtt, délután, kora este) = _produktív idő_.
 - Tevékenységek (munka, csere, vásárlás) ezeken belül zajlanak.
 
 #### Szabadidő: 20:00 – lefekvés
@@ -635,9 +733,9 @@ Az alábbi pontosítások **felülírják / kiegészítik** a korábban leírt s
 #### Alvás–Stressz Kapcsolat
 
 | Alvással töltött idő | Hatás a következő nap reggelén |
-|----------------------|--------------------------------|
-| **≥ 7 óra**          | `stressz` ‑10 (pihent) |
-| 5–6,9 óra            | nincs változás |
-| **< 5 óra**          | `stressz` +15 (kimerült) |
+| -------------------- | ------------------------------ |
+| **≥ 7 óra**          | `stressz` ‑10 (pihent)         |
+| 5–6,9 óra            | nincs változás                 |
+| **< 5 óra**          | `stressz` +15 (kimerült)       |
 
-*Az alvás az alkoholszintet ***nem*** csökkenti tovább a küszöbnél.*
+\*Az alvás az alkoholszintet **_nem_** csökkenti tovább a küszöbnél.\*
