@@ -479,7 +479,7 @@ közvetetten kapcsolatba léphet.
 
 #### Attribútumok azonosítása
 
--**Environment**:
+- **Environment**:
     - name: String
     - elements: List
     - picture: Image
