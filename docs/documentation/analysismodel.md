@@ -69,6 +69,10 @@ JátékÁllapot
 
 ![A játék osztálydiagramja](diagrams/classdiagram.png)
 
+### Komponensek közötti kapcsolatok
+
+![Komponensek közötti kapcsolatok](diagrams/components.svg)
+
 ### Osztályok Felsorolása
 
 MainMenu
