@@ -69,6 +69,10 @@ JátékÁllapot
 
 ![A játék osztálydiagramja](diagrams/classdiagram.png)
 
+### Komponensek közötti kapcsolatok
+
+![Komponensek közötti kapcsolatok](diagrams/components.svg)
+
 ### Osztályok Felsorolása
 
 MainMenu
@@ -607,7 +611,7 @@ Family HUD, valamint a szünetmenük és a játékos vagyoni helyzetét mutató 
 
 (Az állapotjelzők frissülnek a játék során a karakter változásainak megfelelően.)
 
-![A játék osztálydiagramja](diagrams/game_dinamic.png)
+![A játék osztálydiagramja](diagrams/game_dinamic.svg)
 
 ### Analízis modell osztálydiagramja
 
