@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SzakGyak"
-run/main_scene="uid://brenq6kg8pnib"
+run/main_scene="uid://ig3kocnbgc0a"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
