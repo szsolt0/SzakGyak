@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2qc5tyd70kd4"]
+[gd_scene load_steps=11 format=3 uid="uid://d2qc5tyd70kd4"]
 
-[ext_resource type="Texture2D" uid="uid://dmui1pc5cxhhn" path="res://assets/textures/shop/Shop_Background.png" id="1_cimqq"]
-[ext_resource type="Texture2D" uid="uid://dsn66f70fqhks" path="res://assets/textures/shop/Table.png" id="2_yltc6"]
-
-[ext_resource type="Script" uid="uid://ct2rfdrygww18" path="res://scenes/shop/register_button.gd" id="3_fpbbi"]
-
-[ext_resource type="Texture2D" uid="uid://c2s5qmnqy5ccn" path="res://assets/textures/shop/Cash_register0.png" id="4_m0qts"]
+[ext_resource type="Texture2D" uid="uid://bhuxwncxsggkx" path="res://assets/textures/shop/Shop_Background.png" id="1_cimqq"]
+[ext_resource type="Script" uid="uid://bfnmg0sj8e6br" path="res://scenes/shop/shop.gd" id="1_pe3u1"]
+[ext_resource type="Texture2D" uid="uid://bbavsry35i1gw" path="res://assets/textures/shop/Table.png" id="2_yltc6"]
+[ext_resource type="Script" uid="uid://bxegcsl6d6yrr" path="res://scenes/shop/register_button.gd" id="3_fpbbi"]
+[ext_resource type="Texture2D" uid="uid://dnr5w8yvj3y46" path="res://assets/textures/shop/Cash_register0.png" id="4_m0qts"]
+[ext_resource type="Script" uid="uid://cs4jwoc644xts" path="res://scenes/shop/book_button.gd" id="5_6yl83"]
+[ext_resource type="Texture2D" uid="uid://bhv561o33f87" path="res://assets/textures/shop/Book.png" id="6_rdw2s"]
+[ext_resource type="Texture2D" uid="uid://ciyi5p56msksg" path="res://assets/textures/shop/Cash_Keyboard.png" id="7_rdw2s"]
+[ext_resource type="Texture2D" uid="uid://dm1k5k5ey2nvw" path="res://assets/textures/shop/PriceList.png" id="8_2xo2e"]
+[ext_resource type="Texture2D" uid="uid://ccd1xa4uy6w0o" path="res://assets/textures/shop/0.png" id="9_bhc6i"]
 
 [node name="Shop" type="Node2D"]
+script = ExtResource("1_pe3u1")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -35,5 +40,93 @@ position = Vector2(973, 407)
 scale = Vector2(5.583, 5.583)
 polygon = PackedVector2Array(-14.5083, -10.7469, -14.8665, -10.0304, -17.9115, 2.86584, -21.6729, 7.70195, -14.1501, 16.6577, 15.9413, 16.8368, 15.2248, 8.59753, 11.6425, 5.01522, 15.583, 1.79115, 15.4039, -5.9108, 12.0007, -10.0304, 10.3887, -18.628, -11.8216, -18.4489, -14.1501, -12.5381)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1166.0
+offset_bottom = 666.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="BookButton" type="Area2D" parent="CanvasLayer2"]
+script = ExtResource("5_6yl83")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer2/BookButton"]
+texture_filter = 1
+position = Vector2(1131, 478)
+scale = Vector2(5.583, 5.583)
+texture = ExtResource("6_rdw2s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer2/BookButton"]
+polygon = PackedVector2Array(1119, 430, 1082, 503, 1143, 536, 1185, 463)
+
+[node name="CashKeyboard" type="Sprite2D" parent="CanvasLayer2"]
+texture_filter = 1
+position = Vector2(606, 325)
+scale = Vector2(4.26, 4.26)
+texture = ExtResource("7_rdw2s")
+
+[node name="Display" type="HBoxContainer" parent="CanvasLayer2/CashKeyboard"]
+offset_left = -37.0
+offset_top = -72.0
+offset_right = 71.0
+offset_bottom = -59.0
+
+[node name="Digit0" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+texture = ExtResource("9_bhc6i")
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="TextureRact9" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="Digit1" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+texture = ExtResource("9_bhc6i")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="Digit2" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+texture = ExtResource("9_bhc6i")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="TextureRect7" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="Digit3" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+texture = ExtResource("9_bhc6i")
+
+[node name="TextureRect8" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+
+[node name="Digit4" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+layout_mode = 2
+texture = ExtResource("9_bhc6i")
+
+[node name="PriceList" type="Sprite2D" parent="CanvasLayer2"]
+visible = false
+texture_filter = 1
+position = Vector2(580, 323)
+scale = Vector2(2, 2)
+texture = ExtResource("8_2xo2e")
+
 [connection signal="mouse_entered" from="RegisterButton" to="RegisterButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="RegisterButton" to="RegisterButton" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer2/BookButton" to="CanvasLayer2/BookButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer2/BookButton" to="CanvasLayer2/BookButton" method="_on_mouse_exited"]

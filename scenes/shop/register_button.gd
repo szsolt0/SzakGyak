@@ -1,6 +1,5 @@
 extends Area2D
 
-# --- Export változók, hogy az Inspectorban is állíthatók legyenek ---
 @export var normal_texture: Texture2D = preload("res://assets/textures/shop/Cash_register0.png")
 @export var hover_texture: Texture2D = preload("res://assets/textures/shop/Cash_register0light.png")
 
@@ -15,4 +14,16 @@ func _on_mouse_exited():
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-		print("Pénztárgépre kattintottál!")
+		var cashkeyboard = get_node("../CanvasLayer2/CashKeyboard")
+		var overlay = get_node("../CanvasLayer/ColorRect")
+		
+		cashkeyboard.visible = true
+		overlay.modulate.a = 0.0
+		
+		var tween = get_tree().create_tween()
+		tween.tween_property(
+			overlay,
+			"modulate:a",
+			0.7,
+			2.0
+		)
