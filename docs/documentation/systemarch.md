@@ -92,16 +92,28 @@ Ez a dokumentum a "Túlélés a Szocializmusban" című túlélő-szimulációs 
 
 ### Játékos.json
 
-```json
+``` json
 {
-  "ehseg": 40,
-  "stressz": 60,
-  "reputacio": -10,
-  "alkohol": 30,
-  "penz": 1250,
-  "csalad": {
-    "gyerek1": { "ehseg": 50, "egeszseg": 80 },
-    "hazastars": { "ehseg": 60, "egeszseg": 90 }
+  "player": {
+    "name": "Piotr",
+    "stats": {
+      "hunger": 0,
+      "stress": 0,
+      "alcohol": 0,
+      "reputation": 50,
+      "money": 100
+    },
+    "inventory": {
+      "items": {
+        "bread": 2,
+        "medicine": 1
+      }
+    },
+    "family": {
+      "members": 3,
+      "hunger_levels": [0, 1, 2]
+    },
+    "day": 1
   }
 }
 ```
@@ -196,9 +208,13 @@ Felhasználói folyamatok (User Flows): a játékos belép a főmenübe, új já
 
 ## Mentési és Betöltési Rendszer
 
-- Mentés struktúrája: JSON fájl a globális játékállapotról
-- Kézi mentés és visszatöltés támogatása
-- Slot-alapú mentés (3 különböző mentési lehetőség)
+-   A játékállás mentése JSON formátumban történik.
+-   Mentés tartalmazza: játékos statisztikái, inventory, család
+    állapota, nap száma, események.
+-   Mentés: `savegame.json` a `user://` könyvtárban.
+-   Betöltés: adatok visszaállítása a `Stats` és `Inventory` modulokból.
+-   Hibakezelés: ha fájl sérült vagy hiányzik, új játék indul.
+
 
 ## Funkcionális Követelmények
 
