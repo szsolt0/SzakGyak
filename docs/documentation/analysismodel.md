@@ -391,6 +391,8 @@ lásd korábbi diagram.)
 
 ## Interakciók és Karakterek alrendszer
 
+![Interakciók alrendszer](interactions_dynamic.png)
+
 ### Statikus modell
 
 Ez az alrendszer kezeli a játékos, a különféle NPC-k (boltos, autós, asztali),
