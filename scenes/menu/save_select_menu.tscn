@@ -51,6 +51,7 @@ size_flags_vertical = 3
 
 [node name="SaveList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="NewSave" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
