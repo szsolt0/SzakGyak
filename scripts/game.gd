@@ -4,6 +4,8 @@ extends Node
 const Player = preload("res://scripts/player.gd")
 const Family = preload("res://scripts/family.gd")
 
+var ui = load("res://scenes/ui/UI.tscn")
+
 # Aktuális scene
 var current_scene: Node = null
 
@@ -20,9 +22,17 @@ func _ready():
 	print(matka.get_description())
 	var vilen = Family.new("Vilen", 0)
 	print(vilen.get_description())
+	
+	# UI betöltése és hozzáadása
+	var ui_scene = ui.instantiate()
+	add_child(ui_scene)
 
-	# Kezdő scene: Shop
-	_change_scene("res://scenes/shop/Shop.tscn")
+	# Helyes signal kötés Godot 4.4.1-ben
+	ui_scene.connect("scene_change_requested", Callable(self, "_change_scene"))
+
+	# Kezdő scene: Office
+	_change_scene("res://scenes/office/office.tscn")
+
 
 # Scene váltó függvény
 func _change_scene(path: String) -> void:
