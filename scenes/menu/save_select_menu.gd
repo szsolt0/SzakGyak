@@ -29,7 +29,7 @@ func _on_save_select_requested(info: SaveManager.SaveInfo) -> void:
 	print("selected save: ", info.name)
 	SaveManager.load_save_file(info.file) # TODO: handle errors
 	# this is where the game.gd supposed to take control
-	#get_tree().change_scene_to_file("...")
+	get_tree().change_scene_to_file("res://scenes/game/Game.tscn")
 
 func _on_save_delete_requested(info: SaveManager.SaveInfo) -> void:
 	print("delete save: ", info.name)

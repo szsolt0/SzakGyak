@@ -71,6 +71,8 @@ func _load_settings() -> void:
 	# Main
 	_main_lang = str(config.get_value("main", "lang", "ask"))
 	_content_warn_ack = bool(config.get_value("main", "content-warn-ack", false))
+	
+	print("settings loaded")
 
 ## Apply all settings. (Only usefull after loading from config file.)
 func _apply_all() -> void:
@@ -87,6 +89,7 @@ func _apply_all() -> void:
 	set_video_animations(get_video_animations())
 	
 	set_main_lang(get_main_lang())
+	print("applying changes")
 
 ## Load settings from config file and apply them.
 func reload() -> void:
@@ -97,6 +100,7 @@ func reload() -> void:
 	# temporary solution until settings menu has lang option
 	# valid values ar "hu_HU" and "en_US"
 	set_main_lang("hu_HU")
+	print("reloading")
 
 func _ready() -> void:
 	reload()
