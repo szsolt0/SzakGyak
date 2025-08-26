@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://brenq6kg8pnib"]
+[gd_scene load_steps=8 format=3 uid="uid://brenq6kg8pnib"]
 
 [ext_resource type="Texture2D" uid="uid://b0b57r2hu32w" path="res://assets/textures/office/wallpaper.png" id="1_4g2wo"]
+[ext_resource type="Script" uid="uid://tgd3yr6ldtxj" path="res://scenes/office/office.gd" id="1_art4y"]
 [ext_resource type="Texture2D" uid="uid://dvcjnuok1oqqu" path="res://assets/textures/office/desktop.png" id="2_3obsa"]
 [ext_resource type="Texture2D" uid="uid://2vvvcprwbjb7" path="res://assets/textures/office/paper.png" id="3_pqwco"]
 [ext_resource type="Texture2D" uid="uid://cniiwckhbxi5c" path="res://assets/textures/office/idcard.png" id="4_3qdk0"]
@@ -21,6 +22,7 @@ animations = [{
 position = Vector2(0, -1)
 
 [node name="root" type="Node2D" parent="."]
+script = ExtResource("1_art4y")
 
 [node name="Wallpaper" type="Sprite2D" parent="root"]
 position = Vector2(9, -101)
@@ -35,26 +37,36 @@ texture = ExtResource("2_3obsa")
 
 [node name="Paper" type="Sprite2D" parent="root"]
 z_index = 1
-position = Vector2(440, 150)
+position = Vector2(-448, 134)
 scale = Vector2(1.38607, 1.53692)
 texture = ExtResource("3_pqwco")
 
 [node name="Idcard" type="Sprite2D" parent="root"]
 z_index = 1
-position = Vector2(175, 51)
+position = Vector2(-185, 63)
 scale = Vector2(1.17133, 0.728507)
 texture = ExtResource("4_3qdk0")
 
 [node name="Boss" type="Node2D" parent="root"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="root/Boss"]
-position = Vector2(-445, -14)
+position = Vector2(-698, -18)
 scale = Vector2(0.846976, 0.7609)
 sprite_frames = SubResource("SpriteFrames_3obsa")
+frame_progress = 0.452605
 
 [node name="Timer" type="Timer" parent="root/Boss"]
 
 [node name="Text" type="CanvasLayer" parent="root"]
+
+[node name="Label" type="Label" parent="root/Text"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
 
 [node name="Camera" type="Camera2D" parent="root"]
 limit_smoothed = true
