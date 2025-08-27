@@ -14,7 +14,7 @@ animations = [{
 "texture": ExtResource("5_4g2wo")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -53,7 +53,7 @@ texture = ExtResource("4_3qdk0")
 position = Vector2(-698, -18)
 scale = Vector2(0.846976, 0.7609)
 sprite_frames = SubResource("SpriteFrames_3obsa")
-frame_progress = 0.452605
+animation = &"walk"
 
 [node name="Timer" type="Timer" parent="root/Boss"]
 
