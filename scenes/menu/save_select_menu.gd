@@ -16,6 +16,11 @@ func _load_translations() -> void:
 func _ready() -> void:
 	_load_translations()
 	
+	# Új mentés gomb callback
+	NEW_SAVE_BTN.pressed.connect(func():
+		get_tree().change_scene_to_file("res://scenes/game/Game.tscn")
+	)
+	
 	for save in SaveManager.get_list_of_save_files():
 		print(save.name)
 		var entry := SaveEntry.create(save)
