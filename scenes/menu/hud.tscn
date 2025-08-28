@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddejynff6fh03"]
+
+[ext_resource type="Script" uid="uid://dl8raf7hu436u" path="res://scenes/menu/hud.gd" id="1_bacnr"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_bacnr")
+
+[node name="Root" type="VBoxContainer" parent="."]
+offset_right = 342.0
+offset_bottom = 648.0
+size_flags_vertical = 4
+
+[node name="Tabs" type="HBoxContainer" parent="Root"]
+layout_mode = 2
+
+[node name="F1" type="Button" parent="Root/Tabs"]
+layout_mode = 2
+text = "F1"
+
+[node name="F2" type="Button" parent="Root/Tabs"]
+layout_mode = 2
+text = "F2"
+
+[node name="F3" type="Button" parent="Root/Tabs"]
+layout_mode = 2
+text = "F3"
+
+[node name="UpDown" type="Button" parent="Root/Tabs"]
+layout_mode = 2
+text = "^"
+
+[node name="ColorRect" type="ColorRect" parent="Root"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.501961)
+
+[node name="Items" type="HBoxContainer" parent="Root/ColorRect"]
+layout_mode = 2
+
+[node name="Items" type="ScrollContainer" parent="Root/ColorRect/Items"]
+layout_mode = 2
+
+[connection signal="pressed" from="Root/Tabs/F1" to="." method="_on_f_1_pressed"]
+[connection signal="pressed" from="Root/Tabs/F2" to="." method="_on_f_2_pressed"]
+[connection signal="pressed" from="Root/Tabs/F3" to="." method="_on_f_3_pressed"]
+[connection signal="pressed" from="Root/Tabs/UpDown" to="." method="_on_up_down_pressed"]
