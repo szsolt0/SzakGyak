@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://em3wtpfp07ib"]
 
-[ext_resource type="Texture2D" uid="uid://c6eu8nwqxtkwd" path="res://assets/textures/repairshop/Background.png" id="1_i16o3"]
-[ext_resource type="Texture2D" uid="uid://bhkc54pyduw2n" path="res://assets/textures/repairshop/Car.png" id="2_q4rlt"]
-[ext_resource type="Texture2D" uid="uid://puqxxyvnlsce" path="res://assets/textures/repairshop/Shelf.png" id="3_m1dyq"]
-[ext_resource type="Texture2D" uid="uid://74iyn7ye7ekv" path="res://assets/textures/repairshop/Hammer.png" id="4_1jo2a"]
-[ext_resource type="Texture2D" uid="uid://cexnbg80grvfo" path="res://assets/textures/repairshop/ScrewDriver.png" id="5_4p1p8"]
-[ext_resource type="Texture2D" uid="uid://bxqyjxgrncquo" path="res://assets/textures/repairshop/WindowCleaner.png" id="6_e41nk"]
-[ext_resource type="Texture2D" uid="uid://dftsydqb1xugo" path="res://assets/textures/repairshop/Wrench.png" id="7_wy1jm"]
-[ext_resource type="Texture2D" uid="uid://bh0obqpccpd66" path="res://assets/textures/repairshop/Tire.png" id="8_e41nk"]
+[ext_resource type="Texture2D" uid="uid://bs0ysg4vo08mf" path="res://assets/textures/repairshop/Background.png" id="1_i16o3"]
+[ext_resource type="Texture2D" uid="uid://dxotvtfdw5pke" path="res://assets/textures/repairshop/Car.png" id="2_q4rlt"]
+[ext_resource type="Texture2D" uid="uid://cj6dbrlscskxk" path="res://assets/textures/repairshop/Shelf.png" id="3_m1dyq"]
+[ext_resource type="Texture2D" uid="uid://bd0fimo32ll8" path="res://assets/textures/repairshop/Hammer.png" id="4_1jo2a"]
+[ext_resource type="Texture2D" uid="uid://bdewf3ace86u5" path="res://assets/textures/repairshop/ScrewDriver.png" id="5_4p1p8"]
+[ext_resource type="Texture2D" uid="uid://dv1ux4ymf6l1w" path="res://assets/textures/repairshop/WindowCleaner.png" id="6_e41nk"]
+[ext_resource type="Texture2D" uid="uid://sde2ofxwsy7h" path="res://assets/textures/repairshop/Wrench.png" id="7_wy1jm"]
+[ext_resource type="Texture2D" uid="uid://bq3r1aabs0t8x" path="res://assets/textures/repairshop/Tire.png" id="8_e41nk"]
 
 [node name="CarShop" type="Node2D"]
 

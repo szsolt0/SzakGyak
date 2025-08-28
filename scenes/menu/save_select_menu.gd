@@ -16,7 +16,8 @@ func _load_translations() -> void:
 func _ready() -> void:
 	_load_translations()
 	
-	# Új mentés gomb callback
+	# Új mentés gomb callback utólag törölhető, csak míg nincs kész teljesen a
+	# mentés funkció, új mentésre kattintva elindul a játék
 	NEW_SAVE_BTN.pressed.connect(func():
 		get_tree().change_scene_to_file("res://scenes/game/Game.tscn")
 	)
