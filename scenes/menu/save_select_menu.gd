@@ -19,7 +19,7 @@ func _ready() -> void:
 	# Új mentés gomb callback utólag törölhető, csak míg nincs kész teljesen a
 	# mentés funkció, új mentésre kattintva elindul a játék
 	NEW_SAVE_BTN.pressed.connect(func():
-		get_tree().change_scene_to_file("res://scenes/game/Game.tscn")
+		get_tree().change_scene_to_file("res://scenes/game/game.tscn")
 	)
 	
 	for save in SaveManager.get_list_of_save_files():

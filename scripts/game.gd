@@ -4,10 +4,13 @@ extends Node
 const Player = preload("res://scripts/player.gd")
 const Family = preload("res://scripts/family.gd")
 
-var ui = load("res://scenes/ui/UI.tscn")
+# UI és HUD scene
+var ui = preload("res://scenes/ui/ui.tscn")
+var hud_scene = preload("res://scenes/menu/hud.tscn")
 
-# Aktuális scene
+# Példányok
 var current_scene: Node = null
+var hud_instance: CanvasLayer
 
 func _ready():
 	# Karakterek létrehozása
@@ -22,13 +25,15 @@ func _ready():
 	print(matka.get_description())
 	var vilen = Family.new("Vilen", 0)
 	print(vilen.get_description())
-	
-	# UI betöltése és hozzáadása
+
+	# UI betöltése
 	var ui_scene = ui.instantiate()
 	add_child(ui_scene)
-
-	# Helyes signal kötés Godot 4.4.1-ben
 	ui_scene.connect("scene_change_requested", Callable(self, "_change_scene"))
+
+	# HUD betöltése
+	hud_instance = hud_scene.instantiate()
+	add_child(hud_instance)
 
 	# Kezdő scene: Office
 	_change_scene("res://scenes/office/office.tscn")
@@ -47,3 +52,18 @@ func _change_scene(path: String) -> void:
 		add_child(current_scene)
 	else:
 		push_error("Nem található a scene: %s" % path)
+
+
+# Input kezelés HUD-hoz
+func _input(event):
+	if event.is_action_pressed("ui_up_down"):
+		hud_instance._on_up_down_pressed()
+
+	if event.is_action_pressed("ui_f1"):
+		hud_instance._on_f_1_pressed()
+
+	if event.is_action_pressed("ui_f2"):
+		hud_instance._on_f_2_pressed()
+
+	if event.is_action_pressed("ui_f3"):
+		hud_instance._on_f_3_pressed()

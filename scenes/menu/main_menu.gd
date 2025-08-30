@@ -8,6 +8,7 @@ func _load_translations() -> void:
 	$VBoxContainer/Quit.text = tr(&"BTN_QUIT")
 
 func _ready() -> void:
+	preload("res://assets/fonts/Tiny5-Regular.ttf")
 	if not GameSettings.get_content_warn_ack():
 		get_tree().change_scene_to_file("res://scenes/menu/warn_menu.tscn")
 		print("Warning loaded and displayed")
