@@ -17,6 +17,8 @@ nav:
       - documentation/analysismodel.md
       - documentation/systemarch.md
   - "Munkanapló": "https://docs.google.com/spreadsheets/d/1jSlDk9d3kgoSkNY78S58bChsSggCFRqs5fNXPh3aXEc"
+  - "Prototípus":
+      - prototypes/game.md
 
 plugins:
   - search
