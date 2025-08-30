@@ -29,4 +29,4 @@ A végkifejlet függ a család túlélésétől, Piotr állapotától, a reputá
 
 Legelső prototípus, amely magába foglalja a főmenüt és azon beállításait, illetve az alapvető kinézeteket az egyes elemekhez, mint munkahelyek, animációk, hud elemek.
 
-👉 [Prototípus letöltése](IDE-JÖN-MAJD-A-LINK)
+👉 [Prototípus letöltése](https://drive.google.com/file/d/1RT6vIggqD2yBkKtbZHp4HwAOAGwF9RNH/view?usp=drive_link)
