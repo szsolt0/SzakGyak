@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0ekeqowpt6pw"]
+
+[ext_resource type="Script" uid="uid://d4d0dgq4bnfa8" path="res://scenes/menu/hud_entry_player.gd" id="1_61qde"]
+
+[node name="HudEntryPlayer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_61qde")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="Stats" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 2
+
+[node name="HungerLabel" type="Label" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HungerBar" type="ProgressBar" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StressLabel" type="Label" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StressBar" type="ProgressBar" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AlcoholLabel" type="Label" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AlcoholBar" type="ProgressBar" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReputationLabel" type="Label" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReputationBar" type="ProgressBar" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MoneyLabel" type="Label" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MoneyBar" type="ProgressBar" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BreadLabel" type="Label" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BreadBar" type="ProgressBar" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VodkaLabel" type="Label" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VodkaBar" type="ProgressBar" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
