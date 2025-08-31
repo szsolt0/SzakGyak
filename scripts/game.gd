@@ -32,8 +32,19 @@ func _ready():
 	ui_scene.connect("scene_change_requested", Callable(self, "_change_scene"))
 
 	# HUD betöltése
-	hud_instance = hud_scene.instantiate()
+	hud_instance = hud_scene.instantiate() as Hud
 	add_child(hud_instance)
+	
+	piotr.set_hunger(12)
+	piotr.set_alcohol(95)
+	
+	hud_instance.update_player(piotr)
+	hud_instance.update_family_member(1, mihalina)
+	hud_instance.update_family_member(2, gustav)
+	hud_instance.update_family_member(3, matka)
+	
+	matka.set_hunger(99)
+	hud_instance.update_family_member(3, matka)
 
 	# Kezdő scene: Office
 	_change_scene("res://scenes/office/office.tscn")
