@@ -13,6 +13,10 @@ size_flags_vertical = 4
 [node name="Tabs" type="HBoxContainer" parent="Root"]
 layout_mode = 2
 
+[node name="Player" type="Button" parent="Root/Tabs"]
+layout_mode = 2
+text = "PLAYER"
+
 [node name="F1" type="Button" parent="Root/Tabs"]
 layout_mode = 2
 text = "F1"
@@ -35,12 +39,39 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 0.501961)
 
-[node name="Items" type="HBoxContainer" parent="Root/ColorRect"]
+[node name="Player" type="MarginContainer" parent="Root/ColorRect"]
 layout_mode = 2
+offset_right = 342.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
-[node name="Items" type="ScrollContainer" parent="Root/ColorRect/Items"]
-layout_mode = 2
+[node name="F1" type="MarginContainer" parent="Root/ColorRect"]
+layout_mode = 0
+offset_right = 342.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
+[node name="F2" type="MarginContainer" parent="Root/ColorRect"]
+layout_mode = 0
+offset_right = 342.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="F3" type="MarginContainer" parent="Root/ColorRect"]
+layout_mode = 0
+offset_right = 342.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[connection signal="pressed" from="Root/Tabs/Player" to="." method="_on_player_pressed"]
 [connection signal="pressed" from="Root/Tabs/F1" to="." method="_on_f_1_pressed"]
 [connection signal="pressed" from="Root/Tabs/F2" to="." method="_on_f_2_pressed"]
 [connection signal="pressed" from="Root/Tabs/F3" to="." method="_on_f_3_pressed"]
