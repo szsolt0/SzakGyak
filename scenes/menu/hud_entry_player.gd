@@ -8,7 +8,7 @@ class_name HudEntryPlayer
 @onready var stress_bar: ProgressBar = $Stats/StressBar
 @onready var alcohol_bar: ProgressBar = $Stats/AlcoholBar
 @onready var reputation_bar: ProgressBar = $Stats/ReputationBar
-@onready var money_bar: ProgressBar = $Stats/MoneyBar
+@onready var money_bar: Label = $Stats/MoneyBar
 @onready var bread_bar: ProgressBar = $Stats/BreadBar
 @onready var vodka_bar: ProgressBar = $Stats/VodkaBar
 
@@ -59,7 +59,7 @@ func get_reputation() -> int:
 
 # Money
 func set_money(val: int) -> void:
-	money_bar.value = val
+	money_bar.text = String.num_int64(val) + " $"
 
 func get_money() -> int:
 	return money_bar.value as int

@@ -161,7 +161,6 @@ var _ui_volume_bus := AudioServer.get_bus_index(&"Ui")
 
 
 func _set_bus_volume(bus_index: int, val: int) -> void:
-	var db_volume := lerpf(-80, 0, val / 100.0)
 	AudioServer.set_bus_volume_linear(bus_index, val as float / 100.0)
 
 func set_master_volume(val: int) -> void:

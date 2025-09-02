@@ -72,8 +72,8 @@ func create_save_file(file: String, name: String) -> Error:
 		"mtime": today,
 	}
 
-	return _commit()
 	_save_file_name = ""
+	return _commit()
 
 func remove_save_file(file: String) -> void:
 	DirAccess.remove_absolute(SAVE_DIR + "/" + file + ".save")

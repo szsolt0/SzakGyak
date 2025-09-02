@@ -22,6 +22,12 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://scenes/game/game.tscn")
 	)
 	
+	_reload()
+
+func _reload() -> void:
+	for child in SAVE_LIST.get_children():
+		SAVE_LIST.remove_child(child)
+	
 	for save in SaveManager.get_list_of_save_files():
 		print(save.name)
 		var entry := SaveEntry.create(save)
@@ -39,6 +45,12 @@ func _on_save_select_requested(info: SaveManager.SaveInfo) -> void:
 
 func _on_save_delete_requested(info: SaveManager.SaveInfo) -> void:
 	print("delete save: ", info.name)
+	SaveManager.remove_save_file(info.file)
+	_reload()
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
+
+
+func _on_new_save_pressed() -> void:
+	pass # Replace with function body.
