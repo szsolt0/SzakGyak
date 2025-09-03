@@ -1,6 +1,7 @@
 # This script manages the Save Select UI.
 
 extends Control
+class_name SaveSelectMenu
 
 @onready var TITLE := $MarginContainer/VBoxContainer/Title
 @onready var NEW_SAVE_BTN := $MarginContainer/VBoxContainer/NewSave
@@ -8,21 +9,17 @@ extends Control
 
 @onready var SAVE_LIST := $MarginContainer/VBoxContainer/ScrollContainer/SaveList
 
+signal reload_requested()
+
 func _load_translations() -> void:
-	TITLE.text = tr(&"LVL_SELECT_MENU_TITLE")
-	NEW_SAVE_BTN.text = tr(&"LVL_SELECT_MENU_NEW_SAVE")
+	TITLE.text = tr(&"SAVE_SELECT_MENU_TITLE")
+	NEW_SAVE_BTN.text = tr(&"SAVE_SELECT_MENU_NEW_SAVE")
 	BACK_BTN.text = tr(&"BTN_BACK")
 
 func _ready() -> void:
 	_load_translations()
-	
-	# Új mentés gomb callback utólag törölhető, csak míg nincs kész teljesen a
-	# mentés funkció, új mentésre kattintva elindul a játék
-	NEW_SAVE_BTN.pressed.connect(func():
-		get_tree().change_scene_to_file("res://scenes/game/game.tscn")
-	)
-	
 	_reload()
+	reload_requested.connect(_reload)
 
 func _reload() -> void:
 	for child in SAVE_LIST.get_children():
@@ -44,13 +41,14 @@ func _on_save_select_requested(info: SaveManager.SaveInfo) -> void:
 	get_tree().change_scene_to_file("res://scenes/game/Game.tscn")
 
 func _on_save_delete_requested(info: SaveManager.SaveInfo) -> void:
-	print("delete save: ", info.name)
-	SaveManager.remove_save_file(info.file)
-	_reload()
+	var del_menu := preload("res://scenes/menu/save_delete_confirm.tscn").instantiate() as SaveDeleteConfirm
+	del_menu.setup(info)
+	add_child(del_menu)
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
 
 
 func _on_new_save_pressed() -> void:
-	pass # Replace with function body.
+	var new_save_menu := preload("res://scenes/menu/new_save_menu.tscn").instantiate() as NewSaveMenu
+	add_child(new_save_menu)
