@@ -59,4 +59,5 @@ layout_mode = 2
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/NewSave" to="." method="_on_new_save_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

@@ -29,11 +29,24 @@ extends Control
 
 func _load_translations() -> void:
 	for button in menu_btn_translation_map.keys():
-		var label: Label = button.get_parent().get_node("Label")
+		var label := button.get_parent().get_node("Label") as Label
 		label.text = tr(menu_btn_translation_map.get(button))
 	
 	for label in menu_labels_translation_map.keys():
 		label.text = tr(menu_labels_translation_map.get(label))
+	
+	# video quality names
+	video_quality_btn.set_item_text(0, tr(&"GENERIC_LOW"))
+	video_quality_btn.set_item_text(1, tr(&"GENERIC_MEDIUM"))
+	video_quality_btn.set_item_text(2, tr(&"GENERIC_HIGH"))
+	
+	# video animations names
+	video_anim_btn.set_item_text(0, tr(&"GENERIC_BOOL_ON"))
+	video_anim_btn.set_item_text(1, tr(&"GENERIC_BOOL_OFF"))
+	
+	# video font names
+	video_font_btn.set_item_text(0, tr(&"SETTINGS_BTN_VIDEO_FONT_PIXEL"))
+	video_font_btn.set_item_text(1, tr(&"SETTINGS_BTN_VIDEO_FONT_READABLE"))
 
 func _ready() -> void:
 	_load_translations()
@@ -71,16 +84,16 @@ func _on_video_font_item_selected(index: int) -> void:
 func _on_master_volume_drag_ended(value_changed: bool) -> void:
 	if value_changed:
 		# print("current master volume: ", master_volume_btn.value)
-		GameSettings.set_master_volume(master_volume_btn.value)
+		GameSettings.set_master_volume(master_volume_btn.value as int)
 
 func _on_sfx_volume_drag_ended(value_changed: bool) -> void:
 	if value_changed:
-		GameSettings.set_sfx_volume(sfx_volume_btn.value)
+		GameSettings.set_sfx_volume(sfx_volume_btn.value as int)
 
 func _on_music_volume_drag_ended(value_changed: bool) -> void:
 	if value_changed:
-		GameSettings.set_music_volume(music_volume_btn.value)
+		GameSettings.set_music_volume(music_volume_btn.value as int)
 
 func _on_ui_volume_drag_ended(value_changed: bool) -> void:
 	if value_changed:
-		GameSettings.set_ui_volume(ui_volume_btn.value)
+		GameSettings.set_ui_volume(ui_volume_btn.value as int)

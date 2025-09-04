@@ -54,7 +54,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MoneyBar" type="ProgressBar" parent="Stats"]
+[node name="MoneyBar" type="Label" parent="Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
 

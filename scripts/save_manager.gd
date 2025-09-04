@@ -33,9 +33,9 @@ func get_list_of_save_files() -> Array[SaveInfo]:
 		_load(file_name.left(-5))
 		
 		save_info.file  = file_name.left(-5) # remove the ".save" from the end
-		save_info.name  = _save_data["__meta"]["name"]
-		save_info.ctime = _save_data["__meta"]["ctime"]
-		save_info.mtime = _save_data["__meta"]["mtime"]
+		save_info.name  = _save_data[&"__meta"][&"name"]
+		save_info.ctime = _save_data[&"__meta"][&"ctime"]
+		save_info.mtime = _save_data[&"__meta"][&"mtime"]
 		
 		saves.append(save_info)
 		_save_data = {}
@@ -43,6 +43,9 @@ func get_list_of_save_files() -> Array[SaveInfo]:
 		file_name = save_dir.get_next()
 	
 	return saves
+
+func save_exists(file: String) -> bool:
+	return FileAccess.file_exists(SAVE_DIR + "/" + file + ".save")
 
 func save_state(
 	ns: StringName, state: Dictionary[StringName, Variant]
@@ -72,8 +75,12 @@ func create_save_file(file: String, name: String) -> Error:
 		"mtime": today,
 	}
 
-	return _commit()
+	var err := _commit()
+
 	_save_file_name = ""
+	_save_data = {}
+
+	return err
 
 func remove_save_file(file: String) -> void:
 	DirAccess.remove_absolute(SAVE_DIR + "/" + file + ".save")

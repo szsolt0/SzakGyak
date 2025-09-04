@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://mf1ast6xs8ax"
+
+[deps]
+
+files=["res://translations/hu_HU/menu/lvl_select.hu_HU.translation"]
+
+source_file="res://translations/hu_HU/menu/lvl_select.csv"
+dest_files=["res://translations/hu_HU/menu/lvl_select.hu_HU.translation"]
+
+[params]
+
+compress=true
+delimiter=0
