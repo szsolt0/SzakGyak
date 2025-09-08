@@ -9,8 +9,8 @@ class_name HudEntryPlayer
 @onready var alcohol_bar: ProgressBar = $Stats/AlcoholBar
 @onready var reputation_bar: ProgressBar = $Stats/ReputationBar
 @onready var money_bar: Label = $Stats/MoneyBar
-@onready var bread_bar: ProgressBar = $Stats/BreadBar
-@onready var vodka_bar: ProgressBar = $Stats/VodkaBar
+@onready var bread_bar: Label = $Stats/BreadBar
+@onready var vodka_bar: Label = $Stats/VodkaBar
 
 func _load_translations() -> void:
 	$Stats/HungerLabel.text = tr(&"HUD_ENTRY_HUNGER")
@@ -30,7 +30,6 @@ func set_player_name(p_name: String) -> void:
 
 # Hunger
 func set_hunger(val: int) -> void:
-	print("updateing hunger: ", val)
 	hunger_bar.value = val
 
 func get_hunger() -> int:
@@ -59,21 +58,21 @@ func get_reputation() -> int:
 
 # Money
 func set_money(val: int) -> void:
-	money_bar.text = String.num_int64(val) + " $"
+	money_bar.text = String.num_int64(val) + &" $"
 
 func get_money() -> int:
 	return money_bar.value as int
 
 # Bread
 func set_bread(val: int) -> void:
-	bread_bar.value = val
+	bread_bar.text = String.num_int64(val)
 
 func get_bread() -> int:
 	return bread_bar.value as int
 
 # Vodka
 func set_vodka(val: int) -> void:
-	vodka_bar.value = val
+	vodka_bar.text = String.num_int64(val)
 
 func get_vodka() -> int:
 	return vodka_bar.value as int

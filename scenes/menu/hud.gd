@@ -5,8 +5,6 @@ class_name Hud
 
 const Player := preload("res://scripts/player.gd")
 const Family := preload("res://scripts/family.gd")
-const HudEntryPlayer := preload("res://scenes/menu/hud_entry_player.gd")
-const HudEntryFamily := preload("res://scenes/menu/hud_entry_family.gd")
 
 @onready var hud := $Root
 @onready var hud_tabs := $Root/Tabs
