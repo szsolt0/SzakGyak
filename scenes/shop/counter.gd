@@ -26,14 +26,14 @@ func format_price(price: int) -> String:
 	return &"%d.%02d" % [price / 100, price % 100]
 
 func _ready() -> void:
+	randomize()  # important to seed random numbers
+	
 	var products := Product.PRODUCT_LIST
-	place_product(products[0])
-	place_product(products[0])
-	place_product(products[1])
-	place_product(products[1])
-	place_product(products[1])
-	place_product(products[1])
-	place_product(products[1])
-	place_product(products[1])
+	var n := 3  # how many products to place
+	
+	for i in range(n):
+		var random_index = randi() % products.size()
+		var product = products[random_index]
+		place_product(product)
 	
 	print("total price: ", format_price(total_in_cents))

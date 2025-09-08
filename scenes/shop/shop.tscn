@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2qc5tyd70kd4"]
+[gd_scene load_steps=16 format=3 uid="uid://d2qc5tyd70kd4"]
 
 [ext_resource type="Texture2D" uid="uid://bhuxwncxsggkx" path="res://assets/textures/shop/Shop_Background.png" id="1_cimqq"]
 [ext_resource type="Script" uid="uid://bfnmg0sj8e6br" path="res://scenes/shop/shop.gd" id="1_pe3u1"]
@@ -12,7 +12,9 @@
 [ext_resource type="Script" uid="uid://blnj2hy2xrkvi" path="res://scenes/shop/cash_keyboard.gd" id="9_8qn5i"]
 [ext_resource type="Texture2D" uid="uid://ccd1xa4uy6w0o" path="res://assets/textures/shop/0.png" id="9_bhc6i"]
 [ext_resource type="Texture2D" uid="uid://dbyd1145u5o4" path="res://assets/textures/shop/dot.png" id="11_g6lcs"]
+[ext_resource type="Texture2D" uid="uid://dbuqltxo4fwxk" path="res://assets/textures/shop/x.png" id="12_131kw"]
 [ext_resource type="Script" uid="uid://c6rs34qb1jxj5" path="res://scenes/shop/counter.gd" id="12_dww4p"]
+[ext_resource type="Texture2D" uid="uid://bwecwyg6iutne" path="res://assets/textures/shop/checkmark.png" id="13_xoc10"]
 
 [node name="Shop" type="Node2D"]
 script = ExtResource("1_pe3u1")
@@ -132,6 +134,44 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("9_bhc6i")
 
+[node name="Buttons" type="GridContainer" parent="CanvasLayer2/CashKeyboard"]
+layout_direction = 3
+offset_left = -80.108
+offset_top = -53.5211
+offset_right = 54.892
+offset_bottom = 66.4789
+theme_override_constants/v_separation = 2
+columns = 5
+
+[node name="X" type="Area2D" parent="CanvasLayer2/CashKeyboard"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer2/CashKeyboard/X"]
+position = Vector2(111.268, -49.7653)
+texture = ExtResource("12_131kw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer2/CashKeyboard/X"]
+position = Vector2(111.268, -49.7653)
+polygon = PackedVector2Array(-17.1361, 13.1455, -5.39905, 0.234741, -17.3709, -13.615, -16.4319, -16.4319, -11.9718, -15.9624, -0.469482, -4.46009, 11.9718, -16.9014, 16.1972, -16.4319, 16.4319, -12.2066, 5.16432, -0.704224, 16.6667, 12.6761, 16.6667, 15.493, 12.6761, 16.1972, 0.234756, 4.22535, -11.7371, 16.4319, -16.1972, 16.6667)
+
+[node name="Checkmark" type="Area2D" parent="CanvasLayer2/CashKeyboard"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer2/CashKeyboard/Checkmark"]
+position = Vector2(-120.188, -49.061)
+texture = ExtResource("13_xoc10")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer2/CashKeyboard/Checkmark"]
+position = Vector2(-1.17371, -11.0329)
+polygon = PackedVector2Array(-103.521, -55.1643, -125.587, -28.8732, -134.272, -39.2019, -135.681, -34.507, -127.934, -23.0047, -123.005, -23.7089, -102.113, -51.6432)
+
+[node name="Reset" type="Button" parent="CanvasLayer2/CashKeyboard"]
+offset_left = -93.1925
+offset_top = -8.4507
+offset_right = -39.1925
+offset_bottom = 22.5493
+rotation = -1.07338
+focus_mode = 0
+text = "RESET"
+
 [node name="PriceList" type="Sprite2D" parent="CanvasLayer2"]
 visible = false
 texture_filter = 1
@@ -151,3 +191,5 @@ script = ExtResource("12_dww4p")
 [connection signal="mouse_exited" from="RegisterButton" to="RegisterButton" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="CanvasLayer2/BookButton" to="CanvasLayer2/BookButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer2/BookButton" to="CanvasLayer2/BookButton" method="_on_mouse_exited"]
+[connection signal="input_event" from="CanvasLayer2/CashKeyboard/Checkmark" to="CanvasLayer2/CashKeyboard" method="_on_checkmark_input_event"]
+[connection signal="pressed" from="CanvasLayer2/CashKeyboard/Reset" to="CanvasLayer2/CashKeyboard" method="_on_reset_pressed"]

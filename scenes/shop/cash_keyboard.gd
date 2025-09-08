@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@onready var shop: Shop = $"../.."
+
 @onready var digits: Array[TextureRect] = [
 	# yes, this is the correct order!
 	$Display/Digit4,
@@ -33,8 +35,46 @@ extends Sprite2D
 
 @onready var value_in_cents = 0
 
+const BUTTON_COLUMNS: int = 5
+const BUTTON_ROWS: int = 9
+
+func make_buttons() -> void:
+	var grid := $Buttons
+	grid.columns = 5
+	
+	for i in range(BUTTON_ROWS):
+		for j in range(BUTTON_COLUMNS):
+			var nr := i + 1
+			var col := j
+			var btn = RegisterKey.new(nr, col)
+			btn.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+			btn.toggle_mode = true
+			btn.toggled.connect(_on_key_toggled.bind(btn))
+			grid.add_child(btn)
+
+func _on_key_toggled(pressed: bool, btn: RegisterKey) -> void:
+	if pressed:
+		# unpress others in the same column
+		for child in $Buttons.get_children():
+			if child.column == btn.column and child.number != btn.number:
+				child.button_pressed = false
+		
+		print("Column %d → %d pressed" % [btn.column, btn.number])
+		_calculate_value()
+
+func _calculate_value() -> void:
+	var v := 0
+	
+	for _btn in $Buttons.get_children():
+		var btn := _btn as RegisterKey
+		if btn.button_pressed:
+			v += btn.number * (10 ** btn.column)
+	
+	value_in_cents = v
+	display_number(value_in_cents)
+
 func _ready() -> void:
-	pass
+	make_buttons()
 
 func display_number(val: int) -> void:
 	for digit in digits:
@@ -53,18 +93,15 @@ func append_digit(x: int) -> void:
 	x = clampi(x, 0, 9)
 	set_value((value_in_cents * 10) + x)
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.is_pressed() and not event.is_echo():
-		match event.keycode:
-			KEY_0, KEY_KP_0: append_digit(0)
-			KEY_1, KEY_KP_1: append_digit(1)
-			KEY_2, KEY_KP_2: append_digit(2)
-			KEY_3, KEY_KP_3: append_digit(3)
-			KEY_4, KEY_KP_4: append_digit(4)
-			KEY_5, KEY_KP_5: append_digit(5)
-			KEY_6, KEY_KP_6: append_digit(6)
-			KEY_7, KEY_KP_7: append_digit(7)
-			KEY_8, KEY_KP_8: append_digit(8)
-			KEY_9, KEY_KP_9: append_digit(9)
-			KEY_A: ($"../.." as Shop).cash_register_value_entered.emit(value_in_cents)
-			KEY_BACKSPACE: set_value(value_in_cents / 10)
+
+func _on_checkmark_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.is_pressed():
+		shop.cash_register_value_entered.emit(value_in_cents)
+
+
+func _on_reset_pressed() -> void:
+	for _btn in $Buttons.get_children():
+		var btn := _btn as RegisterKey
+		btn.set_pressed_no_signal(false)
+	
+	set_value(0)
