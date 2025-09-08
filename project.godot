@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameSettings="*res://scripts/game_settings.gd"
 SaveManager="*res://scripts/save_manager.gd"
+BgMusic="*res://scripts/bg_music.gd"
 
 [editor_plugins]
 
