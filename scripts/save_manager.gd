@@ -57,7 +57,9 @@ func save_state(
 
 	return _commit()
 
-func load_state(ns: StringName) -> Dictionary[StringName, Variant]:
+func load_state(ns: StringName) -> Dictionary:
+	if not _save_data.has(ns):
+		return {}
 	return _save_data[ns]
 
 func load_save_file(file: String) -> Error:
