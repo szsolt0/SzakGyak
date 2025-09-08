@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2qc5tyd70kd4"]
+[gd_scene load_steps=14 format=3 uid="uid://d2qc5tyd70kd4"]
 
 [ext_resource type="Texture2D" uid="uid://bhuxwncxsggkx" path="res://assets/textures/shop/Shop_Background.png" id="1_cimqq"]
 [ext_resource type="Script" uid="uid://bfnmg0sj8e6br" path="res://scenes/shop/shop.gd" id="1_pe3u1"]
@@ -9,7 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://bhv561o33f87" path="res://assets/textures/shop/Book.png" id="6_rdw2s"]
 [ext_resource type="Texture2D" uid="uid://ciyi5p56msksg" path="res://assets/textures/shop/Cash_Keyboard.png" id="7_rdw2s"]
 [ext_resource type="Texture2D" uid="uid://dm1k5k5ey2nvw" path="res://assets/textures/shop/PriceList.png" id="8_2xo2e"]
+[ext_resource type="Script" uid="uid://blnj2hy2xrkvi" path="res://scenes/shop/cash_keyboard.gd" id="9_8qn5i"]
 [ext_resource type="Texture2D" uid="uid://ccd1xa4uy6w0o" path="res://assets/textures/shop/0.png" id="9_bhc6i"]
+[ext_resource type="Texture2D" uid="uid://dbyd1145u5o4" path="res://assets/textures/shop/dot.png" id="11_g6lcs"]
+[ext_resource type="Script" uid="uid://c6rs34qb1jxj5" path="res://scenes/shop/counter.gd" id="12_dww4p"]
 
 [node name="Shop" type="Node2D"]
 script = ExtResource("1_pe3u1")
@@ -68,21 +71,25 @@ texture_filter = 1
 position = Vector2(606, 325)
 scale = Vector2(4.26, 4.26)
 texture = ExtResource("7_rdw2s")
+script = ExtResource("9_8qn5i")
 
 [node name="Display" type="HBoxContainer" parent="CanvasLayer2/CashKeyboard"]
 offset_left = -37.0
 offset_top = -72.0
 offset_right = 71.0
 offset_bottom = -59.0
+theme_override_constants/separation = 8
 
 [node name="Digit0" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
 layout_mode = 2
 texture = ExtResource("9_bhc6i")
 
 [node name="TextureRect5" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+visible = false
 layout_mode = 2
 
 [node name="TextureRact9" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+visible = false
 layout_mode = 2
 
 [node name="Digit1" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
@@ -90,19 +97,23 @@ layout_mode = 2
 texture = ExtResource("9_bhc6i")
 
 [node name="TextureRect4" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+visible = false
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+visible = false
 layout_mode = 2
 
 [node name="Digit2" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
 layout_mode = 2
 texture = ExtResource("9_bhc6i")
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+[node name="Dot" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
 layout_mode = 2
+texture = ExtResource("11_g6lcs")
 
 [node name="TextureRect7" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+visible = false
 layout_mode = 2
 
 [node name="Digit3" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
@@ -110,9 +121,11 @@ layout_mode = 2
 texture = ExtResource("9_bhc6i")
 
 [node name="TextureRect8" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+visible = false
 layout_mode = 2
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
+visible = false
 layout_mode = 2
 
 [node name="Digit4" type="TextureRect" parent="CanvasLayer2/CashKeyboard/Display"]
@@ -125,6 +138,14 @@ texture_filter = 1
 position = Vector2(580, 323)
 scale = Vector2(2, 2)
 texture = ExtResource("8_2xo2e")
+
+[node name="Counter" type="GridContainer" parent="."]
+offset_left = 184.0
+offset_top = 374.0
+offset_right = 820.0
+offset_bottom = 550.0
+columns = 6
+script = ExtResource("12_dww4p")
 
 [connection signal="mouse_entered" from="RegisterButton" to="RegisterButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="RegisterButton" to="RegisterButton" method="_on_mouse_exited"]

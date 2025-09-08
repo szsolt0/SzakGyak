@@ -3,7 +3,7 @@ extends Area2D
 @export var normal_texture: Texture2D = preload("res://assets/textures/shop/Cash_register0.png")
 @export var hover_texture: Texture2D = preload("res://assets/textures/shop/Cash_register0light.png")
 
-var cashkeyboard
+var cashkeyboard: Sprite2D
 
 func _ready():
 	cashkeyboard = get_node("../CanvasLayer2/CashKeyboard")
@@ -33,3 +33,8 @@ func _input_event(viewport, event, shape_idx):
 				0.7,
 				2.0
 			)
+		
+		if !cashkeyboard.visible:
+			var tween := get_tree().create_tween()
+			tween.tween_property(overlay, "modulate:a", 0.0, 2.0)
+			
