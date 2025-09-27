@@ -19,7 +19,7 @@ The project was built through continuous teamwork, with each member contributing
 
 ## Documentation  
 Comprehensive documentation, including design decisions, game mechanics, and development notes, can be found on the project website:  
-[https://janossandor2002.github.io/SzakGyak/](https://janossandor2002.github.io/SzakGyak/)
+[https://janossandor2002.github.io/SzakGyak/](https://janossandor2002.github.io/szakmai-gyakorlat/)
 
 ---
 
