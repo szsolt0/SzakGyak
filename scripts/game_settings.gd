@@ -204,13 +204,14 @@ const FONT_OVERRIDE: Array[StringName] = [
 	&"TextEdit",
 	&"CheckBox",
 	&"OptionButton",
-	&"RichTextLabel"
+	&"RichTextLabel",
+	&"ProgressBar",
 ]
 
 func _set_font(path: String) -> void:
 	var font := FontFile.new()
 	font.load_dynamic_font(PIXEL_FONT_PATH)
-
+	
 	var theme := ThemeDB.get_default_theme()
 	
 	for item in FONT_OVERRIDE:

@@ -15,22 +15,27 @@ layout_mode = 2
 
 [node name="Player" type="Button" parent="Root/Tabs"]
 layout_mode = 2
+focus_mode = 0
 text = "PLAYER"
 
 [node name="F1" type="Button" parent="Root/Tabs"]
 layout_mode = 2
+focus_mode = 0
 text = "F1"
 
 [node name="F2" type="Button" parent="Root/Tabs"]
 layout_mode = 2
+focus_mode = 0
 text = "F2"
 
 [node name="F3" type="Button" parent="Root/Tabs"]
 layout_mode = 2
+focus_mode = 0
 text = "F3"
 
 [node name="UpDown" type="Button" parent="Root/Tabs"]
 layout_mode = 2
+focus_mode = 0
 text = "^"
 
 [node name="ColorRect" type="ColorRect" parent="Root"]

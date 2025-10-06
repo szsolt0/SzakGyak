@@ -15,6 +15,8 @@ func _ready() -> void:
 		
 	print("Warning will not load, cuz it was loaded at least once")
 	_load_translations()
+	
+	BgMusic.play(&"background")
 
 func _on_play_pressed() -> void:
 	print("play pressed")

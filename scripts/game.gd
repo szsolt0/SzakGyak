@@ -47,7 +47,7 @@ func _ready():
 	hud_instance.update_family_member(3, matka)
 
 	# Kezdő scene: Office
-	_change_scene("res://scenes/office/office.tscn")
+	_change_scene("res://scenes/shop/shop.tscn")
 
 
 # Scene váltó függvény

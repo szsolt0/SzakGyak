@@ -57,7 +57,9 @@ func save_state(
 
 	return _commit()
 
-func load_state(ns: StringName) -> Dictionary[StringName, Variant]:
+func load_state(ns: StringName) -> Dictionary:
+	if not _save_data.has(ns):
+		return {}
 	return _save_data[ns]
 
 func load_save_file(file: String) -> Error:
@@ -102,8 +104,11 @@ func _commit() -> Error:
 		return ERR_CANT_CREATE
 	
 	if not tmp_save.store_buffer(save_data):
+		tmp_save.close()
+		DirAccess.remove_absolute(tmp_save_path)
 		return ERR_FILE_CANT_WRITE
 	
+	tmp_save.close()
 	var rename_err := DirAccess.rename_absolute(tmp_save_path, save_path)
 	
 	if rename_err != OK:

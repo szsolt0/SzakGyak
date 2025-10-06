@@ -62,7 +62,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BreadBar" type="ProgressBar" parent="Stats"]
+[node name="BreadBar" type="Label" parent="Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -70,6 +70,6 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VodkaBar" type="ProgressBar" parent="Stats"]
+[node name="VodkaBar" type="Label" parent="Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
